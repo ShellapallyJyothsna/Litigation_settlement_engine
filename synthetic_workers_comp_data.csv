@@ -1,0 +1,1001 @@
+Claim Number,DOI,State,Body Part,Injury Nature,Cause of Injury,Wage Information,Comorbidity,Attorney Firm,Attorney Aggressiveness,Medical Bill Categories,Medical Cost,Indemnity Paid,Legal Fees,Settlement Payout
+770487,2018-08-17,Georgia,Neck,Strain,Slip/Fall,1095.19,True,Solo Practitioner,1,PT/Conservative,18359.0,50597.78,11504.77,63915.41
+198246,2019-03-24,Florida,Wrist,Strain,Struck By,849.54,True,Firm C,1,PT/Conservative,10957.33,53826.85,19861.86,110343.69
+832052,2020-05-15,New York,Shoulder,Strain,Struck By,1003.87,True,Firm C,10,PT/Conservative,12132.17,20539.18,21243.51,118019.49
+946335,2018-03-30,California,Back,Fracture,Lifting,1345.08,True,Firm A,4,Surgery,205783.1,34622.36,99858.98,554772.09
+403445,2018-06-13,New York,Shoulder,Strain,Lifting,745.93,True,Firm C,4,PT/Conservative,10323.01,15261.73,12136.49,67424.97
+379946,2021-12-08,Florida,Neck,Fracture,Repetitive Motion,745.24,True,Solo Practitioner,5,Surgery,152943.52,49185.84,56656.97,314760.96
+821590,2021-02-14,New York,Neck,Sprain,Lifting,756.56,False,Firm A,4,PT/Conservative,17037.81,35452.4,20094.63,111636.85
+852787,2019-10-07,Georgia,Knee,Strain,Repetitive Motion,667.16,True,Firm C,10,PT/Conservative,11730.37,28180.84,17284.04,96022.44
+711878,2020-03-28,Texas,Wrist,Strain,Slip/Fall,1413.37,True,Firm B,7,PT/Conservative,12007.78,76491.58,19015.8,105643.32
+503457,2020-02-21,New York,Back,Sprain,Slip/Fall,861.01,False,Firm A,5,PT/Conservative,21231.98,39210.4,25750.83,143060.19
+265840,2020-07-18,Georgia,Wrist,Sprain,Slip/Fall,848.88,False,Firm B,3,PT/Conservative,10708.29,56586.34,12690.73,70504.05
+899550,2018-11-27,California,Back,Fracture,Struck By,886.01,True,Firm C,5,Surgery,160426.1,9941.03,92100.44,511669.12
+160738,2019-05-09,Florida,Knee,Sprain,Repetitive Motion,819.11,True,Firm B,5,PT/Conservative,17892.15,5946.74,6558.68,36437.12
+322086,2021-01-09,Georgia,Shoulder,Strain,Lifting,1049.15,False,Solo Practitioner,2,PT/Conservative,7065.41,9001.71,2761.73,15342.92
+335612,2018-05-12,California,Neck,Fracture,Slip/Fall,1206.39,True,Firm B,2,Surgery,157890.04,76436.87,73544.09,408578.3
+446479,2018-05-26,Florida,Neck,Fracture,Struck By,961.55,True,Solo Practitioner,4,Surgery,223864.6,59654.56,73275.66,407087.0
+201639,2021-09-11,California,Knee,Contusion,Slip/Fall,1223.51,True,Solo Practitioner,6,PT/Conservative,3959.35,55718.65,23949.15,133050.82
+360735,2019-01-28,California,Knee,Strain,Struck By,723.97,True,Solo Practitioner,9,PT/Conservative,9591.34,11467.68,9452.45,52513.59
+153045,2021-08-28,Texas,Neck,Strain,Struck By,882.35,False,Solo Practitioner,1,PT/Conservative,11495.43,9899.97,3162.88,17571.55
+497382,2018-01-05,Texas,Shoulder,Strain,Struck By,804.23,True,Firm C,4,PT/Conservative,12613.27,47771.26,17580.7,97670.56
+707314,2022-02-15,California,Back,Strain,Struck By,1086.17,True,Firm A,3,PT/Conservative,19664.74,35843.61,23226.44,129035.77
+723939,2018-05-20,Florida,Neck,Fracture,Slip/Fall,1512.42,True,Firm C,5,Surgery,215462.92,20962.14,96643.17,536906.52
+802258,2022-01-06,New York,Neck,Sprain,Lifting,836.23,False,Firm A,1,PT/Conservative,16741.32,29251.33,15227.45,84596.97
+751332,2021-02-27,Texas,Wrist,Strain,Lifting,761.92,True,Firm C,5,PT/Conservative,12934.71,37212.17,14986.88,83260.46
+559469,2022-09-04,Texas,Wrist,Strain,Lifting,618.0,True,Firm C,2,PT/Conservative,10107.19,14683.68,6225.72,34587.34
+212235,2022-03-01,New York,Wrist,Strain,Lifting,1228.66,True,Solo Practitioner,5,PT/Conservative,10875.38,41356.7,18315.69,101753.83
+153266,2018-07-09,Texas,Back,Strain,Repetitive Motion,953.55,False,Solo Practitioner,9,PT/Conservative,11881.78,8181.46,5171.79,28732.19
+548462,2021-02-22,Florida,Wrist,Strain,Lifting,858.02,True,Firm B,1,PT/Conservative,10076.83,13591.04,5190.47,28835.97
+482364,2022-06-19,Georgia,Neck,Sprain,Lifting,649.76,False,Firm B,4,PT/Conservative,21093.82,23157.45,8754.34,48635.25
+938742,2022-07-19,Texas,Neck,Sprain,Lifting,734.58,False,Firm C,3,PT/Conservative,15159.56,17938.44,9134.17,50745.4
+835343,2018-08-10,New York,Neck,Strain,Struck By,1554.24,False,Firm B,4,PT/Conservative,13901.24,72831.69,27725.81,154032.27
+792094,2019-01-31,California,Shoulder,Strain,Struck By,963.16,False,Firm A,5,PT/Conservative,7129.39,45133.68,22522.44,125124.64
+708792,2019-06-28,Georgia,Shoulder,Sprain,Lifting,523.35,False,Firm A,7,PT/Conservative,10390.35,12434.8,6483.5,36019.42
+367095,2018-04-01,Georgia,Neck,Strain,Slip/Fall,597.27,False,Firm C,2,PT/Conservative,10666.12,23651.89,8925.47,49585.96
+414910,2020-11-04,Florida,Knee,Sprain,Repetitive Motion,687.85,True,Solo Practitioner,3,PT/Conservative,14910.1,44036.16,14766.31,82035.03
+415568,2020-04-11,Florida,Knee,Sprain,Lifting,731.05,False,Solo Practitioner,4,PT/Conservative,11345.42,32327.03,11942.08,66344.89
+932291,2022-06-19,Texas,Wrist,Sprain,Lifting,891.21,True,Firm C,4,PT/Conservative,15461.9,38232.91,14600.46,81113.68
+308802,2018-10-29,Florida,Wrist,Sprain,Slip/Fall,459.71,False,Firm B,7,PT/Conservative,12525.91,3337.49,4856.3,26979.42
+519066,2019-05-15,Georgia,Back,Sprain,Repetitive Motion,869.54,True,Solo Practitioner,1,PT/Conservative,26554.26,6312.86,5447.76,30265.35
+361303,2022-10-04,Georgia,Wrist,Laceration,Lifting,815.21,False,Solo Practitioner,9,PT/Conservative,4406.01,42505.05,12026.68,66814.88
+266889,2022-03-04,New York,Shoulder,Sprain,Struck By,1418.18,True,Solo Practitioner,2,PT/Conservative,15036.92,43991.94,17027.17,94595.4
+399607,2019-04-26,Texas,Back,Strain,Repetitive Motion,1212.9,False,Firm B,2,PT/Conservative,12635.07,63240.61,12546.04,69700.23
+527398,2019-11-09,Florida,Knee,Strain,Slip/Fall,1102.1,False,Firm A,6,PT/Conservative,6882.3,49462.25,19192.33,106624.07
+890075,2020-03-09,New York,Wrist,Contusion,Struck By,1115.88,True,Solo Practitioner,8,PT/Conservative,3428.5,21357.94,10065.46,55919.2
+507746,2019-11-20,Georgia,Neck,Laceration,Slip/Fall,1196.61,False,Firm A,2,PT/Conservative,7585.65,22903.12,6587.64,36598.01
+242291,2022-11-11,New York,Knee,Strain,Struck By,613.64,False,Solo Practitioner,5,PT/Conservative,6957.97,17010.1,8369.32,46496.24
+364525,2022-09-06,California,Back,Laceration,Lifting,1479.67,True,Firm A,1,PT/Conservative,10114.11,64454.43,25084.46,139358.11
+359295,2019-02-13,Florida,Neck,Strain,Slip/Fall,921.74,True,Firm C,6,PT/Conservative,19653.94,62659.89,36890.25,204945.84
+735324,2021-05-28,Georgia,Shoulder,Strain,Slip/Fall,699.07,False,Solo Practitioner,7,PT/Conservative,9542.94,31835.65,9640.03,53555.73
+307963,2018-06-05,Georgia,Back,Sprain,Lifting,728.52,True,Firm A,6,Surgery,60404.48,10097.29,19268.98,107049.89
+549186,2021-09-16,Florida,Back,Sprain,Struck By,846.59,True,Firm C,8,PT/Conservative,22971.02,15644.98,19234.08,106856.02
+260422,2020-06-10,Florida,Wrist,Sprain,Struck By,965.12,False,Firm C,6,PT/Conservative,13906.13,21020.31,15205.66,84475.91
+971084,2018-06-27,California,Knee,Fracture,Struck By,1263.45,False,Solo Practitioner,6,Surgery,85402.18,81719.95,67873.9,377077.23
+611233,2019-03-11,Georgia,Shoulder,Contusion,Lifting,1836.17,True,Firm B,2,PT/Conservative,3368.5,110280.37,20141.38,111896.58
+855053,2020-04-12,California,Knee,Fracture,Struck By,953.62,False,Firm A,5,Surgery,78333.3,48462.97,56003.58,311131.01
+524045,2021-11-17,Georgia,Shoulder,Strain,Lifting,892.22,False,Firm C,6,PT/Conservative,7441.28,17077.09,8216.71,45648.37
+575786,2019-07-09,Texas,Neck,Strain,Repetitive Motion,1270.15,True,Solo Practitioner,5,PT/Conservative,15510.17,47783.04,12241.44,68008.02
+205409,2022-09-02,California,Neck,Strain,Repetitive Motion,1317.33,False,Firm A,9,PT/Conservative,11365.04,26952.57,20806.96,115594.24
+831295,2018-09-16,Florida,Back,Contusion,Lifting,870.58,False,Solo Practitioner,6,PT/Conservative,5205.68,20684.98,7537.22,41873.47
+153872,2019-06-02,Texas,Knee,Strain,Slip/Fall,1029.12,True,Firm C,2,PT/Conservative,10528.35,25131.11,9085.76,50476.47
+224205,2021-02-16,Florida,Wrist,Strain,Struck By,773.37,False,Firm C,10,PT/Conservative,7997.42,6635.51,7450.65,41392.49
+420214,2021-03-10,Texas,Neck,Fracture,Lifting,1098.21,True,Firm B,3,Surgery,199997.7,18845.28,41009.14,227828.54
+178711,2018-11-17,New York,Knee,Strain,Repetitive Motion,439.97,False,Solo Practitioner,2,PT/Conservative,9227.18,13357.49,6884.72,38248.47
+377405,2022-06-02,New York,Knee,Strain,Repetitive Motion,814.64,True,Firm B,2,PT/Conservative,10878.26,33335.07,13017.88,72321.53
+273982,2022-06-12,Florida,Shoulder,Strain,Struck By,614.12,False,Firm C,9,PT/Conservative,7259.12,30804.26,18801.65,104453.61
+617781,2020-06-15,Texas,Shoulder,Fracture,Slip/Fall,707.15,True,Firm A,5,Surgery,128862.78,29403.3,39038.28,216879.35
+142185,2022-04-12,California,Shoulder,Strain,Struck By,630.46,False,Solo Practitioner,6,PT/Conservative,8368.02,39529.84,18869.43,104830.19
+449499,2019-10-20,Georgia,Knee,Sprain,Lifting,954.79,False,Firm A,8,PT/Conservative,10819.99,6931.78,5250.28,29168.22
+429795,2019-06-01,Florida,Wrist,Sprain,Slip/Fall,1074.82,False,Firm A,4,PT/Conservative,11023.25,24828.34,11592.9,64405.02
+752878,2022-03-30,Florida,Neck,Strain,Repetitive Motion,1829.08,False,Solo Practitioner,2,PT/Conservative,13761.95,26558.24,8873.27,49295.92
+760626,2021-05-31,Texas,Wrist,Strain,Struck By,718.83,True,Firm A,8,PT/Conservative,12932.04,11386.27,6805.87,37810.39
+779172,2022-09-01,Florida,Wrist,Sprain,Struck By,853.12,False,Firm B,8,PT/Conservative,10051.11,54053.68,21174.2,117634.44
+251668,2020-02-25,New York,Neck,Contusion,Lifting,623.06,False,Firm C,1,PT/Conservative,5367.31,12747.81,7462.49,41458.28
+861319,2019-09-04,Florida,Wrist,Strain,Lifting,748.44,False,Firm C,4,PT/Conservative,6497.6,30132.19,13698.09,76100.52
+699573,2020-02-24,Florida,Back,Strain,Struck By,1034.6,False,Firm B,8,PT/Conservative,11167.93,11608.21,7595.55,42197.51
+232378,2020-10-25,Texas,Knee,Strain,Struck By,423.21,True,Solo Practitioner,3,PT/Conservative,9926.88,3910.46,2460.24,13667.98
+592296,2022-05-20,Florida,Back,Contusion,Struck By,767.73,False,Firm A,10,PT/Conservative,4340.44,32428.92,15156.81,84204.51
+346174,2021-07-16,Florida,Back,Strain,Slip/Fall,1069.78,True,Firm B,5,PT/Conservative,14332.05,27536.14,11073.23,61517.95
+148225,2019-10-27,Texas,Knee,Strain,Struck By,532.1,True,Firm B,2,PT/Conservative,12293.31,34767.41,7487.9,41599.44
+501126,2021-06-23,New York,Neck,Strain,Lifting,404.95,False,Firm A,8,PT/Conservative,14220.71,8552.54,11213.11,62295.07
+810526,2021-01-24,Florida,Wrist,Strain,Struck By,774.81,False,Firm C,4,PT/Conservative,9328.68,21989.11,11958.34,66435.23
+994787,2020-09-16,Florida,Shoulder,Fracture,Lifting,956.12,True,Firm C,1,Surgery,105531.22,61841.84,54546.63,303036.82
+819112,2022-05-13,Texas,Shoulder,Sprain,Repetitive Motion,1044.11,False,Firm B,10,PT/Conservative,12536.26,52372.56,16399.94,91110.78
+810687,2022-03-28,Texas,Shoulder,Sprain,Slip/Fall,1738.09,False,Firm A,5,PT/Conservative,11308.67,108978.24,27686.7,153815.02
+883790,2020-04-30,New York,Shoulder,Fracture,Lifting,816.51,True,Solo Practitioner,5,Surgery,105730.84,30717.11,49616.28,275646.0
+455168,2022-07-06,Georgia,Neck,Sprain,Repetitive Motion,1898.47,False,Firm C,2,PT/Conservative,16893.39,129057.99,39437.13,219095.14
+513741,2018-01-29,New York,Shoulder,Sprain,Lifting,788.59,False,Firm A,4,PT/Conservative,9673.46,14573.14,9681.5,53786.12
+126240,2021-06-22,Florida,Neck,Fracture,Struck By,1107.48,False,Firm A,3,Surgery,154250.46,57013.07,63388.36,352157.54
+139019,2019-09-16,Georgia,Wrist,Strain,Struck By,1126.77,False,Solo Practitioner,10,PT/Conservative,9421.61,75110.49,23479.83,130443.48
+861894,2018-11-13,New York,Wrist,Strain,Lifting,952.67,True,Firm B,8,PT/Conservative,13172.23,20749.15,14267.4,79263.34
+347582,2022-10-18,Florida,Wrist,Contusion,Lifting,593.62,True,Firm C,4,PT/Conservative,4722.82,20373.04,10272.92,57071.78
+989227,2022-08-15,Texas,Wrist,Laceration,Slip/Fall,974.29,False,Firm B,10,PT/Conservative,4294.98,27007.32,8236.46,45758.13
+171942,2022-08-27,New York,Neck,Strain,Repetitive Motion,687.05,True,Firm B,3,PT/Conservative,14882.04,24939.91,11844.06,65800.33
+362829,2022-06-24,California,Neck,Strain,Repetitive Motion,634.45,False,Firm B,5,PT/Conservative,10053.33,18424.43,10588.65,58825.84
+232915,2022-02-28,Florida,Knee,Strain,Lifting,565.55,True,Firm B,10,PT/Conservative,12013.63,16050.31,9762.63,54236.86
+862569,2022-05-24,California,Back,Laceration,Struck By,1682.51,False,Solo Practitioner,8,PT/Conservative,6739.3,74400.59,36635.59,203531.08
+184714,2019-10-22,Georgia,Wrist,Fracture,Lifting,1286.7,False,Firm C,8,Surgery,98462.56,25476.66,48829.42,271274.58
+734836,2020-05-31,Florida,Wrist,Sprain,Repetitive Motion,1015.28,False,Firm B,7,PT/Conservative,12230.27,54946.95,20891.88,116065.98
+967611,2020-07-17,Texas,Shoulder,Strain,Lifting,1710.14,False,Solo Practitioner,2,PT/Conservative,6808.61,37246.85,7629.19,42384.37
+972176,2018-06-24,Florida,Neck,Fracture,Lifting,1108.97,True,Firm C,7,Surgery,193677.12,15370.32,96168.12,534267.36
+401601,2021-05-14,California,Wrist,Strain,Struck By,1249.08,True,Firm C,9,PT/Conservative,9421.99,21434.21,21568.21,119823.41
+220465,2022-04-11,California,Wrist,Laceration,Slip/Fall,1243.15,False,Firm B,5,PT/Conservative,4493.81,80406.94,31514.98,175083.21
+899444,2019-09-25,Texas,Neck,Fracture,Struck By,815.91,True,Firm A,2,Surgery,152019.32,15078.02,32125.37,178474.28
+656251,2019-03-17,California,Neck,Strain,Lifting,1263.44,True,Firm B,3,PT/Conservative,15585.79,72546.72,30028.36,166824.2
+747850,2018-04-12,New York,Knee,Strain,Struck By,524.83,False,Firm B,9,PT/Conservative,6666.51,27018.25,14298.4,79435.57
+461939,2020-05-30,Texas,Knee,Fracture,Lifting,233.78,True,Solo Practitioner,10,Surgery,117364.7,14503.71,35042.91,194682.86
+108060,2019-02-23,Florida,Shoulder,Strain,Slip/Fall,1152.45,True,Solo Practitioner,3,PT/Conservative,9368.6,38791.47,12385.02,68805.69
+498676,2020-12-26,California,Shoulder,Strain,Slip/Fall,1154.4,False,Solo Practitioner,2,PT/Conservative,9586.98,10666.66,6493.8,36076.68
+703727,2020-05-29,Texas,Shoulder,Strain,Slip/Fall,1854.68,False,Solo Practitioner,6,PT/Conservative,9499.69,22033.6,6896.12,38311.78
+557925,2022-09-26,New York,Knee,Fracture,Struck By,1055.57,False,Firm B,6,Surgery,94255.86,11146.82,39020.44,216780.23
+276299,2018-06-06,Texas,Wrist,Strain,Lifting,733.5,False,Firm B,2,PT/Conservative,9254.07,36308.25,7292.11,40511.7
+368402,2019-02-09,Georgia,Neck,Laceration,Struck By,521.8,False,Solo Practitioner,10,PT/Conservative,5629.06,31683.7,10359.48,57552.68
+766158,2021-07-03,New York,Neck,Strain,Struck By,1008.23,False,Firm C,10,PT/Conservative,12441.07,29944.43,28482.24,158234.66
+469038,2020-11-05,California,Back,Strain,Lifting,833.06,True,Solo Practitioner,8,PT/Conservative,14001.12,38487.37,22958.32,127546.24
+681242,2022-06-10,California,Neck,Strain,Struck By,597.21,True,Solo Practitioner,2,PT/Conservative,15659.3,29956.05,13934.82,77415.67
+849014,2018-06-22,New York,Neck,Sprain,Struck By,1252.36,True,Firm C,5,PT/Conservative,24244.44,55379.36,43152.3,239735.02
+528625,2022-05-06,New York,Shoulder,Strain,Slip/Fall,1163.31,False,Firm C,10,PT/Conservative,8781.48,9213.42,12345.8,68587.8
+449555,2018-06-16,Georgia,Shoulder,Laceration,Struck By,1112.55,True,Firm A,5,PT/Conservative,7464.67,52868.38,15473.45,85963.6
+494976,2021-08-10,California,Back,Fracture,Struck By,918.71,False,Firm C,5,Surgery,131562.14,40625.36,92867.46,515930.34
+324597,2019-12-01,New York,Neck,Strain,Slip/Fall,640.57,True,Firm B,10,PT/Conservative,19957.59,29594.33,22078.21,122656.71
+261745,2018-11-29,New York,Neck,Sprain,Slip/Fall,839.47,False,Firm B,8,PT/Conservative,19406.96,36567.31,23186.48,128813.77
+398768,2022-03-21,New York,Shoulder,Laceration,Struck By,1006.33,True,Solo Practitioner,8,PT/Conservative,6626.08,15276.09,8865.71,49253.95
+395459,2022-05-13,California,Neck,Sprain,Repetitive Motion,1595.12,False,Solo Practitioner,6,PT/Conservative,20989.83,87380.67,45255.35,251418.62
+207573,2021-12-27,Georgia,Back,Sprain,Lifting,678.12,False,Firm B,7,PT/Conservative,20809.9,38042.53,13494.51,74969.51
+332823,2022-07-31,Florida,Knee,Strain,Lifting,604.93,True,Firm A,6,PT/Conservative,11857.88,6787.31,6460.39,35891.08
+129556,2019-10-15,Texas,Neck,Strain,Lifting,737.7,False,Solo Practitioner,8,PT/Conservative,12401.55,49175.08,14338.85,79660.29
+105506,2018-06-12,New York,Wrist,Contusion,Struck By,788.91,True,Firm B,5,PT/Conservative,3414.29,42695.81,15957.79,88654.39
+150068,2019-05-04,Georgia,Knee,Strain,Struck By,462.18,True,Firm B,3,PT/Conservative,12605.8,30808.92,8047.99,44711.04
+550089,2018-01-04,California,Knee,Strain,Slip/Fall,854.81,False,Firm A,7,PT/Conservative,8259.72,19181.94,13756.71,76426.19
+145649,2021-07-25,Texas,Back,Strain,Slip/Fall,1163.93,False,Firm A,10,PT/Conservative,14077.1,10754.71,7357.87,40877.04
+893435,2019-11-12,Florida,Shoulder,Sprain,Repetitive Motion,1439.1,False,Firm B,3,PT/Conservative,14338.93,55088.75,16835.77,93532.08
+850827,2022-05-09,New York,Back,Sprain,Slip/Fall,744.21,False,Solo Practitioner,9,PT/Conservative,19796.96,48135.5,30828.29,171268.29
+365618,2018-03-16,California,Back,Contusion,Lifting,1002.5,False,Firm C,7,PT/Conservative,4443.65,6616.5,6647.97,36933.15
+879414,2020-06-19,Georgia,Neck,Strain,Struck By,1003.74,False,Firm C,2,PT/Conservative,9961.72,66909.31,21104.95,117249.7
+182760,2020-05-31,New York,Wrist,Strain,Slip/Fall,1646.64,True,Firm C,5,PT/Conservative,13192.55,90202.94,54048.53,300269.61
+731894,2022-01-09,New York,Shoulder,Strain,Lifting,1017.38,False,Firm A,2,PT/Conservative,7171.47,55060.61,21020.47,116780.4
+480959,2020-11-16,Texas,Back,Strain,Struck By,942.11,True,Firm A,4,PT/Conservative,14976.48,25493.5,8812.78,48959.88
+484123,2020-01-12,New York,Wrist,Strain,Struck By,1102.99,False,Solo Practitioner,2,PT/Conservative,7259.75,34942.72,12548.29,69712.72
+655178,2020-01-22,Florida,Neck,Laceration,Slip/Fall,1669.8,True,Solo Practitioner,9,PT/Conservative,9526.22,23143.43,11477.99,63766.59
+374492,2022-05-07,California,Wrist,Strain,Struck By,940.37,True,Firm B,2,PT/Conservative,13296.52,63926.35,25097.19,139428.81
+281043,2021-12-31,Texas,Shoulder,Sprain,Lifting,596.96,False,Firm B,6,PT/Conservative,9738.16,34671.44,9734.0,54077.78
+335134,2018-09-06,Georgia,Knee,Strain,Lifting,806.22,False,Firm B,10,PT/Conservative,8445.96,44696.84,14215.44,78974.64
+190403,2018-05-15,Texas,Wrist,Strain,Struck By,1371.1,True,Firm C,2,PT/Conservative,10717.25,90492.6,24321.96,135121.98
+588461,2021-10-24,Georgia,Wrist,Strain,Repetitive Motion,444.3,False,Firm A,2,PT/Conservative,8724.47,13782.19,4769.85,26499.16
+260448,2019-09-15,New York,Shoulder,Contusion,Lifting,808.11,True,Firm B,9,PT/Conservative,4239.65,48001.73,23661.38,131452.09
+231250,2021-07-04,Georgia,Wrist,Fracture,Repetitive Motion,1112.01,True,Firm C,10,Surgery,108212.5,47705.23,66613.01,370072.29
+965322,2022-11-05,Florida,Shoulder,Sprain,Struck By,945.03,True,Firm C,5,PT/Conservative,15774.62,32433.43,19524.03,108466.84
+356773,2022-07-07,Florida,Back,Strain,Struck By,740.6,False,Firm B,6,PT/Conservative,9964.14,15641.47,7224.37,40135.41
+250647,2019-10-03,New York,Knee,Strain,Lifting,577.96,True,Firm B,8,PT/Conservative,10508.59,28990.47,16935.21,94084.52
+380464,2020-07-09,Texas,Shoulder,Contusion,Struck By,1091.24,True,Firm C,10,PT/Conservative,4225.6,29528.95,12693.73,70520.72
+299055,2022-04-12,California,Knee,Strain,Lifting,726.25,False,Firm A,7,PT/Conservative,6966.43,14379.75,10841.77,60232.07
+579441,2019-05-09,Georgia,Back,Strain,Struck By,653.83,False,Firm A,2,PT/Conservative,12165.23,9062.08,4388.14,24378.58
+240440,2022-12-13,New York,Shoulder,Strain,Slip/Fall,918.73,True,Firm C,2,PT/Conservative,12052.97,49721.67,25982.58,144347.69
+628750,2020-07-11,New York,Wrist,Strain,Slip/Fall,360.28,False,Firm C,9,PT/Conservative,7939.67,22589.56,19018.72,105659.57
+891638,2018-10-23,New York,Wrist,Strain,Slip/Fall,858.4,True,Solo Practitioner,9,PT/Conservative,12571.78,34559.18,19834.69,110192.72
+256175,2021-05-26,Georgia,Shoulder,Strain,Lifting,821.89,False,Solo Practitioner,10,PT/Conservative,7585.51,51532.5,15851.47,88063.71
+597960,2022-07-29,New York,Knee,Fracture,Slip/Fall,969.55,False,Firm B,1,Surgery,97938.58,22396.6,31233.04,173516.89
+278794,2020-12-09,Georgia,Neck,Sprain,Repetitive Motion,1700.78,True,Firm A,4,PT/Conservative,22704.56,17960.24,10039.65,55775.84
+562462,2019-10-05,Texas,Knee,Fracture,Struck By,1084.34,True,Firm B,9,Surgery,102335.8,19322.94,29973.98,166522.1
+794395,2020-09-06,New York,Knee,Contusion,Lifting,1164.94,False,Solo Practitioner,4,PT/Conservative,3039.14,18452.65,6866.55,38147.49
+392559,2021-02-16,Florida,Shoulder,Sprain,Struck By,659.56,False,Firm C,9,PT/Conservative,12307.03,11318.05,11720.39,65113.29
+401769,2018-09-07,California,Knee,Sprain,Repetitive Motion,1130.56,False,Firm C,2,PT/Conservative,11171.99,39546.99,23192.09,128844.95
+563864,2021-09-05,Texas,Neck,Sprain,Lifting,780.62,False,Firm A,10,PT/Conservative,16956.75,13910.65,9204.4,51135.55
+715336,2019-05-06,Florida,Neck,Fracture,Slip/Fall,385.95,True,Firm C,8,Surgery,191805.26,10953.26,99329.88,551832.67
+814281,2022-04-28,Texas,Neck,Strain,Struck By,1622.58,False,Firm C,6,PT/Conservative,11418.11,16063.54,9136.44,50757.99
+777273,2018-05-02,Florida,Wrist,Sprain,Slip/Fall,1987.15,True,Firm B,1,PT/Conservative,17522.77,89183.29,22489.66,124942.58
+926236,2020-10-11,New York,Back,Strain,Slip/Fall,907.85,False,Solo Practitioner,9,PT/Conservative,10738.69,18574.61,12356.58,68647.65
+617904,2022-12-27,Texas,Shoulder,Strain,Slip/Fall,944.77,False,Solo Practitioner,5,PT/Conservative,7569.14,8106.13,3271.0,18172.21
+295243,2018-01-29,Georgia,Neck,Strain,Struck By,962.55,False,Firm C,2,PT/Conservative,14003.5,55904.9,19201.12,106672.88
+801765,2018-07-15,Florida,Shoulder,Contusion,Slip/Fall,1290.97,False,Firm B,8,PT/Conservative,2709.48,51122.41,18041.17,100228.7
+379963,2019-11-07,California,Back,Strain,Lifting,1006.66,True,Firm A,8,PT/Conservative,16642.88,35877.36,28659.23,159217.96
+267475,2020-04-10,Florida,Shoulder,Fracture,Repetitive Motion,1832.15,True,Firm B,8,Surgery,110227.0,93109.86,65535.22,364084.56
+735163,2020-02-05,Georgia,Wrist,Sprain,Repetitive Motion,468.24,True,Firm A,9,PT/Conservative,14211.7,30594.8,14528.43,80713.5
+653829,2021-12-12,Texas,Back,Strain,Repetitive Motion,915.28,True,Firm C,9,PT/Conservative,14026.59,12081.7,10118.8,56215.53
+221886,2021-10-25,Florida,Back,Contusion,Struck By,1277.64,True,Firm B,9,PT/Conservative,5970.46,16021.61,7526.02,41811.23
+578987,2021-02-28,Georgia,Back,Strain,Slip/Fall,457.63,True,Firm A,1,PT/Conservative,17128.76,3322.39,3983.18,22128.77
+461264,2021-12-05,New York,Back,Laceration,Struck By,705.72,True,Solo Practitioner,3,PT/Conservative,10136.08,12110.16,6685.05,37139.17
+903028,2021-08-06,Florida,Shoulder,Laceration,Struck By,1216.95,False,Solo Practitioner,2,PT/Conservative,4451.7,37749.79,9607.39,53374.37
+239449,2021-08-31,California,Knee,Fracture,Repetitive Motion,1130.97,True,Firm C,8,Surgery,142663.22,44039.97,119349.23,663051.3
+854024,2021-01-20,Texas,Neck,Strain,Repetitive Motion,827.81,False,Firm A,1,PT/Conservative,13108.16,9834.38,4155.32,23085.12
+792267,2020-05-08,Florida,Neck,Strain,Slip/Fall,1172.91,True,Firm A,4,PT/Conservative,18289.13,53414.32,23257.22,129206.77
+146385,2020-04-03,Georgia,Back,Strain,Lifting,832.4,True,Firm C,10,PT/Conservative,14379.27,12635.83,11494.22,63856.77
+348411,2019-09-11,Georgia,Neck,Strain,Lifting,752.22,True,Firm B,7,PT/Conservative,15023.85,43192.47,13927.12,77372.89
+619696,2018-04-07,Texas,Wrist,Strain,Struck By,1078.67,False,Firm C,7,PT/Conservative,7548.26,36308.03,14618.87,81215.96
+891062,2021-01-06,California,Shoulder,Contusion,Repetitive Motion,812.37,False,Solo Practitioner,7,PT/Conservative,2852.33,32169.85,14934.41,82968.94
+655736,2018-10-02,California,Shoulder,Fracture,Struck By,1510.84,False,Firm B,1,Surgery,91432.12,71795.12,47610.01,264500.06
+495489,2021-10-11,Texas,Neck,Sprain,Repetitive Motion,1023.28,False,Firm C,5,PT/Conservative,17164.02,58756.74,21963.46,122019.24
+322096,2019-01-25,Texas,Neck,Sprain,Repetitive Motion,822.51,False,Firm C,5,PT/Conservative,16048.98,26057.12,12245.08,68028.25
+588899,2020-12-28,California,Shoulder,Fracture,Struck By,959.18,False,Solo Practitioner,6,Surgery,84056.6,46213.29,50320.99,279561.04
+488712,2019-10-03,Texas,Neck,Strain,Struck By,1127.29,False,Firm B,6,PT/Conservative,13817.42,31248.48,9636.58,53536.57
+498290,2021-03-12,Florida,Shoulder,Strain,Struck By,965.6,False,Firm B,6,PT/Conservative,6885.36,22942.66,8954.03,49744.62
+246757,2022-01-15,California,Back,Fracture,Slip/Fall,991.57,True,Solo Practitioner,3,Surgery,153735.06,62171.44,73832.87,410182.61
+171269,2021-12-19,California,Knee,Strain,Struck By,1731.66,False,Firm A,9,PT/Conservative,6729.33,25143.7,17070.6,94836.66
+112426,2018-02-04,California,Shoulder,Strain,Struck By,884.02,True,Firm A,9,PT/Conservative,12752.11,56594.96,39047.49,216930.49
+352674,2019-01-29,Florida,Shoulder,Sprain,Slip/Fall,3196.39,False,Solo Practitioner,10,PT/Conservative,11934.52,162440.54,63528.51,352936.17
+831105,2019-04-08,Georgia,Back,Strain,Struck By,965.74,False,Solo Practitioner,1,PT/Conservative,13056.18,28682.48,6926.36,38479.79
+836986,2018-12-17,Texas,Shoulder,Fracture,Slip/Fall,658.84,True,Firm B,10,Surgery,109952.52,36091.26,37258.43,206991.28
+384263,2018-04-06,New York,Wrist,Fracture,Slip/Fall,545.74,True,Firm A,4,Surgery,112258.48,11526.03,49223.08,273461.57
+251195,2022-03-21,Florida,Neck,Fracture,Struck By,965.08,False,Firm B,2,Surgery,141018.52,43949.74,42878.45,238213.61
+881667,2019-12-10,California,Back,Strain,Struck By,2584.87,False,Firm C,8,PT/Conservative,10090.62,131363.09,96679.0,537105.57
+339220,2019-12-30,California,Knee,Strain,Lifting,705.52,True,Firm A,5,PT/Conservative,9268.77,27938.59,17276.31,95979.51
+498458,2021-12-28,New York,Shoulder,Strain,Slip/Fall,1511.32,True,Solo Practitioner,6,PT/Conservative,13145.96,94759.76,41897.3,232762.8
+382870,2018-07-29,California,Knee,Fracture,Struck By,787.05,True,Firm A,6,Surgery,109142.24,23375.38,61159.77,339776.52
+725920,2021-05-09,Georgia,Back,Strain,Struck By,743.89,True,Firm B,10,PT/Conservative,19628.06,35349.65,14855.37,82529.84
+277820,2021-11-04,Texas,Shoulder,Strain,Repetitive Motion,1113.33,True,Solo Practitioner,5,PT/Conservative,10659.29,45557.46,11146.52,61925.12
+414313,2020-09-18,Florida,Neck,Sprain,Struck By,521.4,True,Firm A,3,PT/Conservative,28252.76,12044.34,11674.81,64860.08
+107096,2020-03-21,New York,Shoulder,Strain,Struck By,1262.56,True,Firm C,10,PT/Conservative,13080.95,9166.19,15085.03,83805.75
+310608,2020-09-08,New York,Shoulder,Strain,Struck By,354.85,True,Solo Practitioner,5,PT/Conservative,11114.15,23420.1,12125.47,67363.71
+482746,2018-08-22,Texas,Neck,Sprain,Slip/Fall,809.29,False,Solo Practitioner,5,PT/Conservative,15414.17,17626.34,6712.68,37292.65
+958747,2022-10-03,Florida,Shoulder,Strain,Repetitive Motion,492.13,False,Firm A,8,PT/Conservative,6929.64,31506.16,14694.69,81637.17
+602514,2021-04-07,California,Wrist,Strain,Lifting,673.63,True,Firm B,6,PT/Conservative,9946.04,41792.01,20705.9,115032.75
+778428,2021-06-08,California,Shoulder,Laceration,Struck By,1289.95,True,Firm A,5,PT/Conservative,7498.36,49379.29,25947.55,144153.05
+635482,2022-03-10,Georgia,Neck,Strain,Struck By,938.18,False,Firm B,6,PT/Conservative,10485.42,49535.9,13720.87,76227.04
+606222,2018-08-03,New York,Back,Sprain,Repetitive Motion,1410.73,False,Firm C,8,PT/Conservative,14882.95,89383.85,64163.86,356465.89
+646428,2020-09-16,California,Knee,Strain,Lifting,715.61,True,Firm A,6,PT/Conservative,11057.68,27393.55,17583.62,97686.77
+810032,2022-06-27,Georgia,Wrist,Strain,Repetitive Motion,1410.3,False,Solo Practitioner,8,PT/Conservative,7910.61,45609.1,13546.61,75258.94
+936507,2020-04-09,Georgia,Knee,Strain,Repetitive Motion,1361.03,False,Solo Practitioner,7,PT/Conservative,8088.47,90726.26,23540.5,130780.53
+838968,2019-03-16,New York,Wrist,Strain,Repetitive Motion,601.7,False,Firm B,8,PT/Conservative,7990.44,23827.32,12696.3,70534.98
+375097,2021-10-05,New York,Wrist,Strain,Struck By,1008.22,True,Firm C,8,PT/Conservative,13198.6,27282.43,24523.59,136242.18
+280908,2022-07-25,Texas,Back,Sprain,Lifting,810.84,True,Firm C,2,PT/Conservative,29206.1,23011.64,12964.27,72023.71
+491439,2021-11-21,Texas,Wrist,Strain,Struck By,1305.41,False,Solo Practitioner,9,PT/Conservative,6486.71,65479.37,17345.21,96362.29
+681868,2018-12-08,California,Shoulder,Sprain,Slip/Fall,1493.12,False,Solo Practitioner,3,PT/Conservative,12825.09,79822.2,29790.32,165501.8
+954815,2020-02-26,Texas,Knee,Strain,Struck By,727.92,False,Firm A,10,PT/Conservative,8488.79,8167.26,4973.18,27628.78
+934541,2022-04-08,Georgia,Neck,Fracture,Repetitive Motion,1091.98,False,Solo Practitioner,9,Surgery,121131.3,62701.49,48876.68,271537.11
+218710,2021-03-18,Georgia,Shoulder,Fracture,Slip/Fall,456.09,False,Firm B,7,Surgery,75129.3,24984.61,22904.75,127248.63
+871740,2022-08-27,California,Knee,Strain,Slip/Fall,626.27,False,Firm B,4,PT/Conservative,7065.24,11573.47,6392.25,35512.52
+822608,2019-12-20,Georgia,Neck,Sprain,Slip/Fall,1024.67,False,Firm C,10,PT/Conservative,19468.41,6762.82,11180.11,62111.7
+276556,2019-10-25,Florida,Wrist,Laceration,Slip/Fall,1271.57,True,Firm A,5,PT/Conservative,5901.38,9231.6,4964.9,27582.78
+787757,2018-09-17,Texas,Neck,Sprain,Struck By,1442.43,False,Firm C,7,PT/Conservative,17011.86,59024.24,25094.52,139414.01
+573947,2018-06-04,Florida,Knee,Fracture,Lifting,686.76,False,Solo Practitioner,6,Surgery,106144.32,43059.85,44945.97,249699.85
+911739,2022-10-01,Florida,Shoulder,Contusion,Struck By,959.65,True,Firm B,8,PT/Conservative,5015.42,60803.42,22013.56,122297.58
+438548,2022-08-24,California,Neck,Fracture,Struck By,607.66,False,Firm A,2,Surgery,130961.52,36095.0,61334.13,340745.16
+117072,2018-09-12,Texas,Knee,Strain,Repetitive Motion,2126.21,False,Firm C,2,PT/Conservative,7225.24,43502.26,13135.99,72977.71
+477943,2019-05-28,Florida,Back,Strain,Lifting,1174.86,True,Firm A,2,PT/Conservative,20055.18,51952.31,20641.41,114674.49
+323788,2020-09-03,New York,Wrist,Sprain,Slip/Fall,1395.78,True,Firm A,7,PT/Conservative,18967.76,86594.19,51367.13,285372.95
+238595,2020-09-05,Texas,Back,Strain,Lifting,1423.07,False,Solo Practitioner,3,PT/Conservative,11990.84,40386.73,9403.21,52240.05
+810029,2018-10-20,Texas,Wrist,Sprain,Struck By,1355.14,False,Firm B,7,PT/Conservative,10590.82,84967.28,20686.7,114926.13
+327797,2018-06-27,New York,Wrist,Sprain,Lifting,1084.68,False,Firm B,4,PT/Conservative,13920.09,10738.33,8392.82,46626.8
+775933,2018-06-22,Texas,Wrist,Strain,Slip/Fall,1193.5,False,Firm B,7,PT/Conservative,7981.68,14966.49,5368.71,29826.16
+777558,2018-04-22,New York,Neck,Strain,Slip/Fall,526.84,True,Firm C,3,PT/Conservative,16254.14,35119.15,24732.03,137400.19
+979727,2021-03-10,Georgia,Knee,Laceration,Slip/Fall,427.56,True,Firm A,1,PT/Conservative,7455.74,20882.03,5384.61,29914.51
+326222,2018-03-23,Florida,Wrist,Strain,Struck By,604.36,False,Firm A,9,PT/Conservative,8330.09,13960.72,8716.32,48424.01
+745972,2018-11-09,Florida,Wrist,Contusion,Repetitive Motion,820.57,False,Firm A,5,PT/Conservative,3498.62,36827.18,13141.83,73010.19
+558737,2022-02-03,Texas,Knee,Strain,Slip/Fall,1455.4,False,Firm A,1,PT/Conservative,8212.49,61476.1,13218.43,73435.71
+243876,2021-12-07,New York,Wrist,Fracture,Lifting,932.74,True,Firm B,5,Surgery,111633.0,27702.38,49353.38,274185.44
+908903,2018-03-02,Florida,Wrist,Strain,Slip/Fall,964.5,False,Firm C,1,PT/Conservative,6918.44,57291.3,20588.43,114380.18
+694423,2018-12-08,Georgia,Wrist,Sprain,Slip/Fall,456.77,True,Firm A,1,PT/Conservative,18620.53,24720.39,8228.86,45715.88
+356430,2018-04-05,Texas,Neck,Contusion,Slip/Fall,1332.55,False,Firm C,4,PT/Conservative,4910.74,86189.33,26506.74,147259.64
+855276,2019-10-18,Texas,Shoulder,Strain,Slip/Fall,615.31,True,Firm A,7,PT/Conservative,9300.18,21523.54,8697.7,48320.58
+587686,2022-11-09,New York,Shoulder,Strain,Struck By,2255.59,True,Firm B,5,PT/Conservative,8983.54,31262.48,14001.4,77785.53
+875501,2021-06-29,Texas,Knee,Laceration,Repetitive Motion,529.67,True,Firm A,7,PT/Conservative,6405.59,33909.47,11148.46,61935.9
+344315,2021-01-14,California,Shoulder,Strain,Struck By,820.16,False,Firm B,9,PT/Conservative,8444.64,48717.5,26967.61,149820.03
+540208,2020-10-04,New York,Shoulder,Strain,Repetitive Motion,1253.34,False,Solo Practitioner,2,PT/Conservative,7198.94,81066.03,26180.04,145444.64
+200219,2020-11-01,Texas,Back,Fracture,Slip/Fall,1078.87,False,Firm B,5,Surgery,145431.46,24921.9,32761.48,182008.22
+992247,2019-10-08,Texas,Shoulder,Strain,Repetitive Motion,1066.19,True,Firm B,10,PT/Conservative,9768.98,66146.43,19624.56,109025.33
+262959,2018-08-05,Florida,Knee,Strain,Lifting,975.62,True,Firm C,8,PT/Conservative,10361.59,56664.01,33291.34,184951.91
+993892,2018-09-03,California,Wrist,Strain,Lifting,1073.47,True,Firm B,6,PT/Conservative,13310.34,68015.06,33457.42,185874.56
+638401,2018-04-11,California,Back,Laceration,Struck By,824.43,True,Solo Practitioner,2,PT/Conservative,10376.34,26117.94,11378.74,63215.21
+227352,2018-01-25,California,Neck,Strain,Struck By,2156.9,False,Firm C,2,PT/Conservative,12720.8,46977.28,27288.94,151605.2
+167603,2019-02-09,Texas,Shoulder,Strain,Struck By,1028.68,True,Solo Practitioner,7,PT/Conservative,9500.14,8147.15,4042.1,22456.12
+130914,2020-02-23,California,Neck,Strain,Struck By,1483.71,True,Firm B,5,PT/Conservative,13879.19,23501.97,14559.6,80886.67
+532005,2022-12-13,Georgia,Knee,Strain,Repetitive Motion,627.76,True,Firm A,7,PT/Conservative,11372.04,39360.55,14267.26,79262.56
+476556,2020-09-09,Texas,Wrist,Fracture,Struck By,1270.42,False,Firm A,6,Surgery,94171.08,62885.79,38256.04,212533.58
+329659,2018-03-02,California,Wrist,Strain,Repetitive Motion,1005.47,True,Firm B,4,PT/Conservative,12858.04,25880.8,13116.52,72869.58
+659614,2022-07-30,Texas,Wrist,Sprain,Struck By,753.65,False,Firm B,4,PT/Conservative,14076.43,23875.63,6860.07,38111.52
+945372,2022-02-20,Florida,Shoulder,Contusion,Repetitive Motion,558.62,True,Firm C,3,PT/Conservative,3448.51,37606.3,14420.53,80114.04
+139807,2018-07-04,Georgia,Back,Fracture,Slip/Fall,2537.87,False,Firm B,3,Surgery,122671.1,31824.89,28114.21,156190.06
+851763,2018-12-30,Georgia,Wrist,Sprain,Repetitive Motion,692.18,True,Firm C,2,PT/Conservative,15700.41,42486.01,15858.41,88102.29
+838761,2021-09-18,Florida,Shoulder,Strain,Repetitive Motion,758.94,False,Firm C,3,PT/Conservative,7534.79,19535.12,10321.05,57339.14
+827250,2022-12-27,Texas,Neck,Strain,Lifting,802.14,True,Firm A,10,PT/Conservative,18248.52,24352.97,12644.01,70244.48
+992083,2022-04-28,Florida,Shoulder,Contusion,Repetitive Motion,414.27,True,Firm B,6,PT/Conservative,4501.81,5741.78,3138.79,17437.71
+349556,2019-12-12,Texas,Shoulder,Strain,Lifting,553.93,True,Firm A,6,PT/Conservative,12534.99,19010.88,8139.11,45217.28
+925250,2018-08-10,Florida,Knee,Laceration,Struck By,1252.15,False,Firm C,9,PT/Conservative,5380.53,66113.52,38315.87,212865.93
+206355,2022-08-25,New York,Neck,Strain,Slip/Fall,975.59,True,Firm A,6,PT/Conservative,14996.83,18672.79,15577.97,86544.29
+209812,2018-06-01,Georgia,Neck,Sprain,Slip/Fall,1149.7,False,Solo Practitioner,1,PT/Conservative,15266.44,50080.93,10496.18,58312.11
+785386,2018-12-04,Florida,Back,Strain,Repetitive Motion,734.01,True,Firm C,5,PT/Conservative,14692.87,5813.36,8804.63,48914.61
+349087,2018-07-16,Florida,Knee,Strain,Lifting,1103.35,True,Firm A,5,PT/Conservative,9929.13,13107.8,7990.79,44393.28
+603660,2019-02-13,New York,Shoulder,Laceration,Struck By,1447.62,True,Solo Practitioner,8,PT/Conservative,7547.17,66880.04,30021.77,166787.63
+793150,2019-06-27,Texas,Neck,Strain,Struck By,431.68,False,Solo Practitioner,1,PT/Conservative,14382.41,3418.91,2855.9,15866.1
+561101,2020-08-10,New York,Wrist,Strain,Slip/Fall,3187.36,True,Solo Practitioner,10,PT/Conservative,9965.49,206158.44,98944.94,549694.11
+680493,2018-05-05,Florida,Wrist,Sprain,Struck By,641.59,True,Firm C,2,PT/Conservative,19336.54,32182.15,17346.24,96368.0
+995420,2022-01-02,Florida,Wrist,Sprain,Repetitive Motion,958.99,True,Firm B,3,PT/Conservative,16643.27,48102.94,16620.81,92337.86
+947732,2019-01-30,New York,Knee,Strain,Repetitive Motion,1006.61,False,Firm A,2,PT/Conservative,8496.77,9301.08,6390.05,35500.27
+683390,2020-03-24,California,Knee,Contusion,Slip/Fall,1026.37,False,Solo Practitioner,3,PT/Conservative,2737.67,59611.57,19841.41,110230.04
+694116,2021-04-19,Georgia,Back,Fracture,Slip/Fall,817.15,False,Firm C,7,Surgery,136760.54,24808.67,56226.41,312368.93
+501650,2021-09-03,Georgia,Back,Strain,Struck By,935.29,True,Solo Practitioner,1,PT/Conservative,18031.5,48148.73,11473.08,63739.33
+447596,2021-11-15,New York,Shoulder,Contusion,Slip/Fall,1290.77,False,Firm C,5,PT/Conservative,3085.58,41743.5,24145.87,134143.7
+615500,2022-10-24,New York,Neck,Strain,Struck By,910.83,False,Solo Practitioner,10,PT/Conservative,12315.51,25248.21,17684.05,98244.71
+193624,2019-01-20,Georgia,Knee,Sprain,Lifting,1137.13,True,Firm B,2,PT/Conservative,19155.91,51034.39,12034.32,66857.35
+844037,2020-11-03,California,Wrist,Strain,Repetitive Motion,1398.96,True,Firm B,1,PT/Conservative,10456.36,49858.93,17935.25,99640.28
+153015,2020-01-09,Texas,Wrist,Strain,Slip/Fall,1344.0,True,Firm C,8,PT/Conservative,12332.17,14192.64,9754.74,54193.0
+567773,2018-12-30,New York,Shoulder,Strain,Lifting,1656.85,True,Firm A,7,PT/Conservative,13266.69,43740.84,27769.18,154273.21
+270820,2022-10-15,California,Neck,Strain,Struck By,774.23,True,Solo Practitioner,3,PT/Conservative,18436.38,20439.67,12366.37,68702.08
+281614,2021-05-16,Florida,Wrist,Sprain,Lifting,643.28,False,Solo Practitioner,6,PT/Conservative,12269.67,36512.57,14305.82,79476.79
+364239,2019-03-23,Georgia,Wrist,Strain,Slip/Fall,969.17,True,Firm C,9,PT/Conservative,11790.52,44136.0,20992.64,116625.79
+412974,2021-11-02,New York,Shoulder,Fracture,Lifting,914.68,False,Firm B,3,Surgery,101472.46,47691.42,45600.87,253338.19
+902658,2019-05-08,Florida,Knee,Sprain,Repetitive Motion,881.33,True,Firm C,5,PT/Conservative,19085.62,21522.08,17108.61,95047.83
+524252,2020-03-06,New York,Neck,Strain,Repetitive Motion,786.85,False,Firm C,3,PT/Conservative,14073.73,52970.74,32332.66,179625.9
+789558,2022-12-01,California,Neck,Sprain,Repetitive Motion,1104.84,False,Firm B,6,PT/Conservative,21220.54,53231.19,30370.24,168723.57
+880360,2022-11-20,California,Shoulder,Strain,Lifting,699.33,False,Solo Practitioner,1,PT/Conservative,6615.52,8769.6,4474.45,24858.03
+765213,2021-04-10,Georgia,Knee,Contusion,Slip/Fall,710.08,False,Firm C,7,PT/Conservative,3177.09,28587.82,11666.18,64812.12
+995735,2018-11-05,New York,Knee,Laceration,Struck By,1928.16,True,Firm B,2,PT/Conservative,5101.96,25451.71,9218.61,51214.48
+448787,2021-07-16,Georgia,Back,Strain,Repetitive Motion,1414.66,True,Firm B,8,PT/Conservative,15136.86,89632.86,26146.6,145258.9
+235691,2021-06-12,California,Knee,Laceration,Struck By,747.86,True,Firm B,6,PT/Conservative,5729.54,18756.33,10219.29,56773.81
+437864,2022-03-31,Texas,Neck,Strain,Lifting,1509.39,False,Firm A,7,PT/Conservative,11032.2,40844.09,13400.18,74445.45
+717265,2019-09-19,Florida,Shoulder,Contusion,Struck By,937.36,False,Firm B,6,PT/Conservative,3216.6,19178.39,6320.69,35114.93
+476701,2022-03-17,California,Back,Strain,Repetitive Motion,428.93,True,Firm B,2,PT/Conservative,15595.39,13305.41,8807.29,48929.4
+845652,2021-08-25,California,Wrist,Fracture,Slip/Fall,715.75,True,Firm A,2,Surgery,111540.48,34484.84,56902.49,316124.96
+565897,2020-02-18,Florida,Neck,Strain,Slip/Fall,1097.7,False,Firm A,9,PT/Conservative,11863.36,26081.35,16232.97,90183.14
+753050,2021-05-25,California,Wrist,Sprain,Slip/Fall,1787.07,False,Firm A,8,PT/Conservative,10490.52,30666.12,20974.91,116527.28
+738584,2019-02-14,California,Shoulder,Sprain,Lifting,842.64,True,Solo Practitioner,4,PT/Conservative,17003.98,44491.39,22193.59,123297.7
+446663,2019-04-26,California,Back,Sprain,Struck By,558.55,True,Firm A,2,PT/Conservative,21482.95,22855.87,17350.6,96392.21
+775636,2019-04-19,California,Shoulder,Strain,Slip/Fall,1728.91,True,Firm C,6,PT/Conservative,10068.98,20539.45,17797.26,98873.64
+546688,2022-02-21,New York,Back,Contusion,Repetitive Motion,1636.66,False,Solo Practitioner,10,PT/Conservative,4484.87,77774.08,37878.02,210433.44
+868677,2018-07-10,Florida,Back,Strain,Struck By,1282.15,False,Solo Practitioner,7,PT/Conservative,11679.58,61773.99,22586.74,125481.89
+218548,2018-09-29,Texas,Back,Strain,Struck By,451.64,False,Solo Practitioner,6,PT/Conservative,9655.78,8048.22,3841.16,21339.8
+817712,2022-12-08,California,Back,Contusion,Struck By,1023.92,True,Firm C,6,PT/Conservative,6859.16,13515.74,12450.84,69171.34
+838793,2022-11-14,Florida,Wrist,Strain,Lifting,872.26,True,Firm B,8,PT/Conservative,12813.35,28784.58,12885.81,71587.84
+795951,2021-10-17,Florida,Wrist,Strain,Repetitive Motion,609.85,False,Firm B,2,PT/Conservative,7174.54,22137.56,6491.72,36065.09
+436208,2019-05-09,Texas,Wrist,Strain,Struck By,880.87,False,Firm A,8,PT/Conservative,7996.44,55230.55,17399.03,96661.26
+940183,2021-03-19,California,Knee,Strain,Struck By,1441.39,True,Solo Practitioner,7,PT/Conservative,13176.74,10464.49,9991.78,55509.91
+684194,2021-01-29,New York,Wrist,Fracture,Repetitive Motion,689.33,False,Firm C,1,Surgery,103771.2,17743.35,47291.46,262730.31
+333746,2022-09-26,California,Wrist,Strain,Lifting,835.8,False,Firm A,4,PT/Conservative,6824.69,54611.17,26772.7,148737.25
+457938,2019-12-29,Texas,Back,Strain,Repetitive Motion,669.98,False,Solo Practitioner,2,PT/Conservative,13442.82,23435.9,5916.63,32870.15
+740524,2019-02-06,California,Neck,Strain,Repetitive Motion,1571.43,False,Solo Practitioner,1,PT/Conservative,9751.61,15557.16,7466.09,41478.29
+978146,2021-10-08,California,Knee,Sprain,Repetitive Motion,1299.65,False,Firm A,9,PT/Conservative,12542.13,42888.45,31536.15,175200.83
+979562,2021-04-13,Florida,Wrist,Strain,Repetitive Motion,1050.8,True,Firm C,9,PT/Conservative,12551.74,49240.49,31920.3,177334.98
+539001,2021-06-01,Texas,Knee,Laceration,Lifting,1179.18,False,Firm B,7,PT/Conservative,4471.92,65373.74,16309.6,90608.9
+834018,2022-12-21,Texas,Shoulder,Sprain,Repetitive Motion,1520.75,True,Firm C,6,PT/Conservative,16479.58,12044.34,8699.76,48332.01
+844904,2021-08-24,Georgia,Back,Sprain,Struck By,971.69,False,Firm C,7,PT/Conservative,15580.8,14750.25,10404.81,57804.5
+648122,2018-08-07,New York,Back,Strain,Repetitive Motion,594.29,False,Firm B,1,PT/Conservative,13390.55,25102.81,9998.28,55545.98
+313910,2022-03-24,Texas,Back,Fracture,Repetitive Motion,726.53,False,Firm C,1,Surgery,116730.32,37881.27,36858.4,204768.91
+506380,2020-05-03,Georgia,Wrist,Strain,Lifting,911.6,True,Solo Practitioner,4,PT/Conservative,9853.95,26472.86,7131.55,39619.72
+891787,2021-04-20,Texas,Neck,Strain,Repetitive Motion,942.01,True,Firm B,9,PT/Conservative,16251.65,54711.94,17150.36,95279.77
+495521,2018-03-25,New York,Neck,Strain,Lifting,1389.11,True,Solo Practitioner,3,PT/Conservative,18326.58,64176.88,26673.33,148185.14
+261169,2019-10-23,New York,Shoulder,Strain,Lifting,858.95,True,Firm B,3,PT/Conservative,11776.87,57257.61,21293.7,118298.34
+171488,2022-05-30,Texas,Wrist,Strain,Lifting,982.19,True,Firm C,6,PT/Conservative,10925.0,48618.4,19220.85,106782.5
+407835,2019-03-24,Texas,Back,Strain,Lifting,1364.9,False,Firm B,1,PT/Conservative,13406.19,43240.03,8613.01,47850.08
+499898,2022-06-19,Florida,Shoulder,Strain,Lifting,1236.7,False,Firm A,5,PT/Conservative,7074.12,22037.99,9811.25,54506.96
+783176,2019-01-30,Texas,Neck,Laceration,Slip/Fall,964.6,True,Firm B,7,PT/Conservative,10331.17,22282.26,7484.4,41580.0
+315565,2021-01-06,Florida,Back,Sprain,Repetitive Motion,1022.0,True,Firm C,1,PT/Conservative,25122.16,47890.92,22476.78,124871.02
+176806,2018-04-22,Florida,Back,Fracture,Repetitive Motion,799.03,False,Solo Practitioner,8,Surgery,129871.12,12129.28,46178.69,256548.3
+524094,2020-06-05,California,Wrist,Strain,Slip/Fall,1421.55,True,Firm C,9,PT/Conservative,9692.59,91945.85,74124.84,411804.66
+403915,2022-05-31,Texas,Knee,Strain,Slip/Fall,447.7,False,Firm B,3,PT/Conservative,7226.03,4136.75,1993.47,11074.83
+935474,2022-06-22,Georgia,Shoulder,Sprain,Lifting,744.65,True,Firm B,2,PT/Conservative,19957.2,27522.26,8203.07,45572.63
+105274,2021-03-18,Florida,Back,Strain,Lifting,1031.33,True,Firm B,3,PT/Conservative,19378.53,15655.59,8456.12,46978.42
+331512,2021-06-17,New York,Wrist,Contusion,Struck By,1959.44,True,Firm A,5,PT/Conservative,3604.87,18105.23,8960.23,49779.04
+307007,2022-01-26,New York,Shoulder,Strain,Repetitive Motion,709.11,True,Firm A,4,PT/Conservative,11724.81,4680.13,6386.27,35479.3
+609462,2020-07-11,Florida,Wrist,Strain,Lifting,534.54,False,Firm B,1,PT/Conservative,8337.72,19756.6,6106.1,33922.77
+358133,2022-05-29,Florida,Shoulder,Sprain,Repetitive Motion,490.27,False,Solo Practitioner,8,PT/Conservative,11878.23,17149.64,9375.38,52085.43
+912402,2019-09-18,Georgia,Wrist,Strain,Lifting,962.53,True,Firm B,5,PT/Conservative,11378.78,18422.82,6236.52,34647.35
+862760,2018-06-04,Georgia,Wrist,Fracture,Repetitive Motion,1388.22,True,Firm C,9,Surgery,103677.18,42146.36,60075.59,333753.28
+595036,2021-09-01,Florida,Wrist,Sprain,Lifting,1203.58,True,Firm A,7,PT/Conservative,15564.57,47661.77,22360.89,124227.16
+626560,2018-01-22,Texas,Neck,Sprain,Repetitive Motion,869.32,False,Firm B,10,PT/Conservative,15468.07,35572.57,13203.14,73350.77
+791444,2022-11-22,California,Shoulder,Strain,Struck By,484.06,True,Firm C,6,PT/Conservative,11297.35,10223.35,13114.75,72859.75
+144887,2021-10-01,California,Knee,Strain,Struck By,1098.14,True,Firm C,2,PT/Conservative,9585.64,39137.71,22074.29,122634.95
+764343,2022-08-27,Florida,Wrist,Fracture,Repetitive Motion,921.08,False,Firm C,10,Surgery,77845.74,57143.8,69234.78,384637.64
+641760,2019-05-31,Florida,Wrist,Strain,Lifting,942.22,False,Firm A,9,PT/Conservative,8552.33,8706.11,7379.84,40999.12
+561267,2018-12-06,Georgia,Neck,Strain,Repetitive Motion,1239.02,False,Firm A,4,PT/Conservative,14297.43,42523.17,14022.93,77905.16
+950576,2019-11-08,California,Knee,Strain,Repetitive Motion,551.37,False,Firm B,1,PT/Conservative,7990.96,9461.51,5257.53,29208.49
+701344,2021-04-28,Texas,Back,Contusion,Repetitive Motion,1042.48,True,Firm C,3,PT/Conservative,5325.04,67427.61,19855.38,110307.68
+525151,2021-05-12,Texas,Back,Strain,Struck By,1099.71,False,Firm B,7,PT/Conservative,12847.26,20322.64,7779.79,43221.08
+249644,2022-06-16,New York,Wrist,Sprain,Lifting,1099.24,True,Solo Practitioner,10,PT/Conservative,17318.68,51510.39,31713.67,176187.07
+172187,2019-04-16,Georgia,Back,Strain,Struck By,1334.27,True,Firm A,3,PT/Conservative,20156.06,69568.84,20055.58,111419.91
+744610,2021-05-13,Texas,Wrist,Sprain,Slip/Fall,785.4,False,Firm A,7,PT/Conservative,10985.69,43542.58,15255.46,84752.55
+541119,2020-01-29,New York,Neck,Contusion,Struck By,975.04,False,Firm A,7,PT/Conservative,4327.45,8365.84,6088.34,33824.1
+366881,2020-09-04,Texas,Shoulder,Fracture,Struck By,1140.2,False,Firm A,1,Surgery,100721.3,69232.94,32887.6,182708.9
+647923,2018-08-30,Florida,Shoulder,Strain,Slip/Fall,1188.53,True,Firm C,5,PT/Conservative,10643.01,49419.08,25346.11,140811.74
+692099,2020-01-19,New York,Neck,Strain,Struck By,1399.27,True,Solo Practitioner,5,PT/Conservative,17538.07,22164.44,14280.84,79337.99
+705711,2019-12-07,Texas,Neck,Strain,Repetitive Motion,500.29,True,Solo Practitioner,6,PT/Conservative,16051.11,32358.76,10416.66,57870.31
+268546,2020-03-07,California,Knee,Contusion,Struck By,379.75,True,Firm C,4,PT/Conservative,3384.64,5012.7,4535.66,25198.1
+183927,2021-06-01,Texas,Wrist,Sprain,Lifting,1821.32,True,Solo Practitioner,8,PT/Conservative,17930.39,99771.91,28517.46,158430.35
+311505,2022-10-08,California,Wrist,Fracture,Repetitive Motion,3155.14,True,Firm C,4,Surgery,148754.52,156179.43,162678.32,903768.43
+265092,2018-06-27,California,Knee,Strain,Repetitive Motion,909.79,True,Firm A,9,PT/Conservative,9074.88,21016.15,16113.32,89518.44
+861411,2022-08-27,Georgia,Shoulder,Laceration,Lifting,930.61,True,Firm B,8,PT/Conservative,5660.1,14740.86,5064.93,28138.52
+702833,2018-01-10,California,Back,Fracture,Lifting,559.72,False,Firm C,9,Surgery,137668.36,20317.84,112453.7,624742.78
+931928,2021-03-23,Florida,Wrist,Strain,Repetitive Motion,1216.3,False,Solo Practitioner,10,PT/Conservative,7179.14,67431.67,26272.4,145957.75
+605382,2018-08-27,Georgia,Neck,Sprain,Struck By,1004.73,False,Firm A,5,PT/Conservative,15819.51,14588.68,7700.15,42778.6
+401244,2018-07-10,New York,Back,Fracture,Repetitive Motion,885.83,False,Firm C,4,Surgery,121865.94,35663.52,79937.87,444099.27
+291663,2022-03-09,Texas,Neck,Sprain,Lifting,613.92,True,Firm B,4,PT/Conservative,29530.43,14991.93,8495.95,47199.73
+748645,2019-12-31,Georgia,Back,Sprain,Struck By,1296.37,True,Firm A,8,PT/Conservative,27378.8,49625.04,24291.51,134952.82
+750817,2019-10-08,Texas,Shoulder,Strain,Lifting,479.05,False,Firm B,1,PT/Conservative,9034.16,32565.82,6263.34,34796.36
+938095,2020-05-16,California,Wrist,Strain,Repetitive Motion,609.31,False,Solo Practitioner,6,PT/Conservative,8080.52,32171.57,15755.44,87530.25
+112394,2021-10-12,Georgia,Shoulder,Strain,Lifting,1119.25,True,Firm C,4,PT/Conservative,12514.46,51709.35,18982.33,105457.39
+594241,2021-06-09,Florida,Knee,Strain,Lifting,890.82,False,Firm C,8,PT/Conservative,8979.18,5879.41,7145.78,39698.76
+699166,2018-09-26,Texas,Shoulder,Sprain,Struck By,1119.9,False,Firm B,3,PT/Conservative,12127.2,41391.5,9987.67,55487.08
+944804,2018-01-20,New York,Wrist,Fracture,Lifting,1454.56,False,Firm C,9,Surgery,103831.44,17280.17,81054.92,450305.11
+517754,2018-07-22,New York,Knee,Sprain,Slip/Fall,1046.9,False,Firm C,6,PT/Conservative,12703.71,67022.54,44205.22,245584.57
+687569,2021-02-15,New York,Knee,Strain,Repetitive Motion,545.91,True,Firm C,6,PT/Conservative,12456.75,21257.74,19298.74,107215.2
+611174,2022-05-06,New York,Wrist,Strain,Repetitive Motion,680.51,True,Solo Practitioner,10,PT/Conservative,12773.26,21558.56,15833.84,87965.76
+524434,2022-10-05,Georgia,Neck,Strain,Lifting,988.11,False,Solo Practitioner,5,PT/Conservative,11768.48,50867.9,12971.3,72062.76
+566509,2022-05-19,Texas,Knee,Strain,Repetitive Motion,656.68,True,Firm B,5,PT/Conservative,12261.19,18203.17,5967.65,33153.6
+320800,2018-12-08,Georgia,Knee,Fracture,Slip/Fall,1465.33,False,Firm A,2,Surgery,91681.1,18375.24,22869.51,127052.84
+748127,2018-11-15,Texas,Shoulder,Strain,Lifting,1718.76,False,Firm B,9,PT/Conservative,8422.45,74869.19,20623.0,114572.24
+129959,2018-03-13,Texas,Knee,Strain,Lifting,651.01,False,Firm B,10,PT/Conservative,7770.24,20624.0,7525.03,41805.7
+578720,2021-07-16,Florida,Knee,Fracture,Lifting,1729.6,False,Firm B,2,Surgery,72569.56,37670.69,24379.08,135439.31
+422823,2020-01-20,New York,Back,Strain,Repetitive Motion,1013.41,False,Solo Practitioner,9,PT/Conservative,12376.26,32104.83,19805.5,110030.54
+821179,2020-10-04,Georgia,Knee,Sprain,Repetitive Motion,725.12,True,Firm C,4,PT/Conservative,15220.1,21536.06,10791.81,59954.49
+687783,2020-06-14,Texas,Knee,Strain,Slip/Fall,578.07,False,Firm C,5,PT/Conservative,7535.99,29377.52,11098.36,61657.55
+948097,2019-07-05,Georgia,Neck,Strain,Slip/Fall,675.52,False,Solo Practitioner,5,PT/Conservative,13592.94,30763.18,9786.45,54369.18
+615895,2019-01-20,New York,Wrist,Strain,Slip/Fall,985.86,False,Firm B,8,PT/Conservative,9216.25,38389.39,20028.86,111271.44
+344119,2018-07-04,Florida,Shoulder,Strain,Struck By,481.85,False,Firm A,6,PT/Conservative,7138.65,21307.41,9835.95,54644.18
+984522,2022-03-18,New York,Back,Fracture,Repetitive Motion,1185.59,True,Solo Practitioner,1,Surgery,206437.18,30517.09,63416.17,352312.07
+905459,2022-01-03,Florida,Neck,Sprain,Slip/Fall,1955.92,True,Firm A,9,PT/Conservative,26011.19,86490.78,48080.4,267113.34
+318572,2020-08-26,New York,Shoulder,Strain,Slip/Fall,1113.77,True,Solo Practitioner,5,PT/Conservative,9860.18,65422.85,26319.43,146219.04
+477934,2022-12-23,California,Back,Strain,Struck By,621.25,False,Firm B,5,PT/Conservative,11628.91,26241.6,14681.75,81565.29
+225461,2020-03-21,New York,Wrist,Sprain,Struck By,1518.69,True,Firm A,4,PT/Conservative,18785.42,25058.39,17295.45,96085.86
+624203,2018-07-07,Texas,Back,Strain,Repetitive Motion,552.35,True,Solo Practitioner,4,PT/Conservative,14245.25,5103.71,3765.08,20917.12
+685472,2022-06-03,Texas,Neck,Strain,Struck By,664.26,False,Firm C,1,PT/Conservative,12823.48,40772.28,12657.34,70318.53
+840951,2020-06-15,Florida,Neck,Fracture,Lifting,1231.18,False,Firm C,10,Surgery,112812.72,33315.73,75211.96,417844.21
+268132,2018-05-22,Georgia,Shoulder,Fracture,Struck By,1098.27,True,Solo Practitioner,3,Surgery,136520.74,16671.74,27952.42,155291.25
+749838,2022-10-21,Georgia,Shoulder,Sprain,Struck By,1133.38,True,Solo Practitioner,9,PT/Conservative,14967.84,56102.31,18480.09,102667.15
+742818,2019-08-03,Texas,Back,Strain,Slip/Fall,551.08,True,Firm B,1,PT/Conservative,16865.35,27642.17,6850.5,38058.34
+212255,2020-09-21,New York,Knee,Sprain,Lifting,673.53,True,Firm B,10,PT/Conservative,16445.2,34228.79,23843.86,132465.91
+174316,2018-01-27,Georgia,Knee,Sprain,Slip/Fall,1074.49,False,Solo Practitioner,6,PT/Conservative,12358.02,48932.27,14366.3,79812.78
+842846,2018-04-30,Georgia,Back,Sprain,Slip/Fall,726.18,True,Firm A,2,PT/Conservative,22261.79,27798.17,10252.56,56958.65
+342239,2020-12-24,California,Neck,Fracture,Repetitive Motion,753.38,False,Firm C,8,Surgery,155410.62,19392.0,118674.7,659303.87
+797557,2020-05-24,Georgia,Wrist,Strain,Lifting,1431.56,True,Solo Practitioner,6,PT/Conservative,9592.93,15117.27,5486.09,30478.27
+676802,2019-10-27,Georgia,Shoulder,Fracture,Repetitive Motion,837.16,False,Firm C,6,Surgery,78246.88,6077.78,27850.1,154722.77
+569237,2020-03-24,California,Wrist,Strain,Repetitive Motion,663.61,False,Firm C,4,PT/Conservative,9463.43,39856.42,26738.08,148544.91
+997287,2019-10-07,California,Wrist,Fracture,Repetitive Motion,820.52,True,Solo Practitioner,6,Surgery,144245.52,24369.44,68095.25,378306.94
+245131,2019-06-27,Georgia,Neck,Strain,Lifting,971.68,True,Solo Practitioner,10,PT/Conservative,14375.41,57076.48,20198.94,112216.33
+869933,2018-06-08,California,Knee,Sprain,Slip/Fall,901.57,False,Solo Practitioner,2,PT/Conservative,11513.58,20231.23,10107.82,56154.58
+908348,2019-11-16,Georgia,Knee,Contusion,Slip/Fall,531.27,True,Firm A,7,PT/Conservative,3564.56,10519.15,3842.52,21347.34
+419588,2020-12-09,California,Neck,Strain,Repetitive Motion,1100.04,True,Solo Practitioner,8,PT/Conservative,16346.39,15972.58,14935.44,82974.64
+724041,2021-03-24,New York,Shoulder,Sprain,Repetitive Motion,917.45,True,Firm A,8,PT/Conservative,19327.43,61762.73,38629.69,214609.38
+881519,2018-04-11,Florida,Knee,Fracture,Repetitive Motion,553.42,True,Firm B,8,Surgery,132027.24,25202.75,50365.44,279808.0
+783932,2021-03-16,New York,Neck,Strain,Lifting,1141.36,False,Firm A,2,PT/Conservative,11455.01,10546.17,7934.34,44079.69
+544114,2020-01-19,New York,Wrist,Sprain,Lifting,681.66,True,Solo Practitioner,10,PT/Conservative,20125.5,17995.82,17629.08,97939.35
+561859,2018-04-02,California,Neck,Sprain,Slip/Fall,875.62,True,Firm B,10,Surgery,60150.96,53167.65,53259.1,295883.9
+972881,2022-08-07,Texas,Shoulder,Strain,Slip/Fall,659.9,False,Firm B,4,PT/Conservative,8613.18,5661.94,2749.55,15275.3
+648684,2022-03-17,Georgia,Neck,Sprain,Slip/Fall,717.53,False,Firm A,5,PT/Conservative,16048.04,28887.76,11173.47,62074.85
+163029,2019-08-05,Florida,Shoulder,Strain,Slip/Fall,1313.19,True,Firm C,6,PT/Conservative,12204.94,62402.79,32629.89,181277.19
+120005,2019-08-23,Florida,Wrist,Laceration,Slip/Fall,1064.36,False,Firm A,3,PT/Conservative,3950.32,11239.64,4486.74,24926.34
+624970,2020-07-26,Florida,Back,Strain,Lifting,530.18,False,Solo Practitioner,3,PT/Conservative,11457.98,4898.86,3819.56,21219.8
+463625,2021-11-02,New York,Neck,Laceration,Lifting,871.36,True,Solo Practitioner,1,PT/Conservative,9133.06,57509.76,17989.84,99943.53
+393804,2019-04-07,Florida,Neck,Strain,Struck By,1048.15,True,Firm B,10,PT/Conservative,18016.15,33205.39,18472.5,102625.01
+547180,2019-10-02,New York,Neck,Sprain,Repetitive Motion,1551.63,True,Firm B,7,PT/Conservative,23420.88,101383.5,47793.35,265518.62
+252203,2021-09-05,New York,Back,Fracture,Slip/Fall,892.37,True,Firm B,1,Surgery,159496.06,40638.53,55264.36,307024.24
+534152,2020-04-22,Texas,Neck,Sprain,Slip/Fall,1131.97,True,Firm A,10,PT/Conservative,25193.29,47814.41,21911.79,121732.18
+379825,2021-05-25,California,Neck,Strain,Slip/Fall,1203.44,False,Solo Practitioner,3,PT/Conservative,13491.29,81015.58,31307.01,173927.85
+987240,2021-05-23,Texas,Neck,Contusion,Struck By,547.13,False,Firm B,4,PT/Conservative,4427.0,10833.17,3032.99,16849.93
+133795,2020-04-16,California,Knee,Strain,Repetitive Motion,1081.41,True,Firm B,8,PT/Conservative,12583.8,40682.64,23007.74,127820.76
+747033,2020-09-30,New York,Neck,Strain,Slip/Fall,959.74,False,Solo Practitioner,10,PT/Conservative,13636.18,42439.7,24807.9,137821.66
+699716,2021-05-01,Texas,Wrist,Strain,Struck By,1136.01,True,Solo Practitioner,1,PT/Conservative,11179.63,12746.03,3867.94,21488.55
+641198,2022-04-17,Florida,Shoulder,Strain,Lifting,1100.44,False,Firm B,7,PT/Conservative,8437.34,63913.56,23217.95,128988.59
+742917,2018-04-22,Georgia,Knee,Strain,Slip/Fall,1345.26,True,Firm B,7,PT/Conservative,9433.51,47057.19,13499.68,74998.22
+439173,2020-07-12,New York,Neck,Contusion,Slip/Fall,852.18,False,Firm B,2,PT/Conservative,4824.41,48369.74,14831.35,82396.4
+219710,2021-12-17,Georgia,Wrist,Sprain,Repetitive Motion,1233.02,False,Solo Practitioner,1,PT/Conservative,13450.23,26855.18,6350.75,35281.96
+451475,2021-03-04,New York,Neck,Strain,Slip/Fall,1467.19,False,Firm C,8,PT/Conservative,12041.18,64879.14,47502.99,263905.5
+756883,2019-01-06,Florida,Back,Fracture,Lifting,583.67,True,Solo Practitioner,8,Surgery,192750.98,6548.78,63196.08,351089.32
+946677,2018-01-12,Florida,Neck,Fracture,Struck By,440.78,False,Solo Practitioner,2,Surgery,109131.02,29382.39,33082.81,183793.41
+729252,2018-01-14,Texas,Wrist,Fracture,Repetitive Motion,683.05,True,Firm B,1,Surgery,149989.94,39671.54,28628.04,159044.69
+465973,2018-03-17,California,Wrist,Strain,Slip/Fall,1192.51,True,Solo Practitioner,3,PT/Conservative,9503.81,60603.36,24116.5,133980.54
+804737,2019-08-06,New York,Shoulder,Contusion,Slip/Fall,1077.45,False,Firm C,7,PT/Conservative,2450.34,13511.22,9693.37,53852.05
+895284,2020-05-25,Georgia,Knee,Strain,Lifting,2134.53,False,Solo Practitioner,9,PT/Conservative,7337.03,15496.69,6070.14,33723.01
+829630,2019-03-05,Georgia,Back,Strain,Lifting,1654.72,False,Firm C,5,PT/Conservative,13496.49,21842.3,10836.3,60201.64
+703080,2021-06-30,Texas,Wrist,Strain,Struck By,1100.08,False,Firm B,5,PT/Conservative,6754.59,19603.43,5167.44,28708.02
+101657,2018-08-31,California,Neck,Sprain,Struck By,591.15,False,Firm C,6,PT/Conservative,17563.72,38235.58,32321.25,179562.52
+945197,2021-07-29,New York,Shoulder,Strain,Slip/Fall,408.89,False,Firm C,1,PT/Conservative,7276.13,25097.67,12716.05,70644.7
+819150,2019-11-14,New York,Wrist,Laceration,Repetitive Motion,976.71,True,Firm C,8,PT/Conservative,6667.44,26429.77,20141.99,111899.95
+935981,2018-03-14,Florida,Knee,Contusion,Lifting,840.65,False,Firm A,9,PT/Conservative,3455.12,11651.41,6432.24,35734.69
+692385,2022-01-24,California,Back,Strain,Lifting,1255.17,False,Firm B,5,PT/Conservative,11810.59,14083.01,10030.71,55726.14
+455627,2020-02-08,California,Neck,Fracture,Lifting,648.42,False,Firm C,7,Surgery,138121.92,13694.63,97415.56,541197.58
+621199,2022-12-02,New York,Neck,Fracture,Repetitive Motion,965.27,True,Firm A,4,Surgery,225641.04,19749.42,98339.48,546330.45
+565330,2020-11-02,New York,Neck,Strain,Struck By,534.47,False,Firm B,2,PT/Conservative,13094.15,3880.25,4779.22,26551.23
+641218,2021-10-17,New York,Knee,Strain,Slip/Fall,1242.74,True,Firm A,10,PT/Conservative,9916.53,26246.67,20355.0,113083.36
+449479,2020-08-14,New York,Shoulder,Strain,Lifting,1131.35,True,Firm B,4,PT/Conservative,12242.95,38827.93,17426.83,96815.71
+390088,2020-12-26,California,Shoulder,Strain,Lifting,1169.12,True,Firm A,4,PT/Conservative,9434.57,24691.81,14870.85,82615.84
+467335,2021-01-30,Georgia,Wrist,Strain,Slip/Fall,1594.15,False,Firm C,9,PT/Conservative,9194.63,35772.73,18213.92,101188.43
+153190,2018-09-24,Florida,Back,Strain,Slip/Fall,849.47,False,Firm B,10,PT/Conservative,9644.79,5606.5,5566.94,30927.47
+760047,2022-09-09,Georgia,Shoulder,Sprain,Slip/Fall,550.2,False,Firm B,2,PT/Conservative,13830.96,4720.72,3160.58,17558.77
+201987,2020-07-22,Georgia,Knee,Strain,Repetitive Motion,1502.96,True,Firm C,6,PT/Conservative,9874.08,18847.12,9991.86,55510.36
+292259,2021-12-03,California,Knee,Strain,Slip/Fall,758.15,False,Firm C,8,PT/Conservative,9008.38,50037.9,37995.02,211083.43
+986850,2018-12-16,California,Wrist,Strain,Slip/Fall,1449.03,False,Firm C,9,PT/Conservative,8173.52,90854.18,71383.62,396575.69
+174369,2022-06-11,Florida,Wrist,Strain,Repetitive Motion,703.51,True,Solo Practitioner,2,PT/Conservative,12723.04,9750.65,5288.6,29381.11
+318353,2022-07-25,California,Wrist,Sprain,Repetitive Motion,502.73,True,Solo Practitioner,2,PT/Conservative,14440.53,26212.34,13212.05,73400.27
+725030,2020-08-06,Georgia,Neck,Strain,Struck By,576.79,True,Firm A,10,PT/Conservative,20135.37,4948.86,8194.82,45526.75
+443312,2020-10-09,Texas,Neck,Sprain,Slip/Fall,1457.23,True,Solo Practitioner,9,PT/Conservative,22349.47,33662.01,13722.44,76235.77
+508926,2021-06-14,New York,Shoulder,Strain,Lifting,1150.11,False,Firm A,10,PT/Conservative,7720.39,22772.18,15816.08,87867.12
+741194,2020-11-11,Georgia,Back,Strain,Slip/Fall,766.94,True,Firm C,2,PT/Conservative,16045.17,13160.69,7843.76,43576.46
+395917,2022-11-08,Florida,Knee,Fracture,Struck By,761.48,False,Solo Practitioner,9,Surgery,89315.02,11559.27,35121.23,195117.93
+794668,2018-12-22,Texas,Knee,Sprain,Lifting,822.3,False,Firm C,3,PT/Conservative,12974.13,17909.69,8417.89,46766.08
+112166,2018-05-27,Texas,Knee,Laceration,Repetitive Motion,790.98,True,Solo Practitioner,8,PT/Conservative,7068.57,20881.87,6285.88,34921.53
+546383,2021-06-30,Texas,Wrist,Sprain,Struck By,1388.68,False,Firm B,7,PT/Conservative,10315.2,30245.45,8960.51,49780.61
+706012,2020-10-17,California,Shoulder,Strain,Lifting,508.57,True,Solo Practitioner,6,PT/Conservative,12476.34,13426.25,10687.21,59373.37
+708455,2020-09-13,Texas,Shoulder,Strain,Slip/Fall,357.22,True,Solo Practitioner,2,PT/Conservative,9508.25,15088.97,4000.19,22223.28
+764469,2021-01-09,Florida,Back,Contusion,Slip/Fall,1040.89,False,Solo Practitioner,10,PT/Conservative,4268.56,69385.73,26869.01,149272.3
+541467,2019-12-24,Florida,Wrist,Sprain,Lifting,596.05,True,Firm B,10,PT/Conservative,17715.11,22030.01,13624.53,75691.82
+788201,2019-08-21,Texas,Neck,Fracture,Lifting,1884.91,False,Firm C,5,Surgery,130134.86,108231.53,73864.0,410355.58
+114892,2022-02-27,New York,Neck,Sprain,Lifting,1013.85,True,Firm B,8,Surgery,60069.68,8029.69,26810.63,148947.95
+938202,2020-12-16,Florida,Neck,Fracture,Repetitive Motion,517.66,False,Solo Practitioner,4,Surgery,109306.36,26990.79,35687.03,198261.25
+861265,2021-07-29,Texas,Back,Fracture,Slip/Fall,1021.74,True,Solo Practitioner,7,Surgery,170802.84,37089.16,45419.11,252328.41
+416006,2020-09-02,New York,Neck,Strain,Struck By,846.37,False,Firm B,9,PT/Conservative,11409.19,40778.11,21910.02,121722.35
+112439,2019-08-15,Georgia,Wrist,Sprain,Slip/Fall,831.44,True,Firm C,7,PT/Conservative,16685.55,43351.28,21776.33,120979.61
+783740,2022-10-24,Texas,Back,Strain,Struck By,1565.87,False,Firm B,9,PT/Conservative,9839.24,49606.76,14718.38,81768.75
+810638,2021-11-14,California,Back,Sprain,Slip/Fall,1744.99,False,Firm A,8,PT/Conservative,19911.69,72556.68,47783.91,265466.15
+330074,2022-01-25,Georgia,Back,Fracture,Slip/Fall,747.82,True,Firm A,2,Surgery,161130.02,32575.04,42291.57,234953.14
+998043,2021-05-23,New York,Neck,Contusion,Repetitive Motion,1034.21,False,Solo Practitioner,2,PT/Conservative,3724.12,26620.57,8459.03,46994.61
+575470,2019-07-21,California,Shoulder,Strain,Slip/Fall,942.56,False,Solo Practitioner,7,PT/Conservative,7282.3,39813.73,20642.73,114681.83
+162976,2019-06-13,Texas,Knee,Laceration,Repetitive Motion,641.55,False,Solo Practitioner,2,PT/Conservative,4966.92,41495.45,7975.83,44310.17
+666893,2022-04-24,California,Knee,Sprain,Slip/Fall,620.71,True,Firm A,10,PT/Conservative,13879.26,22122.1,21737.34,120763.0
+362769,2022-05-11,Florida,Neck,Sprain,Slip/Fall,945.42,True,Firm C,3,PT/Conservative,25824.89,18719.32,16457.93,91432.93
+445852,2020-03-12,California,Knee,Strain,Slip/Fall,738.34,True,Solo Practitioner,8,PT/Conservative,10801.71,7796.87,7894.85,43860.3
+694798,2021-01-01,Georgia,Knee,Strain,Slip/Fall,1230.02,False,Firm C,2,PT/Conservative,8154.63,78745.88,23273.85,129299.17
+897392,2022-04-19,New York,Wrist,Strain,Struck By,628.63,True,Solo Practitioner,2,PT/Conservative,13156.96,21159.69,10360.34,57557.46
+822303,2020-01-06,Georgia,Neck,Strain,Repetitive Motion,1115.42,True,Firm B,8,PT/Conservative,16762.91,22085.32,9510.47,52835.93
+166052,2022-06-12,California,Wrist,Laceration,Struck By,1482.88,True,Firm C,1,PT/Conservative,6688.52,96891.38,43906.76,243926.45
+926045,2022-01-16,California,Wrist,Strain,Repetitive Motion,540.3,True,Firm A,3,PT/Conservative,13202.72,7488.56,8187.82,45487.91
+785592,2018-02-09,Texas,Back,Strain,Repetitive Motion,584.42,True,Firm A,5,PT/Conservative,14206.72,22757.31,9139.08,50772.65
+932251,2018-07-19,Florida,Back,Sprain,Slip/Fall,645.97,True,Firm B,2,PT/Conservative,27052.24,17906.29,10350.23,57501.27
+546915,2019-11-22,Georgia,Wrist,Strain,Repetitive Motion,840.78,True,Firm B,6,PT/Conservative,9474.16,20531.85,6945.95,38588.63
+226610,2019-07-15,Georgia,Shoulder,Fracture,Struck By,963.5,True,Firm A,3,Surgery,128194.32,50236.89,39509.91,219499.49
+929478,2022-10-02,California,Knee,Strain,Slip/Fall,775.25,True,Firm C,7,PT/Conservative,12754.2,42468.19,33723.41,187352.28
+946632,2022-06-11,Texas,Neck,Fracture,Struck By,750.43,False,Firm B,10,Surgery,130235.34,23773.62,40100.48,222780.46
+725236,2019-01-04,Texas,Shoulder,Strain,Slip/Fall,2006.21,True,Firm A,9,PT/Conservative,9238.98,64880.83,21174.7,117637.24
+748985,2020-01-12,Florida,Shoulder,Strain,Slip/Fall,924.22,True,Solo Practitioner,3,PT/Conservative,12517.07,35379.14,11408.3,63379.43
+802695,2018-03-30,California,Neck,Strain,Lifting,890.05,False,Firm A,1,PT/Conservative,10841.38,17035.56,9798.45,54435.81
+284431,2018-11-20,Florida,Back,Contusion,Struck By,1234.2,False,Firm B,6,PT/Conservative,3632.3,76569.77,23877.58,132653.23
+916814,2018-08-14,California,Knee,Contusion,Struck By,1240.89,True,Solo Practitioner,10,PT/Conservative,3631.52,18836.71,10634.34,59079.65
+156978,2022-12-29,Florida,Knee,Strain,Lifting,1019.42,True,Firm B,6,PT/Conservative,12418.62,48442.84,17928.5,99602.77
+312033,2019-11-19,Florida,Back,Strain,Slip/Fall,886.46,False,Solo Practitioner,3,PT/Conservative,10051.93,7020.76,4363.22,24240.11
+460265,2019-03-27,Florida,Neck,Fracture,Repetitive Motion,835.31,True,Solo Practitioner,4,Surgery,159173.82,33629.58,50147.69,278598.29
+596489,2022-09-11,Georgia,Neck,Strain,Struck By,3220.34,True,Firm B,10,PT/Conservative,16110.4,110522.07,35835.77,199087.59
+538065,2018-04-01,California,Back,Strain,Struck By,431.68,False,Solo Practitioner,8,PT/Conservative,13405.7,12820.9,11353.52,63075.1
+187127,2021-02-17,California,Neck,Strain,Lifting,972.88,True,Firm A,8,PT/Conservative,15538.99,11557.81,14248.37,79157.62
+419644,2018-11-28,Florida,Back,Laceration,Struck By,922.55,True,Firm B,6,PT/Conservative,8157.07,56626.12,19093.83,106076.85
+586849,2021-12-12,New York,Knee,Contusion,Lifting,1262.83,True,Solo Practitioner,5,PT/Conservative,3638.94,74178.63,28434.64,157970.22
+703171,2022-06-16,California,Wrist,Contusion,Slip/Fall,807.37,False,Firm A,7,PT/Conservative,3580.23,22380.3,13250.23,73612.38
+587957,2021-06-21,New York,Wrist,Sprain,Repetitive Motion,1089.39,True,Firm B,9,PT/Conservative,13664.34,12222.96,11662.67,64792.62
+780566,2020-09-06,New York,Neck,Sprain,Repetitive Motion,612.75,False,Firm C,9,PT/Conservative,17570.33,31948.78,33701.3,187229.45
+543473,2019-07-22,Georgia,Knee,Strain,Slip/Fall,1063.63,False,Firm C,8,PT/Conservative,9142.0,12635.92,8445.63,46920.17
+938759,2021-10-10,California,Neck,Contusion,Struck By,1106.01,True,Solo Practitioner,3,PT/Conservative,6092.76,21899.0,9582.68,53237.09
+180685,2018-08-12,New York,Knee,Strain,Repetitive Motion,899.94,True,Solo Practitioner,9,PT/Conservative,10407.09,21976.53,14572.44,80958.02
+238440,2020-08-28,Georgia,Shoulder,Strain,Slip/Fall,558.02,True,Firm C,7,PT/Conservative,9016.48,12521.97,7397.37,41096.52
+459443,2021-09-04,New York,Wrist,Sprain,Struck By,810.7,False,Firm B,5,PT/Conservative,9740.95,15516.8,9258.69,51437.17
+927607,2019-06-17,Texas,Back,Strain,Lifting,970.44,False,Firm B,9,PT/Conservative,10499.58,65330.02,18399.25,102218.07
+291134,2018-12-26,New York,Back,Laceration,Repetitive Motion,779.56,False,Firm C,3,PT/Conservative,7879.16,7717.64,7464.23,41467.95
+689810,2021-12-19,California,Neck,Strain,Repetitive Motion,795.15,False,Firm A,7,PT/Conservative,13543.86,43033.52,28189.82,156610.13
+905849,2018-10-25,Florida,Back,Laceration,Lifting,410.71,False,Firm C,10,PT/Conservative,6734.37,3252.82,5541.94,30788.58
+254228,2022-06-26,Texas,Shoulder,Sprain,Struck By,468.91,True,Firm A,5,PT/Conservative,14198.98,30638.58,10413.91,57855.05
+521139,2021-06-18,New York,Shoulder,Strain,Repetitive Motion,957.79,True,Firm B,1,PT/Conservative,10034.64,38560.63,13761.8,76454.47
+664566,2022-10-06,Georgia,Wrist,Strain,Struck By,656.15,False,Firm A,6,PT/Conservative,8364.09,13857.89,6111.35,33951.97
+255132,2022-01-06,Florida,Back,Strain,Lifting,1145.34,False,Firm A,4,PT/Conservative,11291.4,58962.1,22708.41,126157.83
+877548,2020-05-01,Georgia,Knee,Sprain,Struck By,741.89,True,Firm A,3,PT/Conservative,13649.1,12241.18,5662.25,31456.96
+417960,2020-08-30,California,Back,Contusion,Struck By,1172.13,True,Solo Practitioner,5,PT/Conservative,5833.6,28623.41,13261.37,73674.28
+283388,2021-02-12,Georgia,Neck,Strain,Struck By,1083.36,False,Solo Practitioner,1,PT/Conservative,14360.36,68641.69,13135.21,72973.39
+975126,2021-04-13,New York,Neck,Strain,Slip/Fall,600.27,True,Firm C,8,PT/Conservative,15727.35,26543.94,26237.98,145766.55
+785572,2021-09-25,California,Neck,Strain,Lifting,601.77,False,Firm C,10,PT/Conservative,9759.31,24624.43,25449.66,141387.0
+693047,2020-06-12,Texas,Back,Strain,Slip/Fall,684.65,False,Firm A,3,PT/Conservative,14103.86,38408.87,10951.31,60840.63
+583439,2022-12-04,New York,Shoulder,Strain,Lifting,1005.14,True,Firm C,9,PT/Conservative,12876.54,66339.24,51814.22,287856.77
+180558,2020-11-18,New York,Back,Fracture,Repetitive Motion,1210.3,False,Firm C,5,Surgery,113993.44,43933.89,83243.84,462465.76
+831871,2021-11-10,Georgia,Shoulder,Sprain,Slip/Fall,949.88,True,Firm C,6,PT/Conservative,15996.29,24449.91,14153.33,78629.61
+532007,2019-11-28,Florida,Wrist,Strain,Repetitive Motion,1394.43,True,Solo Practitioner,2,PT/Conservative,11106.23,31291.01,9661.3,53673.9
+958620,2018-09-26,Texas,Shoulder,Strain,Struck By,1048.69,False,Firm C,1,PT/Conservative,9512.88,8305.62,4262.26,23679.24
+333159,2018-09-21,California,Neck,Strain,Slip/Fall,679.55,False,Firm A,1,PT/Conservative,13463.55,41710.78,20236.79,112426.62
+607778,2022-04-01,California,Back,Sprain,Slip/Fall,1341.15,False,Firm C,1,PT/Conservative,18923.31,24784.45,19830.4,110168.87
+416298,2021-09-29,New York,Wrist,Strain,Repetitive Motion,2044.16,True,Firm A,2,PT/Conservative,9464.36,63409.84,24592.34,136624.1
+986950,2022-03-09,California,Shoulder,Strain,Repetitive Motion,855.81,True,Firm A,9,PT/Conservative,9166.63,23723.05,18271.52,101508.42
+850582,2019-01-28,Georgia,Back,Laceration,Slip/Fall,822.67,True,Solo Practitioner,6,PT/Conservative,8698.78,45608.82,11773.84,65410.22
+294118,2020-06-19,Georgia,Shoulder,Laceration,Struck By,1209.74,True,Firm B,7,PT/Conservative,6549.0,61478.99,16849.44,93608.01
+898395,2019-10-06,Georgia,Neck,Strain,Lifting,629.95,False,Firm A,2,PT/Conservative,13810.86,39497.87,11798.88,65549.33
+617695,2018-08-25,Georgia,Shoulder,Sprain,Struck By,1204.38,True,Solo Practitioner,5,PT/Conservative,13672.98,34975.2,10178.45,56546.96
+297955,2022-10-21,Florida,Shoulder,Strain,Struck By,692.47,True,Solo Practitioner,9,PT/Conservative,12495.44,42960.84,18926.69,105148.3
+809381,2018-06-24,New York,Wrist,Laceration,Repetitive Motion,619.59,True,Firm B,6,PT/Conservative,5276.52,28625.06,12053.01,66961.19
+723861,2022-09-25,New York,Knee,Strain,Lifting,987.67,False,Solo Practitioner,10,PT/Conservative,9179.36,63230.63,34342.33,190790.75
+608069,2020-11-13,Texas,Back,Strain,Struck By,573.54,False,Firm B,1,PT/Conservative,11235.92,23090.72,5308.25,29490.29
+873637,2018-04-19,New York,Neck,Strain,Lifting,859.22,True,Firm A,2,PT/Conservative,17519.64,34025.11,17982.07,99900.4
+904857,2020-10-05,Georgia,Knee,Strain,Lifting,1132.25,False,Firm A,1,PT/Conservative,8564.56,75475.79,16004.67,88914.81
+224921,2020-02-25,Georgia,Knee,Strain,Slip/Fall,1450.79,True,Firm C,3,PT/Conservative,10682.61,51706.16,18590.42,103280.13
+551601,2018-10-03,Florida,Back,Fracture,Struck By,627.41,False,Firm B,9,Surgery,133536.44,4140.91,45804.11,254467.26
+510396,2019-06-24,California,Wrist,Sprain,Lifting,618.72,False,Firm A,10,PT/Conservative,11553.47,38793.74,28641.32,159118.47
+234425,2022-09-11,California,Back,Sprain,Lifting,753.07,False,Solo Practitioner,6,PT/Conservative,14728.67,8449.45,9020.11,50111.7
+531939,2019-12-21,New York,Neck,Fracture,Slip/Fall,371.26,True,Firm A,6,Surgery,186704.92,16172.09,89266.68,495925.98
+120669,2021-01-07,California,Wrist,Fracture,Struck By,511.56,False,Solo Practitioner,10,Surgery,93988.08,31399.55,59152.85,328626.93
+431889,2020-02-13,Florida,Knee,Strain,Repetitive Motion,868.49,False,Firm C,3,PT/Conservative,8053.03,33245.8,14460.71,80337.29
+414070,2020-01-15,New York,Wrist,Strain,Lifting,793.39,True,Solo Practitioner,4,PT/Conservative,12555.58,30370.97,13877.14,77095.25
+878974,2018-07-08,Texas,Shoulder,Strain,Struck By,664.57,False,Firm C,2,PT/Conservative,7669.75,27632.82,9227.32,51262.87
+629152,2022-07-05,Georgia,Shoulder,Strain,Struck By,657.43,False,Solo Practitioner,9,PT/Conservative,8374.61,42088.67,13321.88,74010.45
+119506,2021-07-09,Georgia,Wrist,Strain,Struck By,830.7,False,Solo Practitioner,10,PT/Conservative,9215.56,35088.77,12658.02,70322.32
+647639,2019-02-15,Florida,Neck,Sprain,Lifting,1920.76,False,Firm C,2,PT/Conservative,21548.28,109022.34,46915.93,260644.06
+313446,2022-09-29,Texas,Neck,Strain,Repetitive Motion,876.32,False,Firm A,3,PT/Conservative,10392.98,28340.19,8234.56,45747.53
+129049,2019-05-18,Texas,Knee,Strain,Slip/Fall,1252.05,True,Firm C,3,PT/Conservative,12158.87,17353.41,8042.59,44681.05
+370948,2022-06-06,California,Back,Laceration,Struck By,834.98,True,Firm A,6,PT/Conservative,8681.63,54557.59,31704.42,176135.65
+412453,2022-11-11,Texas,Shoulder,Sprain,Slip/Fall,740.09,False,Firm B,2,PT/Conservative,10836.51,46892.1,9199.95,51110.82
+870158,2020-10-21,Georgia,Wrist,Strain,Slip/Fall,952.14,True,Firm A,6,PT/Conservative,12864.76,16967.13,7793.66,43298.1
+972765,2021-04-11,Texas,Knee,Strain,Slip/Fall,643.6,True,Firm C,8,PT/Conservative,10613.36,11893.73,8049.71,44720.6
+366659,2022-11-03,Texas,Back,Strain,Struck By,371.05,False,Firm C,3,PT/Conservative,12238.0,20815.91,8481.49,47119.37
+598306,2022-01-05,New York,Wrist,Strain,Slip/Fall,1101.88,True,Solo Practitioner,5,PT/Conservative,11955.21,60360.99,25160.87,139782.61
+834649,2020-01-14,New York,Knee,Strain,Struck By,839.39,False,Firm A,4,PT/Conservative,8299.71,10525.95,7516.22,41756.77
+320606,2022-10-27,Florida,Knee,Sprain,Lifting,795.92,True,Solo Practitioner,7,PT/Conservative,17726.53,5778.38,7281.97,40455.39
+852233,2020-05-15,Florida,Neck,Sprain,Slip/Fall,790.81,False,Firm C,8,PT/Conservative,20368.93,53759.26,34814.25,193412.48
+128679,2022-04-10,Florida,Knee,Sprain,Repetitive Motion,885.99,True,Firm B,5,PT/Conservative,15422.67,43271.75,15593.89,86632.75
+703779,2018-06-18,Florida,Neck,Sprain,Struck By,826.13,False,Solo Practitioner,3,PT/Conservative,17275.45,51253.11,17343.38,96352.13
+281905,2021-11-08,Florida,Neck,Strain,Lifting,837.27,True,Solo Practitioner,10,PT/Conservative,18928.38,25972.12,16555.59,91975.52
+121741,2018-02-17,Texas,Back,Laceration,Repetitive Motion,495.71,False,Firm A,7,PT/Conservative,7269.73,8833.55,4299.21,23884.51
+729557,2019-06-17,Georgia,Neck,Contusion,Slip/Fall,927.44,True,Solo Practitioner,8,PT/Conservative,7211.59,23872.31,7757.78,43098.79
+806331,2020-10-09,Florida,Neck,Contusion,Lifting,650.67,False,Solo Practitioner,3,PT/Conservative,5037.08,32637.61,9203.75,51131.97
+997935,2019-02-28,California,Neck,Strain,Struck By,1633.37,True,Firm C,5,PT/Conservative,14104.43,90554.03,59829.13,332384.03
+747684,2020-07-12,New York,Knee,Strain,Struck By,1078.03,True,Solo Practitioner,4,PT/Conservative,10622.85,46958.99,18248.84,101382.46
+502124,2021-12-21,New York,Back,Strain,Slip/Fall,1130.86,True,Firm B,8,PT/Conservative,16878.5,27615.6,18260.77,101448.75
+735829,2021-10-05,Florida,Back,Strain,Struck By,344.92,False,Firm C,3,PT/Conservative,10284.45,14797.07,9478.95,52660.81
+708684,2019-01-03,New York,Shoulder,Contusion,Repetitive Motion,844.05,True,Solo Practitioner,3,PT/Conservative,4228.96,15040.97,6103.9,33910.57
+222517,2019-10-04,New York,Shoulder,Sprain,Struck By,1066.6,False,Firm C,9,PT/Conservative,11234.9,70395.6,52593.26,292184.78
+556943,2018-12-04,Texas,Neck,Fracture,Struck By,1399.85,True,Firm B,1,Surgery,196996.92,39727.74,38073.49,211519.38
+292037,2018-03-15,Florida,Knee,Strain,Struck By,559.27,True,Firm C,9,PT/Conservative,11559.39,27314.75,19074.57,105969.84
+579995,2020-10-06,Texas,Back,Strain,Repetitive Motion,574.85,False,Firm B,9,PT/Conservative,10076.65,20867.06,7304.66,40581.42
+690607,2022-12-30,California,Wrist,Sprain,Repetitive Motion,933.62,False,Firm B,8,PT/Conservative,11462.34,36971.35,20424.2,113467.77
+444622,2018-02-23,Texas,Knee,Strain,Slip/Fall,809.55,False,Firm A,2,PT/Conservative,7325.58,24577.94,6686.56,37147.54
+971051,2021-12-20,Georgia,Wrist,Sprain,Lifting,1701.83,True,Solo Practitioner,6,PT/Conservative,15549.86,107827.95,27781.58,154342.1
+235602,2019-03-09,California,Shoulder,Sprain,Slip/Fall,903.01,False,Solo Practitioner,5,PT/Conservative,10023.37,40527.09,19989.21,111051.19
+351742,2022-04-28,Texas,Neck,Strain,Struck By,955.73,False,Firm A,5,PT/Conservative,11469.51,19554.24,7536.34,41868.57
+940014,2020-06-04,Georgia,Wrist,Strain,Slip/Fall,966.15,False,Firm B,8,PT/Conservative,8133.46,60577.6,16804.62,93359.02
+506941,2020-09-02,Florida,Back,Sprain,Lifting,559.97,True,Solo Practitioner,2,PT/Conservative,28612.58,4434.96,7440.32,41335.13
+638277,2019-12-01,Florida,Knee,Fracture,Slip/Fall,655.16,False,Solo Practitioner,2,Surgery,74075.32,23782.31,22874.64,127081.31
+414985,2018-11-01,Georgia,Neck,Fracture,Lifting,700.41,True,Firm A,1,Surgery,168968.82,9245.41,35541.67,197453.74
+635456,2020-05-20,California,Shoulder,Strain,Slip/Fall,1318.92,True,Solo Practitioner,3,PT/Conservative,9583.6,19150.72,9741.69,54120.51
+983855,2020-03-15,Georgia,Shoulder,Fracture,Struck By,432.73,False,Firm C,6,Surgery,89600.32,17136.11,37277.87,207099.27
+949352,2019-01-19,Georgia,Shoulder,Contusion,Slip/Fall,625.88,False,Firm A,1,PT/Conservative,2790.99,13631.67,3295.71,18309.49
+222346,2018-01-28,Georgia,Knee,Contusion,Struck By,1372.32,False,Firm C,7,PT/Conservative,2641.57,85138.73,30320.82,168449.0
+191892,2018-09-14,Texas,Back,Sprain,Repetitive Motion,1077.1,True,Solo Practitioner,3,PT/Conservative,29301.98,51894.68,14633.33,81296.29
+556957,2022-09-21,California,Knee,Strain,Struck By,1217.2,True,Firm B,3,PT/Conservative,11644.06,50611.18,20912.64,116181.35
+836727,2020-06-30,California,Wrist,Strain,Lifting,776.89,False,Firm C,1,PT/Conservative,8941.47,14869.67,10380.4,57668.87
+761032,2022-10-02,Florida,Wrist,Fracture,Lifting,1004.3,True,Solo Practitioner,8,Surgery,102536.84,52364.2,48532.93,269627.38
+719749,2022-01-24,Georgia,Neck,Sprain,Slip/Fall,1044.03,False,Firm C,9,PT/Conservative,17880.53,54435.72,28799.41,159996.73
+380859,2021-08-20,Florida,Knee,Fracture,Lifting,887.4,False,Firm A,3,Surgery,85511.88,49197.46,38510.74,213948.55
+861485,2019-01-29,Texas,Wrist,Strain,Lifting,707.5,False,Firm C,7,PT/Conservative,8036.08,42025.5,17485.43,97141.29
+973548,2021-10-10,Florida,Neck,Fracture,Lifting,1555.85,True,Firm B,3,Surgery,225343.9,93444.35,77826.33,432368.48
+263907,2021-05-25,California,Knee,Strain,Repetitive Motion,1647.49,True,Firm C,5,PT/Conservative,12573.52,47843.11,33230.17,184612.04
+809810,2018-11-21,California,Back,Sprain,Lifting,1768.93,False,Firm B,2,PT/Conservative,15186.7,63044.67,24352.97,135294.28
+334981,2020-09-23,Georgia,Back,Sprain,Lifting,1138.45,True,Firm A,1,PT/Conservative,26476.05,30055.08,11471.78,63732.11
+937798,2020-07-25,Georgia,Wrist,Fracture,Slip/Fall,276.95,True,Firm A,3,Surgery,139234.86,5666.4,33608.07,186711.52
+223794,2022-11-19,Texas,Shoulder,Sprain,Struck By,1313.94,True,Firm C,6,PT/Conservative,14343.4,26016.01,12719.81,70665.61
+228957,2022-10-04,New York,Back,Strain,Struck By,1394.74,False,Firm B,2,PT/Conservative,13461.3,30377.44,13113.59,72853.3
+490527,2022-01-04,Texas,Neck,Sprain,Struck By,1601.62,True,Solo Practitioner,7,Surgery,60289.4,17970.18,18449.84,102499.09
+581037,2022-10-12,California,Back,Strain,Slip/Fall,949.92,True,Firm C,6,PT/Conservative,14043.54,24450.94,21952.94,121960.79
+909891,2018-12-03,Florida,Neck,Contusion,Slip/Fall,1199.95,False,Solo Practitioner,9,PT/Conservative,4932.86,36430.48,13390.35,74390.81
+856601,2022-03-02,Florida,Shoulder,Contusion,Repetitive Motion,1103.75,False,Firm B,9,PT/Conservative,3524.51,50264.78,18608.9,103382.79
+926636,2021-06-20,California,Knee,Sprain,Lifting,1134.33,True,Firm C,7,PT/Conservative,17563.42,23957.05,26200.18,145556.54
+645752,2021-01-12,California,Wrist,Strain,Lifting,1074.77,True,Firm A,9,PT/Conservative,9307.87,9221.53,10230.14,56834.12
+353063,2022-09-01,Georgia,Back,Sprain,Lifting,831.79,False,Firm C,2,PT/Conservative,15199.19,37879.72,14239.53,79108.51
+893310,2021-08-26,New York,Back,Strain,Repetitive Motion,720.99,True,Firm C,5,PT/Conservative,18128.92,25696.08,24247.7,134709.45
+805097,2018-10-14,Florida,Back,Strain,Repetitive Motion,420.97,False,Firm A,3,PT/Conservative,9968.94,11947.13,6647.17,36928.72
+968679,2020-04-23,New York,Neck,Strain,Struck By,977.81,True,Solo Practitioner,10,PT/Conservative,18191.62,44529.47,27440.86,152449.22
+644153,2022-05-15,Florida,Knee,Fracture,Struck By,1329.46,False,Firm B,3,Surgery,79600.04,37730.07,28176.03,156533.5
+233299,2020-09-19,Florida,Wrist,Strain,Repetitive Motion,1471.86,False,Firm A,3,PT/Conservative,8971.14,84514.2,26585.43,147696.86
+487272,2018-09-01,Georgia,Back,Strain,Lifting,1422.42,True,Firm B,2,PT/Conservative,17129.15,36613.09,9995.03,55527.96
+419736,2020-02-06,New York,Neck,Strain,Struck By,1004.19,True,Firm C,4,PT/Conservative,17495.47,41091.45,28987.33,161040.73
+958914,2022-02-23,Florida,Shoulder,Strain,Slip/Fall,678.12,False,Firm C,10,PT/Conservative,8703.33,18349.93,14389.42,79941.22
+454233,2022-05-20,Florida,Neck,Sprain,Struck By,1133.92,False,Firm B,6,PT/Conservative,18618.23,60619.36,23346.7,129703.87
+938663,2021-07-03,Florida,Neck,Contusion,Lifting,1064.35,True,Firm C,2,PT/Conservative,6207.2,43553.2,17664.54,98136.35
+273659,2021-12-19,Georgia,Wrist,Fracture,Slip/Fall,2180.91,True,Firm A,10,Surgery,128646.04,103636.84,73847.43,410263.48
+298595,2022-03-18,New York,Back,Sprain,Repetitive Motion,982.91,True,Firm B,4,PT/Conservative,24206.57,25948.82,16323.78,90687.66
+979668,2022-12-23,California,Wrist,Strain,Slip/Fall,1065.27,False,Firm C,7,PT/Conservative,6828.25,59058.57,40676.3,225979.47
+535092,2018-02-19,New York,Back,Strain,Slip/Fall,633.9,True,Firm B,3,PT/Conservative,14710.35,42674.15,17118.94,95105.25
+905625,2018-07-03,California,Neck,Strain,Lifting,824.28,True,Firm A,5,PT/Conservative,15295.86,25569.17,19269.91,107055.06
+203540,2019-10-18,Texas,Shoulder,Strain,Slip/Fall,609.83,True,Firm B,10,PT/Conservative,10484.86,21331.85,8445.56,46919.79
+347978,2020-10-06,Georgia,Back,Strain,Lifting,2380.6,False,Solo Practitioner,2,PT/Conservative,11118.1,31423.92,7797.04,43316.88
+130310,2020-04-14,Georgia,Shoulder,Fracture,Slip/Fall,966.77,True,Firm B,5,Surgery,144474.02,49131.25,42668.46,237046.99
+567646,2018-06-21,Georgia,Shoulder,Fracture,Repetitive Motion,589.23,True,Solo Practitioner,9,Surgery,145750.36,8555.62,40291.99,223844.37
+143822,2018-01-03,California,Shoulder,Sprain,Repetitive Motion,1142.89,True,Solo Practitioner,5,PT/Conservative,17976.94,19611.99,14474.34,80413.02
+363076,2022-09-16,Texas,Wrist,Sprain,Lifting,838.95,True,Firm A,5,PT/Conservative,16758.43,23255.69,10096.63,56092.39
+514507,2021-12-01,New York,Shoulder,Contusion,Repetitive Motion,1079.88,False,Firm C,8,PT/Conservative,2566.94,66995.76,44042.03,244677.97
+357874,2021-09-18,Georgia,Wrist,Strain,Repetitive Motion,1288.7,True,Solo Practitioner,1,PT/Conservative,11945.41,35722.76,7702.17,42789.84
+805383,2018-12-22,Florida,Knee,Fracture,Slip/Fall,1046.18,True,Firm A,6,Surgery,148376.7,56619.26,69241.64,384675.76
+494659,2022-08-22,California,Back,Strain,Repetitive Motion,650.93,False,Firm B,1,PT/Conservative,13352.75,9021.89,6850.32,38057.33
+394790,2021-10-25,Florida,Wrist,Fracture,Repetitive Motion,896.59,True,Firm C,1,Surgery,120210.06,29587.47,47933.58,266297.68
+616777,2021-12-12,Texas,Knee,Strain,Lifting,609.11,False,Firm B,10,PT/Conservative,6755.13,34975.1,11109.36,61718.69
+815531,2021-05-19,Georgia,Neck,Sprain,Repetitive Motion,980.41,False,Firm B,9,PT/Conservative,17393.74,7117.78,6264.68,34803.75
+920251,2019-07-16,Florida,Wrist,Fracture,Struck By,528.25,True,Firm A,6,Surgery,133930.62,29286.18,58717.79,326209.96
+985356,2020-04-13,California,Knee,Strain,Slip/Fall,1421.93,True,Firm C,7,PT/Conservative,12338.02,40354.37,32940.61,183003.4
+570665,2019-10-10,Florida,Back,Contusion,Slip/Fall,1129.19,True,Firm A,4,PT/Conservative,7385.63,33536.94,13140.86,73004.77
+272471,2019-11-06,New York,Back,Strain,Slip/Fall,1380.32,False,Firm B,2,PT/Conservative,11496.63,57393.71,19532.3,108512.8
+349937,2019-11-29,Florida,Neck,Contusion,Struck By,519.32,True,Firm A,2,PT/Conservative,7283.34,7540.53,3905.14,21695.25
+134963,2020-02-12,New York,Neck,Strain,Struck By,912.66,True,Solo Practitioner,2,PT/Conservative,15238.22,37346.05,15660.48,87002.69
+810477,2018-04-25,Georgia,Knee,Strain,Struck By,601.32,True,Firm A,8,PT/Conservative,10043.66,13096.75,7203.36,40018.68
+586758,2022-06-17,Georgia,Back,Strain,Slip/Fall,963.52,False,Firm C,10,PT/Conservative,9750.82,7631.08,7111.74,39509.66
+213253,2018-07-30,Georgia,Wrist,Sprain,Repetitive Motion,927.91,True,Firm C,6,PT/Conservative,17007.9,38582.5,18441.28,102451.53
+604783,2022-01-24,New York,Neck,Sprain,Slip/Fall,1149.19,True,Solo Practitioner,9,PT/Conservative,20579.9,75088.07,42202.53,234458.49
+783362,2022-03-25,New York,Neck,Strain,Lifting,1039.98,False,Firm C,1,PT/Conservative,11096.95,25396.31,14551.26,80840.34
+714926,2021-09-08,New York,Wrist,Sprain,Slip/Fall,752.36,False,Firm B,4,PT/Conservative,13714.22,30786.57,14175.68,78753.76
+923408,2018-05-21,Georgia,Knee,Fracture,Lifting,784.91,False,Firm C,7,Surgery,85772.9,22275.75,37452.43,208069.06
+270162,2018-08-03,Texas,Knee,Strain,Slip/Fall,421.94,True,Solo Practitioner,10,PT/Conservative,10491.28,17822.75,7352.18,40845.43
+350629,2020-09-11,New York,Knee,Strain,Repetitive Motion,671.79,True,Firm A,2,PT/Conservative,10519.47,9311.01,6609.35,36718.59
+131475,2021-02-10,California,Neck,Fracture,Lifting,1333.37,True,Firm B,4,Surgery,224849.1,52801.45,94240.41,523557.81
+282605,2019-03-25,Texas,Wrist,Strain,Repetitive Motion,522.92,True,Firm C,2,PT/Conservative,12985.55,33132.21,11879.25,65995.82
+971834,2021-10-19,Texas,Shoulder,Contusion,Lifting,361.62,False,Firm C,6,PT/Conservative,2763.5,18138.86,6822.48,37902.67
+652522,2022-06-25,Texas,Back,Strain,Repetitive Motion,617.38,True,Solo Practitioner,6,PT/Conservative,19739.18,15076.42,7400.16,41112.02
+728672,2020-05-29,New York,Wrist,Fracture,Lifting,962.02,True,Firm B,1,Surgery,130143.32,11428.8,37525.24,208473.56
+934259,2019-07-28,Georgia,Knee,Strain,Slip/Fall,752.13,False,Firm A,3,PT/Conservative,8098.36,46165.74,12408.94,68938.53
+506968,2022-03-19,New York,Knee,Fracture,Repetitive Motion,542.36,False,Solo Practitioner,8,Surgery,79050.0,23625.2,42953.05,238628.07
+381370,2021-04-05,Texas,Back,Strain,Repetitive Motion,701.66,False,Solo Practitioner,4,PT/Conservative,13350.34,25007.16,7127.85,39599.16
+545668,2022-12-26,New York,Shoulder,Fracture,Repetitive Motion,905.56,True,Solo Practitioner,9,Surgery,146483.62,22113.78,74120.53,411780.74
+341358,2021-04-10,Florida,Shoulder,Strain,Struck By,1044.29,False,Firm C,8,PT/Conservative,8991.55,38596.96,24147.12,134150.66
+386281,2020-02-23,New York,Shoulder,Fracture,Lifting,808.2,True,Firm A,5,Surgery,145663.12,29337.66,70844.77,393582.04
+338804,2018-07-21,New York,Wrist,Strain,Repetitive Motion,430.83,False,Firm C,5,PT/Conservative,6871.37,3980.87,5741.46,31897.01
+839919,2021-05-22,New York,Shoulder,Strain,Lifting,456.86,False,Solo Practitioner,7,PT/Conservative,8835.48,21106.93,12299.56,68330.89
+894617,2021-09-04,Texas,Neck,Contusion,Repetitive Motion,673.35,True,Solo Practitioner,4,PT/Conservative,7465.02,6666.17,2625.54,14586.34
+715517,2022-05-29,Florida,Shoulder,Sprain,Lifting,835.34,True,Solo Practitioner,4,PT/Conservative,17113.0,12129.14,7611.08,42283.8
+571829,2022-10-13,New York,Neck,Strain,Slip/Fall,1554.86,False,Firm C,4,PT/Conservative,12292.2,15393.11,13738.64,76325.75
+546399,2021-11-05,Texas,Shoulder,Strain,Slip/Fall,1074.0,True,Firm B,6,PT/Conservative,10044.06,55998.36,13524.48,75136.0
+760434,2022-06-25,California,Knee,Laceration,Repetitive Motion,1041.52,False,Solo Practitioner,4,PT/Conservative,4745.77,39181.98,15509.74,86165.22
+213915,2019-11-05,Georgia,Back,Strain,Repetitive Motion,909.06,True,Solo Practitioner,1,PT/Conservative,14912.47,58798.0,12690.73,70504.05
+308665,2018-05-23,California,Shoulder,Sprain,Slip/Fall,1152.18,False,Firm C,9,PT/Conservative,10445.26,69199.93,58150.45,323058.08
+280172,2019-11-01,Florida,Neck,Fracture,Struck By,1118.21,True,Firm B,3,Surgery,219837.14,19188.48,61385.9,341032.79
+424803,2020-06-04,Georgia,Neck,Fracture,Lifting,711.62,True,Solo Practitioner,5,Surgery,190622.34,35225.19,50635.98,281311.0
+107804,2018-10-20,Florida,Wrist,Sprain,Lifting,1366.48,False,Solo Practitioner,10,PT/Conservative,13310.83,92893.31,38383.4,213241.11
+873105,2018-07-06,Georgia,Shoulder,Sprain,Lifting,790.68,False,Firm B,7,PT/Conservative,12799.68,35485.72,12055.09,66972.73
+288301,2021-06-19,California,Neck,Sprain,Slip/Fall,1124.31,False,Firm B,3,PT/Conservative,18742.06,34134.05,16833.78,93520.98
+758592,2021-01-06,New York,Neck,Contusion,Struck By,1060.93,True,Firm A,2,PT/Conservative,5939.71,25907.91,10868.52,60380.68
+903774,2022-05-16,California,Shoulder,Strain,Slip/Fall,544.48,False,Firm A,8,PT/Conservative,7429.34,26951.76,18295.57,101642.04
+460351,2022-03-08,New York,Back,Strain,Slip/Fall,1143.45,True,Solo Practitioner,8,PT/Conservative,18871.61,23394.99,17343.4,96352.21
+171551,2018-06-19,Texas,Neck,Strain,Lifting,890.78,True,Firm A,10,PT/Conservative,17891.56,11170.38,9402.25,52234.74
+285846,2019-08-26,Texas,Neck,Strain,Slip/Fall,739.05,False,Solo Practitioner,6,PT/Conservative,10338.27,17559.83,6216.08,34533.77
+327197,2022-01-03,Florida,Neck,Strain,Slip/Fall,3634.95,True,Firm C,8,PT/Conservative,16676.01,182329.09,95888.99,532716.59
+727263,2018-01-10,California,Neck,Strain,Repetitive Motion,500.01,True,Firm A,7,PT/Conservative,18508.66,14520.29,15955.77,88643.19
+115267,2019-11-22,Texas,Neck,Laceration,Slip/Fall,454.01,True,Firm A,7,PT/Conservative,9911.31,16180.92,6858.49,38102.74
+212914,2022-07-29,California,Wrist,Strain,Struck By,758.23,False,Firm B,4,PT/Conservative,8205.04,50043.18,20584.46,114358.12
+473897,2019-10-25,California,Back,Strain,Struck By,650.94,True,Firm C,10,PT/Conservative,19866.47,13318.23,25078.92,139327.36
+146073,2018-05-18,New York,Knee,Laceration,Slip/Fall,1210.07,True,Firm A,10,PT/Conservative,5751.85,81461.91,47146.44,261924.68
+761519,2021-11-27,California,Shoulder,Strain,Lifting,1093.04,False,Firm C,1,PT/Conservative,7768.01,61319.54,31000.89,172227.15
+713455,2020-07-08,California,Wrist,Fracture,Slip/Fall,1773.7,True,Firm A,5,Surgery,115037.8,80774.3,88199.54,489997.44
+873758,2020-05-27,Texas,Back,Strain,Struck By,1584.62,False,Firm B,7,PT/Conservative,13551.17,97263.98,24887.39,138263.28
+773226,2018-03-19,New York,Knee,Sprain,Lifting,724.96,True,Firm C,1,PT/Conservative,14815.45,48804.31,25336.62,140758.98
+930241,2020-04-29,Texas,Neck,Sprain,Lifting,1210.08,False,Firm B,9,PT/Conservative,14636.23,79865.28,22397.35,124429.71
+797309,2019-05-24,California,Wrist,Strain,Struck By,468.71,True,Solo Practitioner,2,PT/Conservative,13174.71,14230.04,8548.84,47493.54
+154638,2021-07-23,Georgia,Back,Strain,Repetitive Motion,691.47,True,Firm A,7,PT/Conservative,18982.57,19623.92,11473.15,63739.72
+426592,2018-12-03,Texas,Wrist,Strain,Lifting,1458.78,False,Firm C,8,PT/Conservative,8125.1,30809.43,14386.62,79925.69
+477048,2020-03-26,Florida,Knee,Fracture,Struck By,1314.5,True,Firm A,7,Surgery,127613.9,59862.33,69645.61,386920.06
+995528,2018-06-20,Florida,Wrist,Sprain,Lifting,371.29,False,Firm C,8,PT/Conservative,9862.25,4655.98,6859.79,38109.94
+493370,2021-02-25,Texas,Neck,Sprain,Repetitive Motion,1336.74,True,Firm A,1,PT/Conservative,20683.16,67933.13,17309.99,96166.62
+625021,2022-02-04,Florida,Knee,Laceration,Lifting,841.33,False,Firm C,10,PT/Conservative,4003.73,24987.5,15873.62,88186.78
+528644,2022-12-18,Florida,Knee,Contusion,Repetitive Motion,811.84,True,Firm C,6,PT/Conservative,3868.92,38042.82,19008.62,105603.42
+843575,2020-09-27,Florida,Knee,Contusion,Repetitive Motion,1412.97,True,Firm A,6,PT/Conservative,3784.73,55953.61,20338.04,112989.1
+831351,2021-09-25,Texas,Knee,Contusion,Repetitive Motion,1228.26,False,Firm B,1,PT/Conservative,3368.03,38911.28,6391.49,35508.29
+908422,2018-07-09,Florida,Knee,Sprain,Slip/Fall,811.91,True,Firm B,7,PT/Conservative,18563.88,33759.22,16308.04,90600.24
+825443,2019-09-11,California,Wrist,Strain,Struck By,706.72,True,Firm C,3,PT/Conservative,11399.35,38714.12,23960.66,133114.77
+885100,2019-03-06,California,Neck,Sprain,Slip/Fall,983.81,True,Solo Practitioner,9,PT/Conservative,22871.72,11687.66,15678.39,87102.16
+786315,2019-08-14,Texas,Neck,Sprain,Repetitive Motion,788.47,False,Firm A,8,PT/Conservative,17004.31,29662.24,12955.88,71977.11
+294655,2019-02-16,Georgia,Shoulder,Laceration,Struck By,2253.32,False,Firm A,3,PT/Conservative,4885.96,44615.74,11337.48,62985.98
+407364,2018-06-25,Florida,Shoulder,Strain,Repetitive Motion,1194.19,False,Firm A,1,PT/Conservative,6950.69,70934.89,20851.31,115840.61
+379005,2022-03-20,Georgia,Back,Strain,Slip/Fall,1318.24,False,Firm C,8,PT/Conservative,13572.03,20880.92,13245.33,73585.15
+893679,2019-11-22,Florida,Shoulder,Sprain,Lifting,1244.43,False,Firm A,6,PT/Conservative,12934.06,39423.54,19056.71,105870.63
+945435,2018-07-25,Texas,Neck,Strain,Slip/Fall,871.59,False,Firm C,8,PT/Conservative,11254.1,24735.72,13140.52,73002.89
+819517,2021-09-11,New York,Back,Laceration,Lifting,718.15,True,Firm A,6,PT/Conservative,8828.61,28912.72,16312.39,90624.39
+344903,2021-05-27,Florida,Back,Strain,Struck By,578.21,True,Firm C,10,PT/Conservative,14238.84,22133.88,19886.36,110479.8
+846525,2018-10-21,Georgia,Back,Strain,Slip/Fall,1156.84,False,Solo Practitioner,3,PT/Conservative,11982.04,58027.09,13258.89,73660.49
+567965,2018-08-25,Florida,Neck,Strain,Slip/Fall,930.0,True,Firm A,3,PT/Conservative,16844.84,47262.6,18669.16,103717.58
+502118,2022-04-19,Georgia,Knee,Laceration,Slip/Fall,876.45,True,Solo Practitioner,2,PT/Conservative,5632.13,39335.08,7981.65,44342.49
+448967,2022-11-21,Georgia,Back,Fracture,Struck By,1076.98,False,Solo Practitioner,4,Surgery,146134.44,41226.79,37993.61,211075.62
+371679,2018-08-25,Georgia,Shoulder,Sprain,Repetitive Motion,440.83,True,Firm C,3,PT/Conservative,16680.82,6400.85,6871.73,38176.28
+498663,2021-03-27,New York,Wrist,Fracture,Struck By,690.92,False,Firm C,3,Surgery,97718.78,12768.2,51251.73,284731.86
+795984,2021-05-17,Texas,Back,Fracture,Struck By,741.34,False,Firm C,4,Surgery,123662.46,15167.82,40266.91,223705.03
+813011,2020-07-22,New York,Back,Fracture,Lifting,635.8,True,Solo Practitioner,4,Surgery,211429.12,6714.05,71205.22,395584.56
+405654,2021-12-13,California,Neck,Sprain,Repetitive Motion,907.62,True,Firm B,8,PT/Conservative,22654.9,48521.37,30104.38,167246.55
+413630,2022-07-28,Florida,Knee,Strain,Struck By,935.18,False,Solo Practitioner,2,PT/Conservative,8156.35,38267.57,10456.62,58092.33
+862057,2019-08-03,Georgia,Wrist,Strain,Repetitive Motion,1480.17,False,Firm A,5,PT/Conservative,7468.96,64476.21,19191.79,106621.03
+786433,2018-12-02,Texas,Shoulder,Contusion,Repetitive Motion,489.78,True,Firm A,6,PT/Conservative,4377.25,21981.33,6643.88,36910.44
+206900,2021-10-21,Florida,Neck,Contusion,Slip/Fall,813.76,False,Firm B,1,PT/Conservative,4819.57,40281.12,9360.21,52001.17
+640472,2021-08-24,Florida,Knee,Strain,Slip/Fall,702.26,True,Solo Practitioner,5,PT/Conservative,10668.86,19466.65,8471.96,47066.46
+725114,2018-12-20,Florida,Knee,Contusion,Struck By,1403.83,False,Firm C,1,PT/Conservative,2638.79,25942.78,9429.35,52385.3
+222292,2018-06-19,California,Neck,Strain,Struck By,1602.63,False,Firm B,7,PT/Conservative,12485.29,30674.34,17775.0,98749.99
+775908,2021-12-10,California,Back,Strain,Repetitive Motion,733.02,False,Solo Practitioner,9,PT/Conservative,14305.77,47895.53,28742.19,159678.83
+921532,2022-07-22,California,Wrist,Fracture,Slip/Fall,460.64,True,Firm B,10,Surgery,150046.06,22801.68,87957.87,488654.85
+105582,2021-02-10,California,Back,Strain,Repetitive Motion,818.8,True,Firm C,1,PT/Conservative,18398.59,53500.39,31707.07,176150.38
+230775,2020-11-02,New York,Neck,Strain,Slip/Fall,620.36,True,Firm A,9,PT/Conservative,14813.84,23747.38,19851.41,110285.63
+791176,2020-12-29,California,Shoulder,Fracture,Lifting,644.58,True,Firm A,4,Surgery,125145.2,37862.63,70626.37,392368.72
+297209,2018-10-18,New York,Neck,Fracture,Repetitive Motion,688.76,False,Firm B,10,Surgery,137678.74,21365.34,75522.54,419569.64
+177971,2021-01-31,Texas,Knee,Strain,Lifting,672.7,False,Firm B,2,PT/Conservative,6641.87,12875.48,3194.09,17744.95
+763874,2021-11-28,Texas,Wrist,Sprain,Repetitive Motion,963.65,False,Firm C,7,PT/Conservative,10041.92,17808.25,9500.43,52780.17
+127168,2021-05-21,New York,Wrist,Strain,Struck By,533.88,True,Firm A,6,PT/Conservative,9027.7,26779.42,15822.44,87902.44
+915866,2019-07-14,Florida,Shoulder,Strain,Struck By,1251.24,True,Firm A,2,PT/Conservative,11485.2,67717.11,22280.48,123780.47
+652049,2022-01-31,Georgia,Back,Fracture,Lifting,478.19,False,Firm A,1,Surgery,122639.2,3471.66,25921.74,144009.66
+433443,2022-03-20,Georgia,Wrist,Fracture,Struck By,1300.4,False,Firm B,5,Surgery,106082.42,30039.24,29008.81,161160.03
+820013,2020-11-17,New York,Neck,Strain,Lifting,534.64,True,Firm B,10,PT/Conservative,19750.46,10585.87,13351.36,74174.25
+841119,2020-07-26,Georgia,Knee,Fracture,Lifting,1099.74,False,Firm B,5,Surgery,93153.1,28307.31,26485.41,147141.19
+999595,2018-06-28,California,Back,Fracture,Slip/Fall,819.13,True,Firm B,10,Surgery,195269.2,31356.3,110602.47,614458.18
+188693,2022-03-03,Florida,Back,Laceration,Struck By,882.37,True,Solo Practitioner,9,PT/Conservative,11111.88,11064.92,7476.28,41534.87
+809649,2022-12-24,Georgia,Neck,Contusion,Slip/Fall,769.58,False,Firm C,4,PT/Conservative,4810.43,28951.6,10396.62,57759.02
+793291,2022-08-14,Texas,Wrist,Strain,Repetitive Motion,1062.29,True,Firm A,6,PT/Conservative,11191.22,25240.01,9255.19,51417.71
+239794,2020-11-18,New York,Knee,Strain,Lifting,982.52,True,Firm B,9,PT/Conservative,13057.18,23993.14,16639.34,92440.76
+404154,2019-09-05,New York,Back,Sprain,Struck By,774.48,True,Firm A,8,PT/Conservative,28397.9,41914.86,34655.77,192532.07
+160289,2019-12-30,Texas,Shoulder,Strain,Slip/Fall,1970.69,False,Solo Practitioner,6,PT/Conservative,8642.78,63732.11,15662.06,87011.47
+206260,2020-06-01,Florida,Wrist,Contusion,Struck By,1114.22,True,Firm A,3,PT/Conservative,4734.86,44858.5,13900.91,77227.27
+788530,2019-05-28,California,Shoulder,Strain,Repetitive Motion,656.22,False,Solo Practitioner,8,PT/Conservative,7266.58,24687.0,14730.81,81837.83
+246668,2019-12-26,Florida,Back,Strain,Slip/Fall,681.15,True,Solo Practitioner,6,PT/Conservative,15824.66,26523.98,12698.66,70548.13
+268099,2021-09-26,New York,Back,Strain,Struck By,1712.98,True,Solo Practitioner,9,PT/Conservative,13985.32,64442.31,33426.1,185700.53
+237801,2018-08-13,California,Neck,Strain,Slip/Fall,1337.87,True,Firm C,7,PT/Conservative,19386.96,24723.84,27851.09,154728.28
+555426,2020-09-10,Texas,Knee,Strain,Repetitive Motion,1295.56,True,Firm C,2,PT/Conservative,10740.57,63275.15,18087.97,100488.72
+835005,2019-05-22,Texas,Wrist,Fracture,Repetitive Motion,680.55,True,Firm A,3,Surgery,150578.04,7635.77,32437.83,180210.17
+140230,2019-07-15,Florida,Back,Fracture,Slip/Fall,1180.07,True,Solo Practitioner,9,Surgery,195384.34,76326.93,90994.29,505523.82
+834169,2021-07-21,New York,Knee,Strain,Struck By,825.74,True,Firm A,5,PT/Conservative,12836.07,34334.27,20688.6,114936.69
+394184,2019-12-20,Texas,Neck,Strain,Slip/Fall,1339.07,False,Firm C,8,PT/Conservative,12662.18,43305.52,19712.09,109511.6
+735984,2018-07-26,California,Shoulder,Strain,Slip/Fall,816.62,True,Firm B,6,PT/Conservative,11868.96,24792.58,15065.99,83699.95
+877301,2022-07-17,Texas,Wrist,Fracture,Repetitive Motion,898.81,False,Solo Practitioner,2,Surgery,100263.52,39745.38,22268.98,123716.56
+211532,2018-09-25,Florida,Back,Fracture,Repetitive Motion,304.68,True,Firm A,2,Surgery,173959.08,3217.42,46665.37,259252.04
+749079,2019-12-04,Texas,Wrist,Sprain,Slip/Fall,1233.08,True,Solo Practitioner,9,PT/Conservative,14148.24,52085.3,16754.08,93078.21
+364792,2022-12-31,Florida,Back,Contusion,Slip/Fall,891.93,False,Firm A,3,PT/Conservative,3620.69,5886.74,2919.89,16221.62
+387465,2021-11-27,Florida,Back,Sprain,Repetitive Motion,913.23,False,Firm A,3,PT/Conservative,20062.96,60875.91,24238.14,134656.33
+887195,2020-11-09,California,Knee,Fracture,Repetitive Motion,600.91,True,Firm B,10,Surgery,145237.2,22209.63,82885.77,460476.48
+720875,2021-11-27,Texas,Knee,Fracture,Lifting,786.41,False,Firm C,5,Surgery,83153.04,35813.11,35771.41,198730.04
+224888,2018-12-17,Texas,Shoulder,Strain,Repetitive Motion,702.82,False,Firm C,1,PT/Conservative,8170.82,15771.28,5505.28,30584.89
+361103,2022-08-14,California,Shoulder,Fracture,Lifting,1365.93,False,Firm C,3,Surgery,100414.54,57696.88,77148.97,428605.4
+741185,2019-08-27,New York,Shoulder,Strain,Lifting,744.92,True,Firm A,9,PT/Conservative,12585.77,6883.06,9950.84,55282.43
+915987,2022-05-18,Texas,Shoulder,Contusion,Repetitive Motion,929.23,False,Firm C,5,PT/Conservative,3529.34,57649.43,19247.06,106928.12
+709918,2021-07-13,Texas,Neck,Sprain,Struck By,369.55,False,Solo Practitioner,2,PT/Conservative,14959.01,10731.73,4226.53,23480.75
+290330,2020-07-29,California,Neck,Fracture,Repetitive Motion,1602.04,False,Firm C,3,Surgery,155756.34,89874.44,127781.34,709896.35
+957210,2020-03-18,Georgia,Knee,Strain,Struck By,936.8,True,Firm B,1,PT/Conservative,12312.63,40807.01,8350.25,46390.26
+204574,2020-02-13,Texas,Back,Strain,Slip/Fall,775.19,False,Firm A,1,PT/Conservative,11573.25,20976.64,6192.41,34402.26
+668716,2022-02-16,New York,Neck,Strain,Struck By,430.75,True,Firm C,8,PT/Conservative,14982.9,9097.44,14822.81,82348.92
+355652,2018-04-25,Georgia,Back,Strain,Slip/Fall,1150.36,True,Firm C,2,PT/Conservative,17014.29,20499.42,9783.95,54355.29
+977116,2020-04-30,New York,Back,Strain,Struck By,1058.17,True,Firm C,4,PT/Conservative,17078.0,27237.3,21048.28,116934.9
+503433,2021-11-07,California,Knee,Strain,Slip/Fall,675.98,True,Firm C,6,PT/Conservative,9431.95,20076.61,17012.51,94513.92
+745604,2019-11-15,Georgia,Back,Fracture,Repetitive Motion,542.72,False,Firm C,10,Surgery,119442.3,7163.9,50969.19,283162.15
+812437,2020-05-20,New York,Wrist,Sprain,Lifting,846.89,True,Solo Practitioner,6,PT/Conservative,15013.85,13414.74,10867.15,60373.05
+950100,2021-12-27,Florida,Neck,Strain,Struck By,708.27,False,Firm A,2,PT/Conservative,12345.18,8414.25,5673.44,31519.11
+548217,2022-01-28,New York,Neck,Strain,Struck By,1535.61,False,Solo Practitioner,7,PT/Conservative,12942.86,56756.15,28094.93,156082.92
+827104,2020-04-27,Florida,Neck,Sprain,Repetitive Motion,353.45,False,Solo Practitioner,9,PT/Conservative,15866.4,5132.09,7416.22,41201.21
+616530,2020-12-26,California,Back,Fracture,Struck By,1118.28,True,Firm B,6,Surgery,159923.84,42807.76,80976.74,449870.79
+313154,2022-10-09,New York,Neck,Contusion,Slip/Fall,2181.31,False,Firm B,5,PT/Conservative,5279.63,69103.9,25305.24,140584.65
+251141,2022-09-07,Texas,Neck,Strain,Repetitive Motion,602.85,True,Firm A,3,PT/Conservative,16073.29,23077.1,8538.91,47438.37
+868691,2018-02-23,Texas,Wrist,Strain,Repetitive Motion,1164.97,True,Firm C,3,PT/Conservative,12422.98,47670.57,16540.48,91891.55
+356949,2018-06-07,Georgia,Neck,Sprain,Struck By,1354.35,True,Firm C,8,PT/Conservative,26946.32,10726.45,14265.31,79251.75
+857656,2019-11-22,Georgia,Shoulder,Strain,Slip/Fall,1020.54,True,Firm B,9,PT/Conservative,11775.35,27615.81,10588.68,58825.99
+111395,2020-03-22,Texas,Wrist,Sprain,Lifting,1032.69,False,Solo Practitioner,3,PT/Conservative,12946.92,44302.4,10566.03,58700.18
+196402,2020-12-04,Florida,Neck,Strain,Slip/Fall,1130.95,True,Firm B,9,PT/Conservative,18959.73,66432.0,28218.57,156769.84
+956223,2021-11-19,Texas,Knee,Strain,Lifting,768.88,False,Firm C,2,PT/Conservative,8101.05,19283.51,6644.27,36912.61
+181588,2020-01-13,Georgia,Neck,Fracture,Slip/Fall,685.82,True,Firm A,5,Surgery,215836.04,24442.62,61664.54,342580.76
+678490,2019-02-18,California,Wrist,Fracture,Struck By,884.72,True,Firm C,2,Surgery,133447.82,15765.71,72916.97,405094.29
+108890,2020-01-01,Texas,Neck,Strain,Struck By,829.32,False,Firm A,6,PT/Conservative,10576.67,9304.97,5276.48,29313.77
+877468,2020-10-28,Georgia,Back,Fracture,Struck By,1260.64,False,Firm A,5,Surgery,160275.56,84034.26,63083.66,350464.77
+258898,2021-10-29,Georgia,Neck,Contusion,Repetitive Motion,365.49,True,Firm C,8,PT/Conservative,7513.9,21951.33,10952.02,60844.54
+455488,2019-08-19,Texas,Back,Contusion,Struck By,797.98,True,Firm A,3,PT/Conservative,7552.9,53720.01,13058.68,72548.22
+758285,2020-10-15,California,Shoulder,Fracture,Slip/Fall,1538.36,False,Solo Practitioner,6,Surgery,74520.12,88332.63,64246.46,356924.76
+409967,2018-11-27,New York,Shoulder,Strain,Repetitive Motion,833.21,False,Solo Practitioner,5,PT/Conservative,7885.56,46193.16,19378.0,107655.53
+781880,2018-10-15,Florida,Back,Strain,Lifting,701.31,False,Firm B,8,PT/Conservative,13002.08,46286.46,19019.66,105664.78
+637373,2022-09-27,Texas,Wrist,Strain,Slip/Fall,1018.71,True,Firm A,3,PT/Conservative,10632.12,26893.94,8285.62,46031.23
+210412,2019-08-19,New York,Back,Strain,Struck By,1014.6,True,Solo Practitioner,8,PT/Conservative,18633.28,58927.97,30607.76,170043.1
+661109,2022-08-03,Texas,Back,Contusion,Struck By,462.11,False,Solo Practitioner,6,PT/Conservative,4586.46,16469.6,4420.25,24556.93
+432697,2019-12-03,Florida,Back,Strain,Slip/Fall,1859.11,True,Firm B,4,PT/Conservative,17992.62,110431.13,31935.69,177420.5
+695807,2018-03-06,California,Shoulder,Sprain,Struck By,1173.16,True,Firm B,1,PT/Conservative,16038.09,78202.85,26642.43,148013.5
+543464,2019-07-07,New York,Neck,Strain,Struck By,621.91,True,Solo Practitioner,7,PT/Conservative,19423.55,15597.5,13297.56,73875.35
+324505,2021-10-03,New York,Back,Contusion,Struck By,1159.46,False,Firm B,4,PT/Conservative,4379.69,75759.12,27694.69,153859.37
+539459,2020-09-13,Georgia,Knee,Strain,Struck By,499.45,True,Firm B,2,PT/Conservative,11553.05,31315.51,7804.81,43360.05
+800409,2021-03-30,Florida,Back,Strain,Struck By,665.49,True,Firm C,2,PT/Conservative,18229.87,10980.59,9763.95,54244.16
+806682,2020-04-12,Georgia,Knee,Contusion,Repetitive Motion,454.83,False,Firm A,1,PT/Conservative,2776.59,14709.2,3501.82,19454.53
+881931,2019-01-20,Texas,Wrist,Strain,Lifting,1309.01,True,Firm A,6,PT/Conservative,11459.51,85530.71,25291.23,140506.81
+116977,2019-09-11,Florida,Knee,Fracture,Struck By,1266.72,False,Firm C,6,Surgery,85780.76,82767.48,73722.38,409568.78
+668817,2020-05-22,New York,Back,Contusion,Struck By,868.99,False,Firm B,9,PT/Conservative,4588.82,43588.54,21798.86,121104.76
+270558,2021-01-16,California,Shoulder,Sprain,Slip/Fall,1115.83,True,Firm A,1,PT/Conservative,17716.44,7364.48,8801.52,48897.36
+531257,2018-08-01,New York,Wrist,Strain,Struck By,846.9,True,Solo Practitioner,4,PT/Conservative,10207.49,20122.34,10185.07,56583.7
+914617,2020-07-20,Florida,Knee,Laceration,Lifting,1504.4,False,Solo Practitioner,1,PT/Conservative,4076.34,61560.05,14477.73,80431.81
+920192,2019-04-04,California,Shoulder,Sprain,Struck By,1193.98,True,Solo Practitioner,1,PT/Conservative,14701.49,73286.49,26359.44,146441.33
+127521,2018-11-11,Texas,Wrist,Strain,Repetitive Motion,1216.6,False,Solo Practitioner,4,PT/Conservative,8793.08,33724.15,8027.0,44594.44
+968797,2018-04-16,Florida,Neck,Strain,Lifting,1032.63,True,Firm B,2,PT/Conservative,13701.94,40210.61,12734.02,70744.55
+940089,2018-09-16,New York,Knee,Sprain,Lifting,480.14,True,Firm B,2,PT/Conservative,16322.78,21548.68,11086.31,61590.59
+126885,2020-06-14,California,Neck,Strain,Slip/Fall,753.11,False,Firm B,8,PT/Conservative,12800.51,13420.42,12011.05,66728.03
+762177,2022-05-12,New York,Shoulder,Strain,Repetitive Motion,1725.27,False,Firm A,5,PT/Conservative,7196.83,71736.73,34108.51,189491.71
+250753,2021-07-08,Texas,Back,Strain,Slip/Fall,1142.51,True,Firm C,5,PT/Conservative,13478.43,75405.66,26183.73,145465.16
+197283,2018-06-08,California,Knee,Strain,Slip/Fall,1362.04,False,Solo Practitioner,2,PT/Conservative,6529.12,19776.82,7934.24,44079.13
+820724,2020-05-09,Georgia,Neck,Strain,Slip/Fall,883.84,True,Firm A,2,PT/Conservative,18706.72,49000.09,13718.68,76214.9
+463629,2020-09-18,Texas,Neck,Fracture,Lifting,850.82,True,Firm A,9,Surgery,157264.8,24707.81,51466.06,285922.55
+643157,2020-11-14,Texas,Back,Contusion,Slip/Fall,594.25,False,Firm B,2,PT/Conservative,3838.76,26277.74,5062.55,28125.29
+380589,2019-07-15,Florida,Shoulder,Sprain,Lifting,1401.56,False,Solo Practitioner,9,PT/Conservative,12598.15,86952.78,33571.95,186510.83
+302432,2019-05-28,Texas,Knee,Strain,Lifting,687.91,True,Solo Practitioner,7,PT/Conservative,11819.68,12712.58,5479.13,30439.59
+544320,2021-05-06,Texas,Wrist,Strain,Struck By,839.11,False,Firm C,6,PT/Conservative,8663.67,28798.26,12070.25,67056.93
+571233,2018-12-09,California,Wrist,Strain,Lifting,1369.0,False,Firm A,3,PT/Conservative,7613.21,57826.56,26602.7,147792.79
+550244,2022-06-08,New York,Neck,Sprain,Lifting,972.2,True,Firm A,1,PT/Conservative,26541.37,8983.13,12177.05,67650.28
+821726,2018-01-23,New York,Shoulder,Contusion,Slip/Fall,1153.09,False,Firm B,9,PT/Conservative,3111.79,63927.31,30362.69,168681.61
+207919,2021-02-22,New York,Wrist,Contusion,Struck By,1279.33,False,Firm C,4,PT/Conservative,3399.4,30396.88,17162.36,95346.46
+152072,2022-07-02,Georgia,Knee,Strain,Struck By,1122.5,True,Firm C,10,PT/Conservative,9709.76,10371.9,7926.07,44033.71
+347906,2021-03-26,Florida,Back,Contusion,Lifting,842.06,True,Firm A,9,PT/Conservative,6663.53,54464.44,25352.61,140847.83
+141020,2019-11-22,New York,Knee,Sprain,Lifting,667.14,False,Solo Practitioner,2,PT/Conservative,12652.51,5724.06,5325.55,29586.38
+617806,2021-06-08,Georgia,Knee,Sprain,Slip/Fall,739.43,False,Firm A,1,PT/Conservative,10580.0,15128.74,5074.88,28193.79
+150157,2022-08-18,New York,Knee,Strain,Slip/Fall,1314.27,True,Firm A,1,PT/Conservative,9720.38,25155.13,11601.23,64451.27
+923073,2018-03-30,Texas,Back,Strain,Struck By,1085.15,False,Firm B,10,PT/Conservative,9719.84,48701.53,15445.13,85806.28
+225725,2018-09-16,Georgia,Knee,Fracture,Slip/Fall,1059.92,True,Solo Practitioner,8,Surgery,149230.38,8394.57,40101.14,222784.12
+437548,2022-05-02,Texas,Shoulder,Sprain,Lifting,1080.65,True,Firm A,2,PT/Conservative,19847.76,15691.04,6876.98,38205.46
+163194,2019-03-12,Texas,Knee,Strain,Slip/Fall,463.18,False,Firm C,5,PT/Conservative,9348.18,10699.46,6208.25,34490.26
+787120,2018-11-12,Georgia,Neck,Contusion,Struck By,1113.78,False,Firm B,7,PT/Conservative,3770.84,38224.93,9574.48,53191.58
+171973,2019-07-24,California,Wrist,Fracture,Repetitive Motion,871.68,False,Firm A,4,Surgery,75044.36,53503.72,57071.94,317066.31
+583232,2019-01-19,New York,Knee,Strain,Slip/Fall,749.45,True,Solo Practitioner,4,PT/Conservative,12915.46,35119.23,16132.89,89627.17
+516209,2020-10-25,Florida,Knee,Strain,Slip/Fall,1071.39,True,Solo Practitioner,4,PT/Conservative,12021.87,25456.23,10027.84,55710.23
+298652,2020-04-04,California,Wrist,Strain,Struck By,898.37,True,Firm B,2,PT/Conservative,10243.61,48619.78,19352.72,107515.12
+220783,2018-04-19,Georgia,Back,Fracture,Lifting,1007.74,True,Solo Practitioner,7,Surgery,186354.72,68506.17,58566.93,325371.83
+206225,2019-03-27,California,Neck,Strain,Lifting,925.11,False,Firm A,3,PT/Conservative,11268.03,37855.5,20674.0,114855.56
+834497,2021-06-28,Texas,Neck,Strain,Slip/Fall,1029.91,True,Firm C,8,PT/Conservative,19743.13,19032.74,13807.22,76706.79
+113353,2021-09-26,California,Neck,Laceration,Slip/Fall,1015.75,True,Firm C,8,PT/Conservative,10543.97,53631.6,41392.66,229959.21
+612027,2022-11-24,Georgia,Back,Fracture,Lifting,836.55,True,Firm B,3,Surgery,171503.3,10490.34,33059.78,183665.46
+204849,2019-09-16,New York,Wrist,Strain,Struck By,483.26,False,Solo Practitioner,1,PT/Conservative,7803.06,29662.5,10679.01,59327.81
+469755,2019-09-09,Florida,Knee,Strain,Slip/Fall,454.46,True,Firm B,3,PT/Conservative,12536.35,21895.88,8284.2,46023.35
+622014,2018-03-05,Florida,Shoulder,Strain,Slip/Fall,746.11,True,Firm A,5,PT/Conservative,10001.63,33977.85,15107.16,83928.64
+757343,2021-10-22,Florida,Wrist,Strain,Lifting,509.8,False,Solo Practitioner,5,PT/Conservative,7367.93,15141.06,6058.86,33660.35
+299829,2018-03-26,New York,Wrist,Strain,Struck By,533.81,False,Firm A,1,PT/Conservative,8988.88,32060.63,13195.48,73308.25
+818826,2018-10-29,Florida,Shoulder,Fracture,Repetitive Motion,886.63,False,Firm C,2,Surgery,82887.1,59102.76,49491.76,274954.23
+116349,2020-07-18,Florida,Back,Strain,Lifting,639.46,True,Firm C,1,PT/Conservative,14488.19,30809.18,14646.84,81371.32
+363647,2018-10-10,Texas,Wrist,Strain,Slip/Fall,563.25,False,Firm B,7,PT/Conservative,8396.8,25650.4,7639.06,42439.21
+404928,2019-03-25,Florida,Neck,Sprain,Struck By,904.35,False,Firm A,5,PT/Conservative,14992.36,39393.49,18480.2,102667.78
+726040,2019-09-29,Texas,Wrist,Strain,Repetitive Motion,635.5,False,Solo Practitioner,9,PT/Conservative,7010.32,41104.14,12005.52,66697.32
+415686,2019-09-17,Texas,Wrist,Strain,Struck By,516.26,True,Solo Practitioner,6,PT/Conservative,11949.11,16695.85,6205.06,34472.53
+818445,2021-12-30,California,Knee,Strain,Struck By,962.55,False,Firm A,7,PT/Conservative,8848.51,31128.87,19946.45,110813.62
+892572,2018-10-15,California,Wrist,Fracture,Repetitive Motion,592.51,False,Solo Practitioner,3,Surgery,79026.0,35586.15,38260.36,212557.55
+802629,2018-01-13,New York,Knee,Sprain,Slip/Fall,1210.48,True,Firm A,6,PT/Conservative,18056.9,55125.26,32298.88,179438.22
+202130,2022-08-11,Georgia,Back,Strain,Slip/Fall,1963.66,True,Firm B,9,PT/Conservative,19217.82,34992.42,13728.47,76269.29
+243028,2019-04-03,California,Back,Sprain,Repetitive Motion,674.82,True,Firm A,3,PT/Conservative,25339.62,9798.39,14667.45,81485.82
+226913,2020-11-30,California,Knee,Strain,Struck By,1765.29,False,Firm A,5,PT/Conservative,9017.14,17476.37,12098.85,67215.82
+607216,2019-01-12,Florida,Shoulder,Sprain,Struck By,780.18,True,Firm B,1,PT/Conservative,17772.69,6693.94,5477.97,30433.16
+248568,2022-08-04,California,Neck,Strain,Lifting,2627.71,False,Solo Practitioner,6,PT/Conservative,14075.15,149148.82,66278.76,368215.34
+388548,2020-03-12,California,Knee,Strain,Struck By,979.17,True,Firm C,8,PT/Conservative,9790.01,66563.98,52510.93,291727.39
+691616,2020-03-08,Florida,Wrist,Strain,Lifting,578.87,True,Solo Practitioner,5,PT/Conservative,11158.63,34002.82,12250.49,68058.26
+266004,2020-01-03,Texas,Neck,Strain,Struck By,577.12,True,Firm B,6,PT/Conservative,15956.96,7237.08,4877.56,27097.58
+854145,2021-02-27,California,Shoulder,Sprain,Lifting,980.65,False,Solo Practitioner,7,PT/Conservative,10017.68,37539.28,20490.63,113836.83
+735271,2021-09-11,Georgia,Wrist,Strain,Lifting,427.98,False,Solo Practitioner,2,PT/Conservative,9563.27,14123.34,4099.91,22777.3
+130955,2022-10-11,Texas,Knee,Contusion,Struck By,1254.1,False,Firm B,2,PT/Conservative,3024.09,76976.66,13028.8,72382.22
+863534,2020-02-26,Florida,Wrist,Strain,Slip/Fall,1010.78,True,Firm C,10,PT/Conservative,11770.43,57371.87,35973.06,199850.33
+981516,2018-03-02,New York,Knee,Strain,Repetitive Motion,1043.24,True,Solo Practitioner,8,PT/Conservative,10148.86,6885.38,6935.17,38528.72
+336450,2019-02-17,Texas,Neck,Strain,Slip/Fall,886.76,True,Firm A,3,PT/Conservative,19627.37,18728.37,8047.17,44706.51
+477027,2022-05-05,Texas,Shoulder,Strain,Struck By,623.99,True,Solo Practitioner,9,PT/Conservative,9889.78,40771.51,12906.42,71702.33
+473801,2021-06-20,Georgia,Knee,Strain,Struck By,1208.17,True,Firm A,3,PT/Conservative,11716.34,72562.69,19212.09,106733.86
+642372,2019-09-03,Texas,Back,Fracture,Lifting,1338.8,True,Firm C,5,Surgery,204428.7,19439.38,69521.81,386232.3
+837435,2020-01-03,Florida,Shoulder,Strain,Repetitive Motion,1434.63,False,Firm A,9,PT/Conservative,6946.27,89004.45,40243.24,223573.55
+216260,2021-04-08,Texas,Back,Strain,Struck By,775.78,False,Firm C,1,PT/Conservative,9818.17,46081.33,13054.03,72522.41
+314154,2021-01-25,California,Neck,Strain,Slip/Fall,1220.83,False,Solo Practitioner,10,PT/Conservative,12047.3,49956.36,28778.49,159880.51
+184508,2022-12-23,New York,Back,Strain,Struck By,978.63,True,Solo Practitioner,8,PT/Conservative,13674.61,27127.62,17457.97,96988.72
+919506,2022-10-07,California,Back,Sprain,Repetitive Motion,1164.09,False,Solo Practitioner,1,PT/Conservative,15951.61,31500.28,13213.77,73409.85
+902875,2020-02-12,Georgia,Wrist,Strain,Struck By,1215.56,True,Firm C,6,PT/Conservative,12206.2,69797.46,29009.18,161162.13
+459793,2020-06-13,Georgia,Back,Fracture,Repetitive Motion,1277.2,False,Firm A,1,Surgery,118791.42,16859.04,27082.02,150455.64
+362062,2022-07-23,New York,Knee,Strain,Slip/Fall,1673.04,False,Firm B,5,PT/Conservative,8484.85,45272.46,19072.65,105959.17
+735566,2020-03-25,New York,Back,Strain,Repetitive Motion,973.41,False,Firm B,8,PT/Conservative,14051.3,61032.81,29684.54,164914.1
+417423,2020-01-22,California,Wrist,Contusion,Lifting,978.46,True,Firm C,7,PT/Conservative,3392.18,47142.2,31707.68,176153.78
+752079,2020-09-22,New York,Wrist,Strain,Repetitive Motion,813.46,True,Firm B,1,PT/Conservative,10835.25,52077.71,16317.82,90654.54
+832264,2020-06-20,New York,Back,Strain,Slip/Fall,744.4,False,Solo Practitioner,5,PT/Conservative,14215.16,35373.89,16692.87,92738.16
+162621,2019-07-26,Florida,Knee,Strain,Repetitive Motion,1455.9,True,Firm B,7,PT/Conservative,11887.16,62458.11,22544.79,125248.85
+154798,2021-09-14,Georgia,Back,Contusion,Lifting,1774.25,False,Firm B,1,PT/Conservative,5126.6,53866.23,10123.13,56239.62
+861042,2022-08-26,Florida,Back,Fracture,Lifting,629.11,False,Firm C,3,Surgery,123207.26,27819.24,55373.19,307628.85
+590033,2022-03-08,Texas,Shoulder,Sprain,Lifting,1315.69,True,Firm C,6,PT/Conservative,17996.92,78151.99,31370.82,174282.33
+513769,2018-03-21,New York,Shoulder,Sprain,Slip/Fall,580.95,True,Firm C,5,PT/Conservative,13970.47,14186.8,14544.77,80804.28
+565367,2020-08-05,Florida,Back,Laceration,Struck By,538.21,True,Firm A,10,PT/Conservative,8858.0,17405.71,11278.52,62658.44
+389874,2021-06-03,Florida,Knee,Strain,Lifting,515.25,False,Firm B,4,PT/Conservative,6927.63,8501.62,4117.33,22874.04
+282971,2018-10-28,Georgia,Back,Sprain,Repetitive Motion,823.11,False,Firm C,1,PT/Conservative,16365.24,12494.81,7116.61,39536.73
+852204,2019-04-12,Georgia,Shoulder,Strain,Lifting,997.97,True,Firm B,6,PT/Conservative,10183.22,60596.74,16675.5,92641.66
+181242,2020-11-04,California,Neck,Strain,Lifting,1200.0,False,Solo Practitioner,5,PT/Conservative,13523.56,53064.0,26281.44,146008.0
+125894,2019-10-31,Texas,Shoulder,Strain,Lifting,830.25,True,Firm C,1,PT/Conservative,12835.03,29042.15,9682.36,53790.87
+257352,2021-04-25,Florida,Shoulder,Fracture,Lifting,1622.12,True,Firm A,3,Surgery,121081.28,63165.35,56430.73,313504.07
+899656,2021-08-22,Georgia,Wrist,Fracture,Struck By,805.88,True,Firm A,10,Surgery,135629.22,5318.81,46301.29,257229.4
+791218,2020-12-10,New York,Neck,Sprain,Lifting,1138.62,True,Firm B,6,PT/Conservative,27515.5,9017.87,13410.35,74501.94
+577963,2019-10-07,New York,Knee,Strain,Lifting,1464.45,True,Solo Practitioner,10,PT/Conservative,9497.11,68624.13,35385.54,196586.32
+570777,2022-05-30,Georgia,Wrist,Strain,Struck By,809.53,True,Firm C,5,PT/Conservative,9483.82,12822.96,7489.62,41608.99
+429089,2018-08-30,Florida,Neck,Fracture,Repetitive Motion,1060.0,True,Firm A,3,Surgery,198997.2,67861.2,75608.35,420046.41
+538960,2019-06-24,California,Back,Strain,Slip/Fall,693.94,False,Firm B,2,PT/Conservative,12224.14,25648.02,11286.48,62702.69
+639908,2022-11-11,California,Shoulder,Strain,Repetitive Motion,623.31,False,Firm C,6,PT/Conservative,9193.66,13164.31,13668.98,75938.77
+738328,2021-06-16,Florida,Back,Sprain,Lifting,968.15,False,Solo Practitioner,7,PT/Conservative,17358.17,12140.6,8953.76,49743.13
+894464,2020-09-04,California,Wrist,Contusion,Slip/Fall,854.84,True,Firm C,8,PT/Conservative,4329.12,36108.44,26486.75,147148.59
+436002,2020-06-17,New York,Shoulder,Contusion,Slip/Fall,932.02,True,Solo Practitioner,6,PT/Conservative,3514.84,62743.59,24035.32,133529.57
+691534,2020-11-26,Texas,Shoulder,Strain,Lifting,969.02,True,Firm A,4,PT/Conservative,12094.68,38373.19,11694.23,64967.93
+644352,2019-07-24,Florida,Neck,Strain,Lifting,998.72,False,Firm B,3,PT/Conservative,12155.0,56028.19,17364.93,96471.85
+372031,2021-05-26,California,Shoulder,Strain,Repetitive Motion,1177.39,True,Firm A,9,PT/Conservative,11474.43,48955.88,33419.14,185661.88
+937803,2019-02-04,Georgia,Shoulder,Strain,Struck By,1231.76,False,Firm B,8,PT/Conservative,8939.43,54468.43,15800.89,87782.73
+214939,2022-01-06,California,Knee,Strain,Repetitive Motion,755.75,False,Firm C,2,PT/Conservative,6568.85,42397.58,23058.69,128103.82
+862693,2018-06-02,California,Shoulder,Strain,Slip/Fall,846.89,False,Solo Practitioner,2,PT/Conservative,7098.43,5589.47,3875.64,21531.33
+432951,2019-01-25,Texas,Back,Strain,Struck By,425.72,True,Firm C,8,PT/Conservative,18974.27,25287.77,15015.27,83418.16
+608042,2022-07-25,California,Neck,Strain,Slip/Fall,1354.87,True,Solo Practitioner,2,PT/Conservative,19460.34,79585.06,30594.67,169970.37
+684829,2021-06-05,New York,Knee,Sprain,Struck By,710.92,True,Solo Practitioner,9,PT/Conservative,14844.88,12199.39,12114.28,67301.55
+414678,2022-09-18,Georgia,Knee,Sprain,Struck By,1360.15,False,Solo Practitioner,5,PT/Conservative,11320.01,48475.75,13244.9,73582.76
+329565,2018-08-19,Texas,Shoulder,Strain,Struck By,718.94,True,Solo Practitioner,6,PT/Conservative,12581.66,29893.53,9289.38,51607.65
+219051,2019-12-13,New York,Knee,Fracture,Repetitive Motion,533.5,True,Firm C,9,Surgery,140187.88,14084.4,98328.59,546269.95
+992325,2022-05-23,Florida,Shoulder,Sprain,Struck By,968.91,False,Solo Practitioner,7,PT/Conservative,12151.55,22381.82,11132.92,61849.54
+157287,2019-07-04,Georgia,Back,Strain,Struck By,1074.58,True,Firm B,9,PT/Conservative,15535.31,10638.34,6654.51,36969.5
+917419,2021-07-04,Florida,Wrist,Strain,Slip/Fall,957.41,True,Firm A,6,PT/Conservative,11478.61,14533.48,9462.55,52569.71
+904092,2022-04-18,Georgia,Wrist,Strain,Repetitive Motion,917.2,True,Solo Practitioner,4,PT/Conservative,9963.44,32083.66,8166.05,45366.95
+940208,2018-11-27,California,Wrist,Sprain,Slip/Fall,1146.06,True,Firm A,9,PT/Conservative,17887.15,68075.96,48615.65,270086.97
+929783,2020-09-20,New York,Back,Strain,Repetitive Motion,956.03,True,Firm A,7,PT/Conservative,14995.55,27763.11,19975.9,110977.22
+520217,2018-09-26,California,Back,Fracture,Struck By,1055.03,True,Firm B,2,Surgery,197454.42,18104.31,70208.52,390047.34
+716767,2022-06-12,New York,Shoulder,Sprain,Struck By,1065.34,True,Firm C,8,PT/Conservative,19906.4,28828.1,30966.87,172038.14
+204521,2019-06-26,Florida,Back,Strain,Struck By,2283.16,False,Firm C,9,PT/Conservative,10934.88,132605.93,72558.36,403102.01
+356496,2020-02-23,Texas,Shoulder,Sprain,Slip/Fall,1962.73,False,Firm A,7,PT/Conservative,10472.54,88087.32,25317.62,140653.42
+343390,2020-07-04,Georgia,Shoulder,Strain,Slip/Fall,934.14,True,Firm B,4,PT/Conservative,12141.31,7398.39,3840.23,21334.63
+722234,2019-05-27,Florida,Knee,Fracture,Repetitive Motion,489.35,True,Firm C,7,Surgery,126122.34,16794.49,64642.55,359125.28
+876482,2019-11-23,Texas,Wrist,Strain,Slip/Fall,1283.85,False,Solo Practitioner,9,PT/Conservative,6560.69,55924.51,15144.68,84137.09
+428221,2021-08-28,Florida,Wrist,Fracture,Slip/Fall,736.06,True,Firm A,7,Surgery,105405.26,13116.59,41923.43,232907.92
+893653,2018-01-28,Florida,Neck,Strain,Slip/Fall,738.43,True,Solo Practitioner,3,PT/Conservative,16423.03,26317.65,10659.55,59219.72
+610859,2018-10-14,Georgia,Shoulder,Strain,Lifting,1540.17,False,Firm C,10,PT/Conservative,6425.79,66073.29,30981.62,172120.13
+691198,2021-08-24,Florida,Neck,Sprain,Lifting,408.78,False,Solo Practitioner,4,PT/Conservative,20988.44,11061.59,8321.12,46228.43
+883039,2022-01-14,Florida,Back,Strain,Repetitive Motion,574.28,True,Firm A,1,PT/Conservative,15116.66,31080.03,11627.39,64596.61
+835538,2019-01-20,Georgia,Knee,Strain,Slip/Fall,433.9,False,Firm B,2,PT/Conservative,6525.66,21764.42,5185.85,28810.3
+767254,2021-02-19,New York,Neck,Strain,Struck By,1216.68,False,Solo Practitioner,5,PT/Conservative,13021.66,10439.11,8131.57,45175.4
+667297,2021-08-06,Texas,Neck,Strain,Repetitive Motion,672.54,False,Firm C,10,PT/Conservative,13714.52,35066.24,18853.25,104740.29
+232858,2022-06-21,Texas,Shoulder,Fracture,Lifting,688.18,False,Firm B,1,Surgery,76766.56,14080.16,14528.74,80715.22
+326957,2018-07-07,California,Knee,Contusion,Lifting,924.61,True,Firm B,9,PT/Conservative,4467.97,16476.55,9357.4,51985.56
+546070,2021-09-23,Florida,Back,Strain,Struck By,784.82,False,Solo Practitioner,6,PT/Conservative,14104.94,16575.4,8600.1,47778.33
+979387,2020-12-05,Florida,Neck,Laceration,Lifting,829.97,True,Solo Practitioner,8,PT/Conservative,9438.27,52586.9,19974.03,110966.86
+818660,2018-09-04,New York,Neck,Strain,Lifting,1312.47,False,Solo Practitioner,4,PT/Conservative,10369.08,29451.83,13639.71,75776.19
+686986,2022-11-30,California,Back,Strain,Lifting,1309.16,True,Firm C,6,PT/Conservative,15728.46,43202.28,33741.99,187455.52
+486785,2019-06-04,Florida,Shoulder,Strain,Lifting,1399.88,False,Firm A,5,PT/Conservative,6910.8,52663.49,19149.0,106383.35
+755643,2018-04-28,Florida,Wrist,Fracture,Struck By,773.2,True,Firm A,1,Surgery,144567.84,43376.52,45989.91,255499.5
+130237,2021-06-09,Florida,Neck,Strain,Slip/Fall,732.96,True,Firm A,6,PT/Conservative,19668.88,40635.3,21036.21,116867.81
+999563,2021-01-19,Texas,Wrist,Sprain,Lifting,680.92,False,Firm C,9,PT/Conservative,10789.79,22919.77,12634.43,70191.26
+796773,2020-04-05,California,Back,Strain,Repetitive Motion,1363.83,False,Firm B,8,PT/Conservative,11508.89,9901.41,9065.13,50361.82
+388909,2021-05-31,New York,Neck,Fracture,Slip/Fall,2372.4,False,Firm C,2,Surgery,148578.46,112736.45,113145.91,628588.38
+588900,2021-03-09,California,Knee,Strain,Slip/Fall,1510.39,True,Firm B,6,PT/Conservative,11423.41,20934.01,12814.3,71190.53
