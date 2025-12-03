@@ -7,3 +7,5 @@ seaborn
 lifelines
 plotly
 streamlit
+openai 
+python-dotenv

@@ -807,52 +807,52 @@
     
 #     st.markdown("")
     
-#     # === ZOPA CURVE ===
-#     st.markdown("<div class='section-header'>📈 Zone of Possible Agreement (ZOPA)</div>", unsafe_allow_html=True)
+    # # === ZOPA CURVE ===
+    # st.markdown("<div class='section-header'>📈 Zone of Possible Agreement (ZOPA)</div>", unsafe_allow_html=True)
     
-#     mu = res['prediction']
-#     sigma = mu * 0.12
-#     x = np.linspace(mu - 3*sigma, mu + 3*sigma, 300)
-#     y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+    # mu = res['prediction']
+    # sigma = mu * 0.12
+    # x = np.linspace(mu - 3*sigma, mu + 3*sigma, 300)
+    # y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
     
-#     fig_zopa = go.Figure()
+    # fig_zopa = go.Figure()
     
-#     # Full distribution curve
-#     fig_zopa.add_trace(go.Scatter(
-#         x=x, y=y,
-#         mode='lines',
-#         line=dict(color='#64748B', width=2),
-#         fill='tozeroy',
-#         fillcolor='rgba(59, 130, 246, 0.1)',
-#         name='Distribution'
-#     ))
+    # # Full distribution curve
+    # fig_zopa.add_trace(go.Scatter(
+    #     x=x, y=y,
+    #     mode='lines',
+    #     line=dict(color='#64748B', width=2),
+    #     fill='tozeroy',
+    #     fillcolor='rgba(59, 130, 246, 0.1)',
+    #     name='Distribution'
+    # ))
     
-#     # Safe settlement zone
-#     x_safe = np.linspace(res['range_low'], res['range_high'], 150)
-#     y_safe = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x_safe - mu) / sigma) ** 2)
-#     fig_zopa.add_trace(go.Scatter(
-#         x=x_safe, y=y_safe,
-#         mode='lines',
-#         line=dict(width=0),
-#         fill='tozeroy',
-#         fillcolor='rgba(22, 163, 74, 0.5)',
-#         name='Safe Zone'
-#     ))
+    # # Safe settlement zone
+    # x_safe = np.linspace(res['range_low'], res['range_high'], 150)
+    # y_safe = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x_safe - mu) / sigma) ** 2)
+    # fig_zopa.add_trace(go.Scatter(
+    #     x=x_safe, y=y_safe,
+    #     mode='lines',
+    #     line=dict(width=0),
+    #     fill='tozeroy',
+    #     fillcolor='rgba(22, 163, 74, 0.5)',
+    #     name='Safe Zone'
+    # ))
     
-#     fig_zopa.update_layout(
-#         height=350,
-#         showlegend=True,
-#         paper_bgcolor='rgba(0,0,0,0)',
-#         plot_bgcolor='rgba(0,0,0,0)',
-#         font=dict(color='#e2e8f0', family='Poppins'),
-#         margin=dict(l=50, r=50, t=40, b=40),
-#         xaxis_title='Settlement Amount ($)',
-#         yaxis_title='Probability Density',
-#         hovermode='x unified'
-#     )
-#     st.plotly_chart(fig_zopa, use_container_width=True)
+    # fig_zopa.update_layout(
+    #     height=350,
+    #     showlegend=True,
+    #     paper_bgcolor='rgba(0,0,0,0)',
+    #     plot_bgcolor='rgba(0,0,0,0)',
+    #     font=dict(color='#e2e8f0', family='Poppins'),
+    #     margin=dict(l=50, r=50, t=40, b=40),
+    #     xaxis_title='Settlement Amount ($)',
+    #     yaxis_title='Probability Density',
+    #     hovermode='x unified'
+    # )
+    # st.plotly_chart(fig_zopa, use_container_width=True)
     
-#     st.markdown("")
+    # st.markdown("")
     
 #     # === RESET BUTTON ===
 #     if st.button("🔄 ANALYZE ANOTHER CASE", use_container_width=True, key="reset_button"):
@@ -889,6 +889,19 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
+import os
+from dotenv import load_dotenv
+from openai import AzureOpenAI
+
+# Load environment variables
+load_dotenv()
+
+# Initialize Azure Client
+client = AzureOpenAI(
+    azure_endpoint=os.getenv("OPENAI_DEPLOYMENT_ENDPOINT"), 
+    api_key=os.getenv("OPENAI_API_KEY"),  
+    api_version="2024-12-01-preview"
+)
 
 # === PAGE CONFIG ===
 st.set_page_config(
@@ -905,10 +918,22 @@ st.markdown("""
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
+    /* === NEUTRAL CHARCOAL THEME (No Blue) === */
+    
     .stApp {
         background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
         font-family: 'Poppins', sans-serif;
         color: #e2e8f0;
+    }
+    /* Make the Form Container a Lighter Grey to pop */
+    .form-container {
+        background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
+        border: 1px solid #52525b !important; /* Neutral Grey Border */
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+        padding: 50px;
+        border-radius: 20px;
+        max-width: 1200px;
+        margin: 40px auto;
     }
     
     /* Hide Sidebar */
@@ -1478,16 +1503,16 @@ else:
         st.markdown(f"""
             <div class='dashboard-title'>{rec_emoji} {res['action']}</div>
             <div class='dashboard-subtitle'>{res['action_desc']}<br>
-            📍 Jurisdiction: <b>{inputs['Jurisdiction']}</b> • ⚠️ Risk: <b>{res['risk_label']}</b></div>
+            📍 Jurisdiction: <b>{inputs['Jurisdiction']}</b> </b></div>
         """, unsafe_allow_html=True)
     
-    with col_header_right:
-        st.markdown(f"""
-            <div class='recommendation-panel'>
-                <div class='recommendation-text'>MODEL CONFIDENCE</div>
-                <div class='recommendation-subtext'>89% • Based on {22} litigation attributes</div>
-            </div>
-        """, unsafe_allow_html=True)
+    # with col_header_right:
+    #     st.markdown(f"""
+    #         <div class='recommendation-panel'>
+    #             <div class='recommendation-text'>MODEL CONFIDENCE</div>
+    #             <div class='recommendation-subtext'>89% • Based on {22} litigation attributes</div>
+    #         </div>
+    #     """, unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -1658,110 +1683,371 @@ else:
         
         st.plotly_chart(fig_curve, use_container_width=True)
     # === DRIVER ANALYSIS (Like Image) ===
-    st.markdown("<div class='section-header'>📈 Key Driver Analysis for This Claim</div>", unsafe_allow_html=True)
+    # # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SHAP-STYLE FEATURE IMPORTANCE) ===
+    # st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
     
-    col_drivers_left, col_drivers_right = st.columns(2)
+    # # 1. Extract all variables from inputs dictionary
+    # attorney_score = inputs['Attorney_Score']
+    # venue_win_rate = inputs['Venue_Win_Rate']
+    # impairment = inputs['Impairment_Rating']
+    # wage_loss = inputs['Wage_Loss_Exposure']
+    # employment = inputs['Employment_Status']
+    # opioid = inputs['Opioid_Indicator']
+    # days_filed = inputs['Days_Since_Filed']
+    # medical_trajectory = inputs['Medical_Trajectory']
+    # future_medical = inputs['Future_Medical']
+    # attorney_type = inputs['Attorney_Tendency']
     
-    with col_drivers_left:
-        st.markdown("<div style='color: #fecaca; font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;'>🔴 Positive Drivers (↑ Settlement Pressure)</div>", unsafe_allow_html=True)
-        pos_drivers = [d for d in res['drivers'] if d[2] == 'pos']
-        for name, val, _ in pos_drivers[:5]:
-            st.markdown(f"""
-                <div class='driver-item'>
-                    <span class='driver-name'>{name}</span>
-                    <span class='driver-value driver-pos'>+${val:,.0f}</span>
-                </div>
-            """, unsafe_allow_html=True)
+    # # 2. Determine Risk Level
+    # if confidence_score >= 80:
+    #     risk_level = "LOW RISK"
+    #     risk_emoji = "🟢 GREEN"
+    # elif confidence_score >= 60:
+    #     risk_level = "MEDIUM RISK"
+    #     risk_emoji = "🟡 YELLOW"
+    # else:
+    #     risk_level = "HIGH RISK"
+    #     risk_emoji = "🔴 RED"
     
-    with col_drivers_right:
-        st.markdown("<div style='color: #bbf7d0; font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;'>🟢 Negative Drivers (↓ Defense Advantage)</div>", unsafe_allow_html=True)
-        neg_drivers = [d for d in res['drivers'] if d[2] == 'neg']
-        if neg_drivers:
-            for name, val, _ in neg_drivers[:5]:
-                st.markdown(f"""
-                    <div class='driver-item'>
-                        <span class='driver-name'>{name}</span>
-                        <span class='driver-value driver-neg'>−${abs(val):,.0f}</span>
-                    </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.markdown("<div style='color: #94a3b8; padding: 15px; text-align: center;'><i>No mitigating factors identified</i></div>", unsafe_allow_html=True)
+    # # 3. CALCULATE FEATURE CONTRIBUTIONS (SHAP-STYLE)
+    # feature_contributions = {}
     
-    st.markdown("")
+    # # A. LITIGATION & EXPOSURE FEATURES
+    # if attorney_score > 70:
+    #     feature_contributions['Attorney Score'] = {
+    #         'value': attorney_score,
+    #         'impact': (attorney_score - 50) * 250,
+    #         'direction': 'positive',
+    #         'explanation': f"High attorney aggressiveness ({attorney_score}/100) increases settlement pressure"
+    #     }
+    # else:
+    #     direction_val = 'negative' if attorney_score < 50 else 'neutral'
+    #     feature_contributions['Attorney Score'] = {
+    #         'value': attorney_score,
+    #         'impact': (attorney_score - 50) * 250,
+    #         'direction': direction_val,
+    #         'explanation': f"Moderate attorney profile ({attorney_score}/100) suggests manageable litigation"
+    #     }
     
-    # === RISK ALERTS ===
-    # === RISK ALERTS ===
-    st.markdown("<div class='section-header'>🚨 Critical Risk Alerts</div>", unsafe_allow_html=True)
+    # if venue_win_rate < 0.50:
+    #     feature_contributions['Venue Win Rate'] = {
+    #         'value': venue_win_rate,
+    #         'impact': (0.50 - venue_win_rate) * 150000,
+    #         'direction': 'positive',
+    #         'explanation': f"Unfavorable venue ({venue_win_rate*100:.0f}% defense win rate) increases plaintiff leverage"
+    #     }
+    # else:
+    #     feature_contributions['Venue Win Rate'] = {
+    #         'value': venue_win_rate,
+    #         'impact': (0.50 - venue_win_rate) * 150000,
+    #         'direction': 'negative',
+    #         'explanation': f"Favorable venue ({venue_win_rate*100:.0f}% defense win rate) supports lower settlement"
+    #     }
     
-    # 1. Collect all active alerts first
-    active_alerts = []
+    # # B. ECONOMIC DAMAGES FEATURES
+    # if impairment > 20:
+    #     feature_contributions['Impairment Rating'] = {
+    #         'value': impairment,
+    #         'impact': impairment * 1800,
+    #         'direction': 'positive',
+    #         'explanation': f"High permanent impairment ({impairment}%) significantly raises non-economic damages"
+    #     }
     
-    if attorney_score > 80:
-        active_alerts.append(f"""
-            <div class='alert-box'>
-            🔥 <b>HIGH-AGGRESSION ATTORNEY</b><br>
-            History of trial escalation. Adversarial discovery expected.
-            </div>""")
+    # if wage_loss > 50000:
+    #     feature_contributions['Wage Loss'] = {
+    #         'value': wage_loss,
+    #         'impact': (wage_loss - 25000) * 0.3,
+    #         'direction': 'positive',
+    #         'explanation': f"High wage loss exposure (${wage_loss:,}) increases indemnity component"
+    #     }
+    
+    # # C. BEHAVIORAL FEATURES
+    # if employment == 'Terminated':
+    #     feature_contributions['Employment Status'] = {
+    #         'value': employment,
+    #         'impact': 18000,
+    #         'direction': 'positive',
+    #         'explanation': "Terminated employment status elevates emotional damages demands"
+    #     }
+    
+    # if opioid == 1:
+    #     feature_contributions['Opioid Indicator'] = {
+    #         'value': 'Yes',
+    #         'impact': 12000,
+    #         'direction': 'positive',
+    #         'explanation': "Opioid usage creates narrative risk and settlement floor escalation"
+    #     }
+    
+    # if days_filed > 365:
+    #     feature_contributions['Days Open'] = {
+    #         'value': days_filed,
+    #         'impact': (days_filed - 180) * 15,
+    #         'direction': 'positive',
+    #         'explanation': f"Long duration ({days_filed} days) increases cumulative exposure"
+    #     }
+    
+    # # D. MEDICAL FEATURES
+    # if medical_trajectory == 'Escalating':
+    #     feature_contributions['Medical Trajectory'] = {
+    #         'value': medical_trajectory,
+    #         'impact': 25000,
+    #         'direction': 'positive',
+    #         'explanation': "Escalating medical costs suggest chronic condition trajectory"
+    #     }
+    # elif medical_trajectory == 'Low':
+    #     feature_contributions['Medical Trajectory'] = {
+    #         'value': medical_trajectory,
+    #         'impact': -12000,
+    #         'direction': 'negative',
+    #         'explanation': "Low medical trajectory indicates quick recovery expectations"
+    #     }
+    
+    # if future_medical == 1:
+    #     feature_contributions['Future Medical'] = {
+    #         'value': 'Yes',
+    #         'impact': 15000,
+    #         'direction': 'positive',
+    #         'explanation': "Future medical exposure requires higher settlement reserves"
+    #     }
+    
+    # # E. LITIGATION INTELLIGENCE FEATURES
+    # if attorney_type == 'Trial-Oriented':
+    #     feature_contributions['Attorney Type'] = {
+    #         'value': attorney_type,
+    #         'impact': 20000,
+    #         'direction': 'positive',
+    #         'explanation': "Trial-oriented counsel increases litigation costs and risk premium"
+    #     }
+    # else:
+    #     feature_contributions['Attorney Type'] = {
+    #         'value': attorney_type,
+    #         'impact': -10000,
+    #         'direction': 'negative',
+    #         'explanation': "Settlement-oriented counsel creates early resolution opportunities"
+    #     }
+    
+    # # 4. SORT FEATURES BY IMPACT (SHAP-STYLE)
+    # sorted_features = sorted(feature_contributions.items(), key=lambda x: abs(x[1]['impact']), reverse=True)
+    
+    # # 5. CALCULATE BASE VALUE
+    # base_prediction = res['prediction']
+    
+    # # 6. RENDER SHAP-STYLE EXPLANATION
+    # with st.container():
+    #     st.markdown(f"## 🧾 Why This Claim Is {risk_level} {risk_emoji}")
+    #     st.markdown(f"**Base Settlement Value:** ${base_prediction:,.0f}")
+    #     st.divider()
+        
+    #     st.markdown("### 🔬 Feature Contribution Analysis (SHAP-Style)")
+        
+    #     # Create two columns for positive/negative impacts
+    #     col_pos, col_neg = st.columns(2)
+        
+    #     with col_pos:
+    #         st.markdown("#### 🔴 Increasing Pressure (Positive Impact)")
+    #         pos_features = [f for f in sorted_features if f[1]['direction'] == 'positive']
             
-    if venue_win_rate < 0.40:
-        active_alerts.append(f"""
-            <div class='alert-box'>
-            ⚖️ <b>UNFAVORABLE VENUE</b><br>
-            Defense win rate <40%. Jury pool bias present.
-            </div>""")
+    #         if pos_features:
+    #             for feature_name, feature_data in pos_features[:5]:
+    #                 impact_val = feature_data['impact']
+    #                 pct_change = (impact_val / base_prediction) * 100
+                    
+    #                 st.write(f"**{feature_name}**")
+    #                 st.write(f"Value: `{feature_data['value']}`")
+    #                 st.write(f"Impact: **+${impact_val:,.0f}** (+{pct_change:.1f}%)")
+    #                 st.caption(f"💡 {feature_data['explanation']}")
+    #                 st.write("")
+    #         else:
+    #             st.info("No pressure-increasing factors detected")
+        
+    #     with col_neg:
+    #         st.markdown("#### 🟢 Mitigating Defense (Negative Impact)")
+    #         neg_features = [f for f in sorted_features if f[1]['direction'] == 'negative']
             
-    if days_filed > 365:
-        active_alerts.append(f"""
-            <div class='alert-box'>
-            📅 <b>STALE CLAIM</b><br>
-            >12 months since filing. Settlement window closing.
-            </div>""")
-            
+    #         if neg_features:
+    #             for feature_name, feature_data in neg_features[:5]:
+    #                 impact_val = feature_data['impact']
+    #                 pct_change = (impact_val / base_prediction) * 100
+                    
+    #                 st.write(f"**{feature_name}**")
+    #                 st.write(f"Value: `{feature_data['value']}`")
+    #                 st.write(f"Impact: **${impact_val:,.0f}** ({pct_change:.1f}%)")
+    #                 st.caption(f"💡 {feature_data['explanation']}")
+    #                 st.write("")
+    #         else:
+    #             st.info("No mitigating factors detected")
+        
+    #     st.divider()
+        
+    #     # 7. SUMMARY
+    #     top_driver = sorted_features[0] if sorted_features else None
+        
+    #     if top_driver:
+    #         st.markdown("### 📊 Key Insight")
+    #         st.markdown(
+    #             f"🎯 **Primary Driver:** {top_driver[0]}\n\n"
+    #             f"The single largest factor affecting this claim is **{top_driver[0]}** "
+    #             f"(Contributing **+${abs(top_driver[1]['impact']):,.0f}** or **{abs(top_driver[1]['impact'])/base_prediction*100:.1f}%** of the prediction).\n\n"
+    #             f"**Why:** {top_driver[1]['explanation']}"
+    #         )
+        
+    #     # 8. RECOMMENDATION
+    #     st.markdown("### 🎯 Strategic Recommendation")
+        
+    #     if confidence_score >= 75:
+    #         rec = "✅ **SETTLE** - Risk factors are identifiable and manageable through early negotiation."
+    #     elif confidence_score >= 55:
+    #         rec = "⚡ **STRATEGIZE** - Balance of factors requires careful negotiation strategy."
+    #     else:
+    #         rec = "⚔️ **LITIGATE** - Multiple high-risk factors warrant trial preparation."
+        
+    #     st.success(rec)
+    # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SHAP-STYLE SIMPLIFIED) ===
+    st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
+    
+    # Extract variables from inputs
+    attorney_score = inputs['Attorney_Score']
+    venue_win_rate = inputs['Venue_Win_Rate']
+    impairment = inputs['Impairment_Rating']
+    wage_loss = inputs['Wage_Loss_Exposure']
+    employment = inputs['Employment_Status']
+    opioid = inputs['Opioid_Indicator']
+    days_filed = inputs['Days_Since_Filed']
+    medical_trajectory = inputs['Medical_Trajectory']
+    future_medical = inputs['Future_Medical']
+    attorney_type = inputs['Attorney_Tendency']
+    
+    # Calculate feature importance scores - ALWAYS include meaningful features
+    feature_importance = []
+    
+    # ALWAYS calculate base factors (don't use high thresholds)
+    # Attorney contribution
+    attorney_impact = (attorney_score - 40) * 150  # Scale from base
+    feature_importance.append(('Attorney Score', attorney_score, attorney_impact, f'{attorney_score}/100 aggressiveness'))
+    
+    # Venue contribution
+    venue_impact = (0.50 - venue_win_rate) * 80000  # Negative venue = higher impact
+    feature_importance.append(('Venue Win Rate', f'{int(venue_win_rate*100)}%', venue_impact, f'{int(venue_win_rate*100)}% defense win rate'))
+    
+    # Impairment contribution (MAJOR DRIVER)
+    if impairment > 0:
+        impair_impact = impairment * 1500
+        feature_importance.append(('Impairment Rating', f'{impairment}%', impair_impact, f'{impairment}% permanent injury'))
+    
+    # Wage loss contribution
+    if wage_loss > 0:
+        wage_impact = wage_loss * 0.6
+        feature_importance.append(('Wage Loss Exposure', f'${wage_loss:,}', wage_impact, f'Lost wages: ${wage_loss:,}'))
+    
+    # Employment status (binary impact)
     if employment == 'Terminated':
-        active_alerts.append(f"""
-            <div class='alert-box'>
-            😠 <b>TERMINATED EMPLOYEE</b><br>
-            Higher emotional damages expected. Risk premium applies.
-            </div>""")
-            
-    if opioid:
-        active_alerts.append(f"""
-            <div class='alert-box'>
-            💊 <b>OPIOID INDICATOR</b><br>
-            Increased settlement floor due to addiction narratives.
-            </div>""")
-            
-    if impairment > 20:
-        active_alerts.append(f"""
-            <div class='alert-box'>
-            ⚕️ <b>HIGH IMPAIRMENT</b><br>
-            Non-economic damages baseline significantly raised.
-            </div>""")
-
-    # 2. Render Alerts OR the "Safe State" Card
-    if active_alerts:
-        # Split alerts into two columns for layout
-        col1, col2 = st.columns(2)
-        half = (len(active_alerts) + 1) // 2
+        feature_importance.append(('Employment Status', employment, 25000, 'Terminated = emotional damages premium'))
+    else:
+        feature_importance.append(('Employment Status', employment, 0, 'Standard employment relationship'))
+    
+    # Opioid indicator
+    if opioid == 1:
+        feature_importance.append(('Opioid Indicator', 'Yes', 14000, 'Opioid usage increases narrative risk'))
+    else:
+        feature_importance.append(('Opioid Indicator', 'No', 0, 'No opioid complications'))
+    
+    # Medical trajectory
+    if medical_trajectory == 'Escalating':
+        traj_impact = 20000
+    elif medical_trajectory == 'High':
+        traj_impact = 12000
+    elif medical_trajectory == 'Moderate':
+        traj_impact = 5000
+    else:
+        traj_impact = -3000
+    feature_importance.append(('Medical Trajectory', medical_trajectory, traj_impact, f'{medical_trajectory} medical costs'))
+    
+    # Days filed contribution
+    if days_filed > 0:
+        days_impact = (days_filed / 365) * 8000  # Scale by years
+        feature_importance.append(('Days Since Filed', days_filed, days_impact, f'{days_filed} days open'))
+    
+    # Attorney type
+    if attorney_type == 'Trial-Oriented':
+        att_type_impact = 16000
+    elif attorney_type == 'Balanced':
+        att_type_impact = 4000
+    else:
+        att_type_impact = -5000
+    feature_importance.append(('Attorney Type', attorney_type, att_type_impact, f'{attorney_type} approach'))
+    
+    # Future medical
+    if future_medical == 1:
+        feature_importance.append(('Future Medical', 'Yes', 10000, 'Requires settlement reserves'))
+    else:
+        feature_importance.append(('Future Medical', 'No', 0, 'No future medical needed'))
+    
+    # Sort by absolute impact value (descending)
+    feature_importance = sorted(feature_importance, key=lambda x: abs(x[2]), reverse=True)
+    
+    # Filter out zero-impact factors
+    feature_importance = [f for f in feature_importance if abs(f[2]) > 500]
+    
+    base_value = res['prediction']
+    
+    # RENDER CLEAN EXPLANATION
+    st.markdown(f"## 🧾 What Drove the ${base_value:,.0f} Prediction")
+    st.divider()
+    
+    st.markdown("### Top Factors Contributing to Settlement Value")
+    
+    for i, (feature, value, impact, desc) in enumerate(feature_importance[:6], 1):
+        col1, col2 = st.columns([3, 1])
         
         with col1:
-            for alert in active_alerts[:half]:
-                st.markdown(alert, unsafe_allow_html=True)
+            st.write(f"**{i}. {feature}**")
+            st.caption(f"Value: `{value}` • {desc}")
         
         with col2:
-            for alert in active_alerts[half:]:
-                st.markdown(alert, unsafe_allow_html=True)
-    else:
-        # THE FIX: Show this if no risks are found
-        st.markdown("""
-            <div style='background: rgba(22, 163, 74, 0.1); border: 1px solid #16a34a; border-radius: 10px; padding: 20px; text-align: center;'>
-                <div style='font-size: 2rem;'>🛡️</div>
-                <div style='color: #bbf7d0; font-weight: 700; margin-top: 10px;'>NO CRITICAL RISK FACTORS DETECTED</div>
-                <div style='color: #86efac; font-size: 0.9rem;'>This claim has a standard risk profile based on current attributes.</div>
-            </div>
-        """, unsafe_allow_html=True)
+            impact_pct = (abs(impact) / base_value) * 100 if base_value > 0 else 0
+            color = "🔴" if impact > 0 else "🟢"
+            st.write(f"{color} ${abs(impact):,.0f}\n({impact_pct:.1f}%)")
+    
+    st.divider()
+    
+    # Build narrative summary
+    if len(feature_importance) >= 3:
+        top_3 = feature_importance[:3]
+        
+        summary_text = f"""
+### 📊 Why This Settlement Value
 
-    st.markdown("")
+**The model considered {len(feature_importance)} key factors:**
+
+1. **{top_3[0][0]}** ({top_3[0][1]})  
+   Contribution: ${abs(top_3[0][2]):,.0f} ({abs(top_3[0][2])/base_value*100:.1f}%)  
+   → {top_3[0][3]}
+
+2. **{top_3[1][0]}** ({top_3[1][1]})  
+   Contribution: ${abs(top_3[1][2]):,.0f} ({abs(top_3[1][2])/base_value*100:.1f}%)  
+   → {top_3[1][3]}
+
+3. **{top_3[2][0]}** ({top_3[2][1]})  
+   Contribution: ${abs(top_3[2][2]):,.0f} ({abs(top_3[2][2])/base_value*100:.1f}%)  
+   → {top_3[2][3]}
+
+**Result:** These three factors account for **{sum([abs(f[2]) for f in top_3])/base_value*100:.1f}%** of the final ${base_value:,.0f} prediction.
+        """
+        st.markdown(summary_text)
+    
+    st.divider()
+    
+    # Final recommendation
+    st.markdown("### 🎯 Recommendation")
+    
+    if confidence_score >= 75:
+        st.success("✅ **SETTLE** - Key factors clearly support settlement negotiations.")
+    elif confidence_score >= 55:
+        st.warning("⚡ **STRATEGIZE** - Mixed factors require careful case management.")
+    else:
+        st.error("⚔️ **LITIGATE** - High-risk factors warrant trial preparation.")
+    # === RISK ALERTS ===
+    
     
     # === STRATEGIC RECOMMENDATION ===
     st.markdown("<div class='section-header'>🎯 Recommended Strategy</div>", unsafe_allow_html=True)
@@ -1807,83 +2093,216 @@ else:
     
     st.markdown("")
     
-    # === VISUALIZATIONS ===
-    st.markdown("<div class='section-header'>📊 Predictive Analytics & Confidence Intervals</div>", unsafe_allow_html=True)
+    # # === VISUALIZATIONS ===
+    # st.markdown("<div class='section-header'>📊 Predictive Analytics & Confidence Intervals</div>", unsafe_allow_html=True)
     
-    viz_col1, viz_col2 = st.columns(2)
+    # viz_col1, viz_col2 = st.columns(2)
     
-    with viz_col1:
-        # Gauge Chart - Settlement Value Prediction
-        fig_gauge = go.Figure(go.Indicator(
-            mode="gauge+number",
-            value=int(res['prediction']),
-            number={'font': {'size': 32, 'color': "#e2e8f0"}, 'prefix': "$"},
-            domain={'x': [0, 1], 'y': [0, 1]},
-            gauge={
-                'axis': {'range': [0, int(res['range_high']*1.4)], 'tickwidth': 1, 'tickcolor': "#334155"},
-                'bar': {'color': "#3b82f6", 'thickness': 0.3},
-                'bgcolor': "#0a0e27",
-                'borderwidth': 2,
-                'bordercolor': "#334155",
-                'steps': [
-                    {'range': [0, res['range_low']], 'color': "#1e3a8a"},
-                    {'range': [res['range_low'], res['range_high']], 'color': "#1e40af"},
-                    {'range': [res['range_high'], int(res['range_high']*1.4)], 'color': "#7f1d1d"}
-                ],
-            }
-        ))
-        fig_gauge.update_layout(
-            height=320,
-            margin=dict(l=20, r=20, t=40, b=20),
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#e2e8f0', family='Poppins'),
-            title={'text': 'Settlement Value Prediction', 'font': {'size': 16, 'color': '#cbd5e1'}}
-        )
-        st.plotly_chart(fig_gauge, use_container_width=True)
+    # with viz_col1:
+    #     # Gauge Chart - Settlement Value Prediction
+    #     fig_gauge = go.Figure(go.Indicator(
+    #         mode="gauge+number",
+    #         value=int(res['prediction']),
+    #         number={'font': {'size': 32, 'color': "#e2e8f0"}, 'prefix': "$"},
+    #         domain={'x': [0, 1], 'y': [0, 1]},
+    #         gauge={
+    #             'axis': {'range': [0, int(res['range_high']*1.4)], 'tickwidth': 1, 'tickcolor': "#334155"},
+    #             'bar': {'color': "#3b82f6", 'thickness': 0.3},
+    #             'bgcolor': "#0a0e27",
+    #             'borderwidth': 2,
+    #             'bordercolor': "#334155",
+    #             'steps': [
+    #                 {'range': [0, res['range_low']], 'color': "#1e3a8a"},
+    #                 {'range': [res['range_low'], res['range_high']], 'color': "#1e40af"},
+    #                 {'range': [res['range_high'], int(res['range_high']*1.4)], 'color': "#7f1d1d"}
+    #             ],
+    #         }
+    #     ))
+    #     fig_gauge.update_layout(
+    #         height=320,
+    #         margin=dict(l=20, r=20, t=40, b=20),
+    #         paper_bgcolor='rgba(0,0,0,0)',
+    #         plot_bgcolor='rgba(0,0,0,0)',
+    #         font=dict(color='#e2e8f0', family='Poppins'),
+    #         title={'text': 'Settlement Value Prediction', 'font': {'size': 16, 'color': '#cbd5e1'}}
+    #     )
+    #     st.plotly_chart(fig_gauge, use_container_width=True)
     
-    with viz_col2:
-        # Box Plot - Settlement Range & Confidence
-        fig_box = go.Figure()
+    # with viz_col2:
+    #     # Box Plot - Settlement Range & Confidence
+    #     fig_box = go.Figure()
         
-        # Add box plot for confidence interval
-        fig_box.add_trace(go.Box(
-            y=[res['range_low'], res['prediction'], res['range_high']],
-            name='Settlement Range',
-            marker_color='#3b82f6',
-            boxmean='sd',
-            showlegend=False
-        ))
+    #     # Add box plot for confidence interval
+    #     fig_box.add_trace(go.Box(
+    #         y=[res['range_low'], res['prediction'], res['range_high']],
+    #         name='Settlement Range',
+    #         marker_color='#3b82f6',
+    #         boxmean='sd',
+    #         showlegend=False
+    #     ))
         
-        fig_box.update_layout(
-            height=320,
-            title={'text': 'Confidence Interval (88%-112%)', 'font': {'size': 16, 'color': '#cbd5e1'}},
-            paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(0,0,0,0)',
-            font=dict(color='#e2e8f0', family='Poppins'),
-            yaxis_title='Amount ($)',
-            yaxis_title_font=dict(color='#cbd5e1'),
-            margin=dict(l=20, r=20, t=40, b=20)
-        )
-        st.plotly_chart(fig_box, use_container_width=True)
+    #     fig_box.update_layout(
+    #         height=320,
+    #         title={'text': 'Confidence Interval (88%-112%)', 'font': {'size': 16, 'color': '#cbd5e1'}},
+    #         paper_bgcolor='rgba(0,0,0,0)',
+    #         plot_bgcolor='rgba(0,0,0,0)',
+    #         font=dict(color='#e2e8f0', family='Poppins'),
+    #         yaxis_title='Amount ($)',
+    #         yaxis_title_font=dict(color='#cbd5e1'),
+    #         margin=dict(l=20, r=20, t=40, b=20)
+    #     )
+    #     st.plotly_chart(fig_box, use_container_width=True)
+    
+    # st.markdown("")
+    # === 8. VISUALIZATIONS (Box Plot Only) ===
+    # === 8. VISUALIZATIONS (Improved Box Plot) ===
+    st.markdown("<div class='section-header'>📊 Predictive Analytics & Settlement Range</div>", unsafe_allow_html=True)
+    
+    # 1. Prepare Data for a "Full" Box Plot
+    # We synthesize Q1/Q3 to give the box volume (visual appeal)
+    # Logic: The Box covers the middle 50% of the range, Whiskers cover 100%
+    pred = res['prediction']
+    low = res['range_low']
+    high = res['range_high']
+    
+    q1 = pred - (pred - low) * 0.4  # 40% towards the bottom
+    q3 = pred + (high - pred) * 0.4 # 40% towards the top
+    
+    fig_box = go.Figure()
+    
+    # 2. Add the Horizontal Box Trace
+    fig_box.add_trace(go.Box(
+        q1=[q1], median=[pred], q3=[q3], 
+        lowerfence=[low], upperfence=[high],
+        name="Settlement Value",
+        marker_color='#60A5FA', # Brand Blue
+        fillcolor='rgba(96, 165, 250, 0.2)', # Transparent Fill
+        orientation='h', # Horizontal is better for money ranges
+        hoverinfo='x+name'
+    ))
+    
+    # 3. Add Annotation for the Target
+    fig_box.add_annotation(
+        x=pred, y=0.3,
+        text=f"<b>Target: ${pred/1000:.0f}K</b>",
+        showarrow=False,
+        font=dict(color="#F1F5F9", size=14),
+        yshift=10
+    )
+
+    # 4. Premium Layout Styling
+    fig_box.update_layout(
+        height=250, # Compact height
+        title={
+            'text': f'Projected Settlement Range (Model Confidence: {confidence_score}%)', 
+            'font': {'size': 15, 'color': '#cbd5e1'}
+        },
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='#e2e8f0', family='Poppins'),
+        xaxis=dict(
+            title="Settlement Amount ($)",
+            title_font=dict(color='#94a3b8', size=12),
+            tickfont=dict(color='#cbd5e1'),
+            tickprefix="$",
+            showgrid=True,
+            gridcolor='#334155'
+        ),
+        yaxis=dict(showticklabels=False), # Hide Y labels (it's just one box)
+        margin=dict(l=20, r=20, t=60, b=40),
+        showlegend=False
+    )
+    
+    st.plotly_chart(fig_box, use_container_width=True)
     
     st.markdown("")
     
     # === ZOPA CURVE ===
-    # === ZOPA CURVE (Dynamic) ===
-    st.markdown("<div class='section-header'>📈 Settlement Distribution Analysis</div>", unsafe_allow_html=True)
+    # # === 9. ZOPA CURVE (Dynamic) ===
+    # st.markdown("<div class='section-header'>📈 Settlement Distribution Analysis</div>", unsafe_allow_html=True)
+    
+    # # Ensure variables exist (Safety check)
+    # mu = res.get('prediction', 0)
+    # low_b = res.get('range_low', mu*0.9)
+    # high_b = res.get('range_high', mu*1.1)
+    
+    # # 1. Logic: Calculate shape based on Confidence
+    # # If confidence_score isn't defined yet, default to 90
+    # curr_conf = locals().get('confidence_score', 90) 
+    
+    # # Map Confidence (0-100) to Sigma Width (0.20-0.05)
+    # # High Confidence = Narrow Curve. Low Confidence = Wide Curve.
+    # sigma_pct = 0.20 - ((curr_conf - 50) / 50 * 0.15)
+    # sigma_pct = max(0.05, min(0.20, sigma_pct))
+    # sigma = mu * sigma_pct
+    
+    # # 2. Create Data Points
+    # x = np.linspace(mu - 4*sigma, mu + 4*sigma, 300)
+    # y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+    
+    # # 3. Build Plot
+    # fig_zopa = go.Figure()
+    
+    # # A. The Bell Curve
+    # fig_zopa.add_trace(go.Scatter(
+    #     x=x, y=y,
+    #     mode='lines',
+    #     line=dict(color='#60A5FA', width=3),
+    #     fill='tozeroy',
+    #     fillcolor='rgba(59, 130, 246, 0.15)',
+    #     name='Probability',
+    #     hoverinfo='skip'
+    # ))
+    
+    # # B. The Target Line (Vertical)
+    # fig_zopa.add_vline(x=mu, line_width=2, line_dash="dash", line_color="#F1F5F9")
+    # fig_zopa.add_annotation(
+    #     x=mu, y=max(y)*0.95,
+    #     text=f"Target: ${mu/1000:.0f}K",
+    #     showarrow=False,
+    #     font=dict(color="white", size=12),
+    #     yshift=10
+    # )
+
+    # # C. The Safe Zone (Green Shaded Area)
+    # fig_zopa.add_vrect(
+    #     x0=low_b, x1=high_b,
+    #     fillcolor="#16a34a", opacity=0.1,
+    #     layer="below", line_width=0,
+    #     annotation_text="Confidence Interval", 
+    #     annotation_position="top left",
+    #     annotation_font_color="#16a34a"
+    # )
+    
+    # # 4. Final Layout & Render
+    # fig_zopa.update_layout(
+    #     height=320,
+    #     paper_bgcolor='rgba(0,0,0,0)',
+    #     plot_bgcolor='rgba(0,0,0,0)',
+    #     font=dict(color='#e2e8f0', family='Poppins'),
+    #     margin=dict(l=20, r=20, t=30, b=20),
+    #     xaxis=dict(
+    #         showgrid=False, 
+    #         title="Settlement Amount ($)",
+    #         title_font=dict(color='#94a3b8'),
+    #         tickprefix="$",
+    #         showticklabels=True
+    #     ),
+    #     yaxis=dict(
+    #         showgrid=False, 
+    #         showticklabels=False
+    #     ),
+    #     showlegend=False
+    # )
+    
+    # # THIS IS THE MISSING LINE THAT MAKES IT APPEAR:
+    # st.plotly_chart(fig_zopa, use_container_width=True)
+    # === ZOPA CURVE ===
+    st.markdown("<div class='section-header'>📈 Zone of Possible Agreement (ZOPA)</div>", unsafe_allow_html=True)
     
     mu = res['prediction']
-    
-    # 1. Calculate Sigma (Width) based on Confidence Score
-    # Higher Confidence = Lower Sigma (Narrower/Sharper Curve)
-    # Lower Confidence = Higher Sigma (Wider/Flatter Curve)
-    # Logic: map 100%->5% width, 50%->20% width
-    sigma_pct = 0.20 - ((confidence_score - 50) / 50 * 0.15)
-    sigma_pct = max(0.05, min(0.20, sigma_pct)) # Clamp between 5% and 20%
-    sigma = mu * sigma_pct
-    
-    x = np.linspace(mu - 4*sigma, mu + 4*sigma, 300)
+    sigma = mu * 0.12
+    x = np.linspace(mu - 3*sigma, mu + 3*sigma, 300)
     y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
     
     fig_zopa = go.Figure()
@@ -1892,23 +2311,39 @@ else:
     fig_zopa.add_trace(go.Scatter(
         x=x, y=y,
         mode='lines',
-        line=dict(color='#60A5FA', width=3),
+        line=dict(color='#64748B', width=2),
         fill='tozeroy',
-        fillcolor='rgba(59, 130, 246, 0.15)',
-        name='Probability'
+        fillcolor='rgba(59, 130, 246, 0.1)',
+        name='Distribution'
     ))
     
-    # Add Vertical Line for Target Value
-    fig_zopa.add_vline(x=mu, line_width=2, line_dash="dash", line_color="#F1F5F9")
-    fig_zopa.add_annotation(x=mu, y=max(y)*0.95, text="Target", showarrow=False, font=dict(color="white"))
-
-    # Highlight the Confidence Interval Range (The "Safe Zone")
-    # This matches the numbers in your KPI card
-    fig_zopa.add_vrect(
-        x0=res['range_low'], x1=res['range_high'],
-        fillcolor="#16a34a", opacity=0.1,
-        layer="below", line_width=0,
+    # Safe settlement zone
+    x_safe = np.linspace(res['range_low'], res['range_high'], 150)
+    y_safe = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x_safe - mu) / sigma) ** 2)
+    fig_zopa.add_trace(go.Scatter(
+        x=x_safe, y=y_safe,
+        mode='lines',
+        line=dict(width=0),
+        fill='tozeroy',
+        fillcolor='rgba(22, 163, 74, 0.5)',
+        name='Safe Zone'
+    ))
+    
+    fig_zopa.update_layout(
+        height=350,
+        showlegend=True,
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        font=dict(color='#e2e8f0', family='Poppins'),
+        margin=dict(l=50, r=50, t=40, b=40),
+        xaxis_title='Settlement Amount ($)',
+        yaxis_title='Probability Density',
+        hovermode='x unified'
     )
+    st.plotly_chart(fig_zopa, use_container_width=True)
+    
+    st.markdown("")
+
     
     # === RESET BUTTON ===
     if st.button("🔄 ANALYZE ANOTHER CASE", use_container_width=True, key="reset_button"):
