@@ -896,12 +896,6 @@ from openai import AzureOpenAI
 # Load environment variables
 load_dotenv()
 
-# Initialize Azure Client
-client = AzureOpenAI(
-    azure_endpoint=os.getenv("OPENAI_DEPLOYMENT_ENDPOINT"), 
-    api_key=os.getenv("OPENAI_API_KEY"),  
-    api_version="2024-12-01-preview"
-)
 
 # === PAGE CONFIG ===
 st.set_page_config(
