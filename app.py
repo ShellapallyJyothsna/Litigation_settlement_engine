@@ -23,404 +23,49 @@ st.set_page_config(
 
 
 # === PREMIUM CSS STYLING ===
-# st.markdown("""
-#     <style>
-#     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap');
-    
-#     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-#     /* === NEUTRAL CHARCOAL THEME (No Blue) === */
-    
-#     .stApp {
-#         background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
-#         font-family: 'Poppins', sans-serif;
-#         color: #e2e8f0;
-#     }
-#     /* Make the Form Container a Lighter Grey to pop */
-#     .form-container {
-#         background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
-#         border: 1px solid #52525b !important; /* Neutral Grey Border */
-#         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
-#         padding: 50px;
-#         border-radius: 20px;
-#         max-width: 1200px;
-#         margin: 40px auto;
-#     }
-    
-#     /* Hide Sidebar */
-#     section[data-testid="stSidebar"] { display: none; }
-    
-#     /* Form Container */
-#     .form-container {
-#         background: linear-gradient(135deg, #1a1f3a 0%, #0f172a 100%);
-#         border: 2px solid #3b82f6;
-#         border-radius: 20px;
-#         padding: 50px;
-#         max-width: 1200px;
-#         margin: 40px auto;
-#         box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
-#     }
-    
-#     .form-title {
-#         font-family: 'Playfair Display', serif;
-#         font-size: 3rem;
-#         font-weight: 700;
-#         background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
-#         -webkit-background-clip: text;
-#         -webkit-text-fill-color: transparent;
-#         background-clip: text;
-#         text-align: center;
-#         margin-bottom: 10px;
-#         letter-spacing: 1px;
-#     }
-    
-#     .form-subtitle {
-#         text-align: center;
-#         color: #cbd5e1;
-#         margin-bottom: 40px;
-#         font-size: 1.1rem;
-#     }
-    
-#     /* Form Sections Grid */
-#     .form-section-grid {
-#         display: grid;
-#         grid-template-columns: repeat(2, 1fr);
-#         gap: 25px;
-#         margin-bottom: 30px;
-#     }
-    
-#     .form-section-item {
-#         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-#         border: 1.5px solid #334155;
-#         border-radius: 14px;
-#         padding: 20px;
-#         transition: all 0.3s ease;
-#     }
-    
-#     .form-section-item:hover {
-#         border-color: #3b82f6;
-#         box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
-#     }
-    
-#     .form-section-label {
-#         color: #60a5fa;
-#         font-weight: 700;
-#         font-size: 0.85rem;
-#         text-transform: uppercase;
-#         letter-spacing: 1.2px;
-#         margin-bottom: 15px;
-#         display: block;
-#     }
-    
-#     /* Input Styling */
-#     .stSelectbox div[data-baseweb="select"] > div,
-#     .stNumberInput div[data-baseweb="input"] > div,
-#     .stSlider {
-#         background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
-#         border: 1.5px solid #475569 !important;
-#         border-radius: 10px !important;
-#         color: white !important;
-#         transition: all 0.3s ease;
-#     }
-    
-#     .stSelectbox div[data-baseweb="select"] > div:hover,
-#     .stNumberInput div[data-baseweb="input"] > div:hover {
-#         border-color: #3b82f6 !important;
-#         box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
-#     }
-    
-#     input[type="number"], div[data-baseweb="select"] span {
-#         color: #e2e8f0 !important;
-#         -webkit-text-fill-color: #e2e8f0 !important;
-#         caret-color: #3b82f6 !important;
-#         font-weight: 600 !important;
-#     }
-    
-#     ul[data-testid="stSelectboxVirtualDropdown"] {
-#         background: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%) !important;
-#         border: 1px solid #334155 !important;
-#     }
-    
-#     li[role="option"] { color: #e2e8f0 !important; }
-#     li[role="option"]:hover { background: rgba(59, 130, 246, 0.25) !important; }
-    
-#     .stCheckbox div[role="checkbox"] {
-#         border: 2px solid #475569 !important;
-#         background: #1e293b !important;
-#     }
-    
-#     .stCheckbox div[role="checkbox"]:hover { border-color: #3b82f6 !important; }
-    
-#     /* Submit Button */
-#     .form-button-container {
-#         display: flex;
-#         gap: 15px;
-#         margin-top: 40px;
-#         justify-content: center;
-#     }
-    
-#     div.stButton > button {
-#         background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
-#         border: none;
-#         color: white;
-#         font-weight: 800;
-#         font-size: 1rem;
-#         padding: 16px 40px;
-#         text-transform: uppercase;
-#         letter-spacing: 1.5px;
-#         border-radius: 12px;
-#         box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
-#         transition: all 0.3s ease;
-#         min-width: 250px;
-#     }
-    
-#     div.stButton > button:hover {
-#         transform: translateY(-3px);
-#         box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
-#     }
-    
-#     /* Dashboard Header */
-#     .dashboard-header {
-#         background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
-#         border: 2px solid #3b82f6;
-#         border-radius: 16px;
-#         padding: 40px;
-#         margin-bottom: 30px;
-#         box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
-#         display: grid;
-#         grid-template-columns: 1fr 1fr;
-#         gap: 30px;
-#         align-items: center;
-#     }
-    
-#     .dashboard-title {
-#         font-family: 'Playfair Display', serif;
-#         font-size: 2.5rem;
-#         font-weight: 700;
-#         background: linear-gradient(135deg, #60a5fa, #3b82f6);
-#         -webkit-background-clip: text;
-#         -webkit-text-fill-color: transparent;
-#         background-clip: text;
-#         margin-bottom: 15px;
-#     }
-    
-#     .dashboard-subtitle {
-#         color: #cbd5e1;
-#         font-size: 1rem;
-#         line-height: 1.6;
-#     }
-    
-#     .recommendation-panel {
-#         background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-#         border: 2px solid #3b82f6;
-#         border-radius: 12px;
-#         padding: 25px;
-#         text-align: center;
-#     }
-    
-#     .recommendation-text {
-#         font-size: 1.3rem;
-#         font-weight: 800;
-#         color: #60a5fa;
-#         margin-bottom: 10px;
-#     }
-    
-#     .recommendation-subtext {
-#         color: #94a3b8;
-#         font-size: 0.95rem;
-#     }
-    
-#     /* KPI Cards */
-#     .kpi-row {
-#         display: grid;
-#         grid-template-columns: repeat(4, 1fr);
-#         gap: 20px;
-#         margin-bottom: 30px;
-#     }
-    
-#     .kpi-card {
-#         background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
-#         border: 2px solid #334155;
-#         border-radius: 14px;
-#         padding: 24px;
-#         transition: all 0.3s ease;
-#         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-#     }
-    
-#     .kpi-card:hover {
-#         border-color: #3b82f6;
-#         transform: translateY(-8px);
-#         box-shadow: 0 16px 40px rgba(59, 130, 246, 0.25);
-#     }
-    
-#     .kpi-value {
-#         font-size: 1.8rem; /* Reduced from 2.2rem to fit better */
-#         color: #f1f5f9;
-#         font-weight: 800;
-#         margin: 5px 0; /* Reduced margin */
-#         font-family: 'Playfair Display', serif;
-#         letter-spacing: 0.5px; /* Reduced spacing */
-#         white-space: nowrap; /* Prevents wrapping */
-#     }
-    
-#     .kpi-label {
-#         font-size: 0.7rem; /* Slightly smaller label */
-#         color: #94a3b8;
-#         font-weight: 700;
-#         text-transform: uppercase;
-#         letter-spacing: 1px;
-#         margin-bottom: 5px;
-#     }
-    
-#     .kpi-subtext {
-#         font-size: 0.85rem;
-#         color: #cbd5e1;
-#         font-weight: 500;
-#     }
-    
-#     /* Driver Analysis Container */
-#     .driver-analysis {
-#         display: grid;
-#         grid-template-columns: 1fr 1fr;
-#         gap: 30px;
-#         margin-bottom: 30px;
-#     }
-    
-#     .driver-section {
-#         background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
-#         border: 2px solid #334155;
-#         border-radius: 14px;
-#         padding: 25px;
-#     }
-    
-#     .driver-section-title {
-#         font-weight: 700;
-#         font-size: 1.2rem;
-#         margin-bottom: 20px;
-#         padding-bottom: 12px;
-#         border-bottom: 2px solid #3b82f6;
-#     }
-    
-#     .driver-item {
-#         display: flex;
-#         justify-content: space-between;
-#         align-items: center;
-#         padding: 12px 16px;
-#         background: #0a0e27;
-#         border-radius: 8px;
-#         margin-bottom: 10px;
-#         border-left: 4px solid #3b82f6;
-#     }
-    
-#     .driver-name {
-#         color: #cbd5e1;
-#         font-weight: 600;
-#         flex: 1;
-#         font-size: 0.95rem;
-#     }
-    
-#     .driver-value {
-#         font-weight: 800;
-#         padding: 6px 12px;
-#         border-radius: 6px;
-#         font-size: 0.9rem;
-#     }
-    
-#     .driver-pos {
-#         color: #fecaca;
-#         background: rgba(220, 38, 38, 0.2);
-#         border: 1px solid #dc2626;
-#     }
-    
-#     .driver-neg {
-#         color: #bbf7d0;
-#         background: rgba(22, 163, 74, 0.2);
-#         border: 1px solid #16a34a;
-#     }
-    
-#     /* Alert Boxes */
-#     .alert-box {
-#         background: linear-gradient(135deg, #7f1d1d 0%, #6b2121 100%);
-#         border-left: 5px solid #dc2626;
-#         border-radius: 10px;
-#         padding: 16px;
-#         margin: 12px 0;
-#         color: #fecaca;
-#         font-weight: 600;
-#         box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
-#     }
-    
-#     .section-header {
-#         font-size: 1.5rem;
-#         font-weight: 700;
-#         color: #f1f5f9;
-#         margin: 30px 0 20px 0;
-#         padding-bottom: 10px;
-#         border-bottom: 2px solid #3b82f6;
-#         font-family: 'Playfair Display', serif;
-#     }
-    
-#     header { visibility: hidden; }
-#     footer { visibility: hidden; }
-#     #MainMenu { visibility: hidden; }
-    
-
-#     /* Force all Streamlit input labels to be White */
-#     label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
-#         color: #e2e8f0 !important;
-#         font-size: 0.85rem !important;
-#         font-weight: 600 !important;
-#         letter-spacing: 0.8px !important;
-#     }
-
-#     /* Ensure text typed inside numbers/selects is White */
-#     input[type="number"], div[data-baseweb="select"] span {
-#         color: #ffffff !important;
-#         -webkit-text-fill-color: #ffffff !important;
-#     }
-#     </style>
-# """, unsafe_allow_html=True)
-
-
-# === LIGHT THEME CSS STYLING ===
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap');
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
-    /* === CORE LIGHT THEME === */
+    /* === NEUTRAL CHARCOAL THEME (No Blue) === */
     
     .stApp {
-        background: #f8fafc; /* Very light, off-white background */
+        background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
         font-family: 'Poppins', sans-serif;
-        color: #1e293b; /* Dark text for readability */
+        color: #e2e8f0;
     }
-    
-    /* Form Container (Needs to pop slightly) */
+    /* Make the Form Container a Lighter Grey to pop */
     .form-container {
-        background: #ffffff !important; /* Pure white form background */
-        border: 1px solid #e2e8f0 !important; /* Light border */
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+        background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
+        border: 1px solid #52525b !important; /* Neutral Grey Border */
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
         padding: 50px;
-        border-radius: 16px;
+        border-radius: 20px;
         max-width: 1200px;
         margin: 40px auto;
     }
     
-    /* Hide Streamlit UI elements */
+    /* Hide Sidebar */
     section[data-testid="stSidebar"] { display: none; }
-    header { visibility: hidden; }
-    footer { visibility: hidden; }
-    #MainMenu { visibility: hidden; }
     
-    /* Titles and Subtitles */
+    /* Form Container */
+    .form-container {
+        background: linear-gradient(135deg, #1a1f3a 0%, #0f172a 100%);
+        border: 2px solid #3b82f6;
+        border-radius: 20px;
+        padding: 50px;
+        max-width: 1200px;
+        margin: 40px auto;
+        box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+    }
+    
     .form-title {
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
         font-weight: 700;
-        /* Blue gradient for contrast */
-        background: linear-gradient(135deg, #2563eb, #1e3a8a);
+        background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -431,14 +76,34 @@ st.markdown("""
     
     .form-subtitle {
         text-align: center;
-        color: #64748b; /* Medium grey subtitle */
+        color: #cbd5e1;
         margin-bottom: 40px;
         font-size: 1.1rem;
     }
     
-    /* Form Section Labels */
+    /* Form Sections Grid */
+    .form-section-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .form-section-item {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        border: 1.5px solid #334155;
+        border-radius: 14px;
+        padding: 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .form-section-item:hover {
+        border-color: #3b82f6;
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+    }
+    
     .form-section-label {
-        color: #1e40af; /* Dark blue label for emphasis */
+        color: #60a5fa;
         font-weight: 700;
         font-size: 0.85rem;
         text-transform: uppercase;
@@ -447,121 +112,456 @@ st.markdown("""
         display: block;
     }
     
-    /* Input Field Styling (Selectbox, Number Input) */
+    /* Input Styling */
     .stSelectbox div[data-baseweb="select"] > div,
     .stNumberInput div[data-baseweb="input"] > div,
     .stSlider {
-        background: #f1f5f9 !important; /* Light grey input background */
-        border: 1.5px solid #cbd5e1 !important;
-        border-radius: 8px !important;
-        color: #1e293b !important; /* Dark text inside inputs */
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+        border: 1.5px solid #475569 !important;
+        border-radius: 10px !important;
+        color: white !important;
         transition: all 0.3s ease;
     }
     
     .stSelectbox div[data-baseweb="select"] > div:hover,
     .stNumberInput div[data-baseweb="input"] > div:hover {
         border-color: #3b82f6 !important;
-        box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
     }
     
-    /* Force text/label colors to be dark/black */
-    label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
-        color: #1e293b !important;
-    }
-
     input[type="number"], div[data-baseweb="select"] span {
-        color: #1e293b !important;
-        -webkit-text-fill-color: #1e293b !important;
-        caret-color: #2563eb !important;
+        color: #e2e8f0 !important;
+        -webkit-text-fill-color: #e2e8f0 !important;
+        caret-color: #3b82f6 !important;
         font-weight: 600 !important;
     }
-
-    /* Dropdown menu background (for select boxes) */
+    
     ul[data-testid="stSelectboxVirtualDropdown"] {
-        background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
+        background: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%) !important;
+        border: 1px solid #334155 !important;
     }
     
-    li[role="option"] { color: #1e293b !important; }
-    li[role="option"]:hover { background: rgba(59, 130, 246, 0.1) !important; }
+    li[role="option"] { color: #e2e8f0 !important; }
+    li[role="option"]:hover { background: rgba(59, 130, 246, 0.25) !important; }
     
-    /* Submit Button (Keep bold blue gradient) */
+    .stCheckbox div[role="checkbox"] {
+        border: 2px solid #475569 !important;
+        background: #1e293b !important;
+    }
+    
+    .stCheckbox div[role="checkbox"]:hover { border-color: #3b82f6 !important; }
+    
+    /* Submit Button */
+    .form-button-container {
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+        justify-content: center;
+    }
+    
     div.stButton > button {
         background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
-        color: white; /* Text stays white on blue button */
-        /* ... rest of button style remains ... */
+        border: none;
+        color: white;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 16px 40px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+        transition: all 0.3s ease;
+        min-width: 250px;
     }
     
-    /* Dashboard Elements */
-    .dashboard-header, .kpi-card, .driver-section {
-        background: #ffffff; /* White background for dashboard sections */
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    div.stButton > button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
+    }
+    
+    /* Dashboard Header */
+    .dashboard-header {
+        background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
+        border: 2px solid #3b82f6;
+        border-radius: 16px;
+        padding: 40px;
+        margin-bottom: 30px;
+        box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
     }
     
     .dashboard-title {
-        color: #1e293b; /* Dark title text */
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 15px;
     }
     
-    .dashboard-subtitle, .kpi-subtext, .driver-name {
-        color: #475569; /* Darker grey text */
+    .dashboard-subtitle {
+        color: #cbd5e1;
+        font-size: 1rem;
+        line-height: 1.6;
     }
-
+    
+    .recommendation-panel {
+        background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        border: 2px solid #3b82f6;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+    }
+    
+    .recommendation-text {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #60a5fa;
+        margin-bottom: 10px;
+    }
+    
+    .recommendation-subtext {
+        color: #94a3b8;
+        font-size: 0.95rem;
+    }
+    
+    /* KPI Cards */
+    .kpi-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .kpi-card {
+        background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
+        border: 2px solid #334155;
+        border-radius: 14px;
+        padding: 24px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    
+    .kpi-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(59, 130, 246, 0.25);
+    }
+    
     .kpi-value {
-        color: #1e293b; /* Dark black/blue for numbers */
+        font-size: 1.8rem; /* Reduced from 2.2rem to fit better */
+        color: #f1f5f9;
+        font-weight: 800;
+        margin: 5px 0; /* Reduced margin */
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 0.5px; /* Reduced spacing */
+        white-space: nowrap; /* Prevents wrapping */
     }
     
     .kpi-label {
-        color: #64748b; /* Grey for labels */
+        font-size: 0.7rem; /* Slightly smaller label */
+        color: #94a3b8;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
     }
     
-    /* Driver item list styling */
+    .kpi-subtext {
+        font-size: 0.85rem;
+        color: #cbd5e1;
+        font-weight: 500;
+    }
+    
+    /* Driver Analysis Container */
+    .driver-analysis {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .driver-section {
+        background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
+        border: 2px solid #334155;
+        border-radius: 14px;
+        padding: 25px;
+    }
+    
+    .driver-section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #3b82f6;
+    }
+    
     .driver-item {
-        background: #f1f5f9; /* Light grey strip background */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        background: #0a0e27;
+        border-radius: 8px;
+        margin-bottom: 10px;
         border-left: 4px solid #3b82f6;
     }
     
+    .driver-name {
+        color: #cbd5e1;
+        font-weight: 600;
+        flex: 1;
+        font-size: 0.95rem;
+    }
+    
+    .driver-value {
+        font-weight: 800;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+    }
+    
     .driver-pos {
-        color: #b91c1c; /* Dark red for positive impact */
-        background: rgba(239, 68, 68, 0.1);
-        border: 1px solid #f87171;
+        color: #fecaca;
+        background: rgba(220, 38, 38, 0.2);
+        border: 1px solid #dc2626;
     }
     
     .driver-neg {
-        color: #059669; /* Dark green for negative impact (lower settlement) */
-        background: rgba(5, 150, 105, 0.1);
-        border: 1px solid #34d399;
+        color: #bbf7d0;
+        background: rgba(22, 163, 74, 0.2);
+        border: 1px solid #16a34a;
     }
     
-    /* Section Headers */
+    /* Alert Boxes */
+    .alert-box {
+        background: linear-gradient(135deg, #7f1d1d 0%, #6b2121 100%);
+        border-left: 5px solid #dc2626;
+        border-radius: 10px;
+        padding: 16px;
+        margin: 12px 0;
+        color: #fecaca;
+        font-weight: 600;
+        box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
+    }
+    
     .section-header {
-        color: #1e293b;
-        border-bottom: 2px solid #cbd5e1;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin: 30px 0 20px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3b82f6;
+        font-family: 'Playfair Display', serif;
     }
     
-    /* Strategic Recommendation Box (Green for Settle) */
-    .stSuccess > div {
-        background: #ecfdf5 !important; /* Very light green */
-        border-left: 5px solid #059669 !important;
-        color: #065f46 !important; /* Dark green text */
-    }
-
-    /* Strategic Recommendation Box (Red for Litigate) */
-    .stError > div {
-        background: #fef2f2 !important; /* Very light red */
-        border-left: 5px solid #ef4444 !important;
-        color: #b91c1c !important; /* Dark red text */
-    }
-
-    /* Strategic Recommendation Box (Yellow for Strategize) */
-    .stWarning > div {
-        background: #fffdf6 !important; /* Very light yellow */
-        border-left: 5px solid #f59e0b !important;
-        color: #b45309 !important; /* Dark brown text */
-    }
+    header { visibility: hidden; }
+    footer { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
     
+
+    /* Force all Streamlit input labels to be White */
+    label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
+        color: #e2e8f0 !important;
+        font-size: 0.85rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.8px !important;
+    }
+
+    /* Ensure text typed inside numbers/selects is White */
+    input[type="number"], div[data-baseweb="select"] span {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
     </style>
 """, unsafe_allow_html=True)
+
+
+# # === LIGHT THEME CSS STYLING ===
+# st.markdown("""
+#     <style>
+#     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap');
+    
+#     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+#     /* === CORE LIGHT THEME === */
+    
+#     .stApp {
+#         background: #f8fafc; /* Very light, off-white background */
+#         font-family: 'Poppins', sans-serif;
+#         color: #1e293b; /* Dark text for readability */
+#     }
+    
+#     /* Form Container (Needs to pop slightly) */
+#     .form-container {
+#         background: #ffffff !important; /* Pure white form background */
+#         border: 1px solid #e2e8f0 !important; /* Light border */
+#         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+#         padding: 50px;
+#         border-radius: 16px;
+#         max-width: 1200px;
+#         margin: 40px auto;
+#     }
+    
+#     /* Hide Streamlit UI elements */
+#     section[data-testid="stSidebar"] { display: none; }
+#     header { visibility: hidden; }
+#     footer { visibility: hidden; }
+#     #MainMenu { visibility: hidden; }
+    
+#     /* Titles and Subtitles */
+#     .form-title {
+#         font-family: 'Playfair Display', serif;
+#         font-size: 3rem;
+#         font-weight: 700;
+#         /* Blue gradient for contrast */
+#         background: linear-gradient(135deg, #2563eb, #1e3a8a);
+#         -webkit-background-clip: text;
+#         -webkit-text-fill-color: transparent;
+#         background-clip: text;
+#         text-align: center;
+#         margin-bottom: 10px;
+#         letter-spacing: 1px;
+#     }
+    
+#     .form-subtitle {
+#         text-align: center;
+#         color: #64748b; /* Medium grey subtitle */
+#         margin-bottom: 40px;
+#         font-size: 1.1rem;
+#     }
+    
+#     /* Form Section Labels */
+#     .form-section-label {
+#         color: #1e40af; /* Dark blue label for emphasis */
+#         font-weight: 700;
+#         font-size: 0.85rem;
+#         text-transform: uppercase;
+#         letter-spacing: 1.2px;
+#         margin-bottom: 15px;
+#         display: block;
+#     }
+    
+#     /* Input Field Styling (Selectbox, Number Input) */
+#     .stSelectbox div[data-baseweb="select"] > div,
+#     .stNumberInput div[data-baseweb="input"] > div,
+#     .stSlider {
+#         background: #f1f5f9 !important; /* Light grey input background */
+#         border: 1.5px solid #cbd5e1 !important;
+#         border-radius: 8px !important;
+#         color: #1e293b !important; /* Dark text inside inputs */
+#         transition: all 0.3s ease;
+#     }
+    
+#     .stSelectbox div[data-baseweb="select"] > div:hover,
+#     .stNumberInput div[data-baseweb="input"] > div:hover {
+#         border-color: #3b82f6 !important;
+#         box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+#     }
+    
+#     /* Force text/label colors to be dark/black */
+#     label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
+#         color: #1e293b !important;
+#     }
+
+#     input[type="number"], div[data-baseweb="select"] span {
+#         color: #1e293b !important;
+#         -webkit-text-fill-color: #1e293b !important;
+#         caret-color: #2563eb !important;
+#         font-weight: 600 !important;
+#     }
+
+#     /* Dropdown menu background (for select boxes) */
+#     ul[data-testid="stSelectboxVirtualDropdown"] {
+#         background: #ffffff !important;
+#         border: 1px solid #e2e8f0 !important;
+#     }
+    
+#     li[role="option"] { color: #1e293b !important; }
+#     li[role="option"]:hover { background: rgba(59, 130, 246, 0.1) !important; }
+    
+#     /* Submit Button (Keep bold blue gradient) */
+#     div.stButton > button {
+#         background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+#         color: white; /* Text stays white on blue button */
+#         /* ... rest of button style remains ... */
+#     }
+    
+#     /* Dashboard Elements */
+#     .dashboard-header, .kpi-card, .driver-section {
+#         background: #ffffff; /* White background for dashboard sections */
+#         border: 1px solid #e2e8f0;
+#         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+#     }
+    
+#     .dashboard-title {
+#         color: #1e293b; /* Dark title text */
+#     }
+    
+#     .dashboard-subtitle, .kpi-subtext, .driver-name {
+#         color: #475569; /* Darker grey text */
+#     }
+
+#     .kpi-value {
+#         color: #1e293b; /* Dark black/blue for numbers */
+#     }
+    
+#     .kpi-label {
+#         color: #64748b; /* Grey for labels */
+#     }
+    
+#     /* Driver item list styling */
+#     .driver-item {
+#         background: #f1f5f9; /* Light grey strip background */
+#         border-left: 4px solid #3b82f6;
+#     }
+    
+#     .driver-pos {
+#         color: #b91c1c; /* Dark red for positive impact */
+#         background: rgba(239, 68, 68, 0.1);
+#         border: 1px solid #f87171;
+#     }
+    
+#     .driver-neg {
+#         color: #059669; /* Dark green for negative impact (lower settlement) */
+#         background: rgba(5, 150, 105, 0.1);
+#         border: 1px solid #34d399;
+#     }
+    
+#     /* Section Headers */
+#     .section-header {
+#         color: #1e293b;
+#         border-bottom: 2px solid #cbd5e1;
+#     }
+    
+#     /* Strategic Recommendation Box (Green for Settle) */
+#     .stSuccess > div {
+#         background: #ecfdf5 !important; /* Very light green */
+#         border-left: 5px solid #059669 !important;
+#         color: #065f46 !important; /* Dark green text */
+#     }
+
+#     /* Strategic Recommendation Box (Red for Litigate) */
+#     .stError > div {
+#         background: #fef2f2 !important; /* Very light red */
+#         border-left: 5px solid #ef4444 !important;
+#         color: #b91c1c !important; /* Dark red text */
+#     }
+
+#     /* Strategic Recommendation Box (Yellow for Strategize) */
+#     .stWarning > div {
+#         background: #fffdf6 !important; /* Very light yellow */
+#         border-left: 5px solid #f59e0b !important;
+#         color: #b45309 !important; /* Dark brown text */
+#     }
+    
+#     </style>
+# """, unsafe_allow_html=True)
 
 
 # === INITIALIZE SESSION STATE ===
