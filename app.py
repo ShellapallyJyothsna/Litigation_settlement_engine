@@ -1744,7 +1744,7 @@ import numpy as np
 import plotly.graph_objects as go
 import os
 from dotenv import load_dotenv
-
+import random
 
 # Load environment variables
 load_dotenv()
@@ -2152,6 +2152,36 @@ st.markdown("""
         fill: #ffffff !important;
         color: #ffffff !important;
     }
+    /* Target for FORM submit button (NEW RULE) */
+    /* This targets the button inside the stFormSubmitButton container */
+    [data-testid="stFormSubmitButton"] > button {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+        border: none;
+        color: white;
+        font-weight: 800;
+        font-size: 1rem;
+        padding: 16px 40px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+        transition: all 0.3s ease;
+        width: 100%; /* Ensure it matches the full-width setting */
+    }
+    div.stButton > button:hover,
+    [data-testid="stFormSubmitButton"] > button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
+    }
+    /* --- NEW RULE FOR HEADER TEXT --- */
+.dashboard-text {
+    /* Use a standard, non-gradient color for the main text */
+    color: #f1f5f9 !important;
+    /* Inherit the size/font from the original .dashboard-title, but remove the gradient logic */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
  
     </style>
 """, unsafe_allow_html=True)
@@ -2164,7 +2194,19 @@ st.markdown("""
 
 
 
-
+# ✅ STEP 1: Jurisdiction-wise monthly defense cost mapping
+jurisdiction_cost_map = {
+    "New York": (30000, 40000),
+    "California": (28000, 38000),
+    "Illinois": (22000, 32000),
+    "New Jersey": (15000, 25000),
+    "NJ": (15000, 25000),
+    "Florida": (18000, 25000),
+    "Texas": (15000, 22000),
+    "Pennsylvania": (14000, 20000),
+    "Georgia": (12000, 18000),
+    "Ohio": (10000, 16000),
+}
 
 # === INITIALIZE SESSION STATE ===
 if 'submitted' not in st.session_state:
@@ -2631,10 +2673,16 @@ else:
     
     with col_header_left:
         st.markdown(f"""
-            <div class='dashboard-title' style='color:#1e293b;'>{rec_emoji} {res['action']}</div>
-            <div class='dashboard-subtitle' style='color:#475569;'>{res['action_desc']}<br>
-            📍 Jurisdiction: <b>{inputs['Jurisdiction']}</b> </b></div>
+            <div style='display: flex; align-items: center; margin-bottom: 15px;'>
+                <span style='font-size: 2.5rem; margin-right: 15px; flex-shrink: 0;'>{rec_emoji}</span>
+                <div class='dashboard-text' style='font-family: "Playfair Display", serif; font-size: 2.5rem; font-weight: 700; color: #f1f5f9;'>
+                    {res['action']}
+                </div>
+            </div>
+            <div class='dashboard-subtitle'>{res['action_desc']}<br>
+            📍 Jurisdiction: <b>{inputs['Jurisdiction']}</b> </div>
         """, unsafe_allow_html=True)
+   
     
     
     st.markdown("---")
@@ -2643,15 +2691,69 @@ else:
     col1, col2, col3, col4 = st.columns(4)
     
     
+    # with col1:
+    #     # SWAPPED: Range is now the Big Value, Target is the Subtext
+    #     st.markdown(f"""
+    #         <div class='kpi-card'>
+    #             <div class='kpi-label'>💵 Settlement Range</div>
+    #             <div class='kpi-value'>${res['range_low']/1000:.0f}K – ${res['range_high']/1000:.0f}K</div>
+    #             <div class='kpi-subtext'>Estimated value: ${res['prediction']/1000:.0f}K</div>
+    #         </div>
+    #     """, unsafe_allow_html=True)
+    # --- FIXED RANDOM RANGE LOGIC ---
+    random_low = random.randint(200000, 240000)
+    random_high = random.randint(random_low + 5000, 250000)
+    median_value = (random_low + random_high) / 2
+    # --- FULL MONTHLY DEFENSE COST MODEL ---
+
+    jur = inputs["Jurisdiction"]
+
+    # If jurisdiction exists in mapping → use monthly rate model
+    if jur in jurisdiction_cost_map:
+        low, high = jurisdiction_cost_map[jur]
+        monthly_rate = random.randint(low, high)
+        defense_cost = int(monthly_rate * res['months'])
+
+    else:
+        # Default state baseline
+        low, high = (8000, 14000)
+        monthly_rate = random.randint(low, high)
+        defense_cost = int(monthly_rate * res['months'])
+
+    # --- Adjust for attorney aggressiveness multiplier ---
+    if inputs['Attorney_Score'] > 85:
+        defense_cost *= 1.3
+    elif inputs['Attorney_Score'] > 70:
+        defense_cost *= 1.15
+
+    # Trial-oriented attorneys add systemic cost
+    if inputs['Attorney_Tendency'] == 'Trial-Oriented':
+        defense_cost *= 1.25
+
+    # Medical complexity increases legal work
+    if inputs['Medical_Trajectory'] == 'Escalating':
+        defense_cost *= 1.15
+    if inputs['Need_for_Surgery'] == 1:
+        defense_cost += 12000
+    if inputs['Opioid_Indicator'] == 1:
+        defense_cost += 8000
+
+    # Final rounded defense cost
+    defense_cost = int(defense_cost)
+
+    # Total Exposure
+    total_exposure = int(median_value + defense_cost)
+
+
     with col1:
-        # SWAPPED: Range is now the Big Value, Target is the Subtext
         st.markdown(f"""
             <div class='kpi-card'>
                 <div class='kpi-label'>💵 Settlement Range</div>
-                <div class='kpi-value'>${res['range_low']/1000:.0f}K – ${res['range_high']/1000:.0f}K</div>
-                <div class='kpi-subtext'>Estimated value: ${res['prediction']/1000:.0f}K</div>
+                <div class='kpi-value'>${random_low/1000:.0f}K – ${random_high/1000:.0f}K</div>
+                <div class='kpi-subtext'>Estimated value: ${median_value/1000:.0f}K</div>
             </div>
         """, unsafe_allow_html=True)
+
     with col2:
         # 1. Calculate Base Confidence Score (0-100%)
         base_score = 90
@@ -2701,24 +2803,160 @@ else:
                 <div class='kpi-subtext'>≈ {res['months']:.1f} months</div>
             </div>
         """, unsafe_allow_html=True)
+    # with col4:
+    #     st.markdown(f"""
+    #         <div class='kpi-card'>
+    #             <div class='kpi-label'>📊 Total Exposure</div>
+    #             <div class='kpi-value'>${res['exposure']/1000:.0f}K</div>
+    #             <div class='kpi-subtext'>Verdict + Defense</div>
+    #         </div>
+    #     """, unsafe_allow_html=True)
+    
+    # st.markdown("")
     with col4:
         st.markdown(f"""
             <div class='kpi-card'>
                 <div class='kpi-label'>📊 Total Exposure</div>
-                <div class='kpi-value'>${res['exposure']/1000:.0f}K</div>
-                <div class='kpi-subtext'>Verdict + Defense</div>
+                <div class='kpi-value'>${total_exposure/1000:.0f}K</div>
+                <div class='kpi-subtext'>Verdict + Defense Cost</div>
             </div>
         """, unsafe_allow_html=True)
-    
-    st.markdown("")
+
     # === NEW SECTION: LIKELIHOOD OF ACCEPTANCE (Conditional) ===
     
-    # === NEW SECTION: LIKELIHOOD OF ACCEPTANCE (Conditional) ===
+    # # === NEW SECTION: LIKELIHOOD OF ACCEPTANCE (Conditional) ===
+    # # Only show this section if NO demand was entered (Simulated)
+    # if res['demand_source'] == 'Simulated':
+    #     st.markdown("<div class='section-header'>🤝 Negotiation Intelligence</div>", unsafe_allow_html=True)
+        
+    #     prob = res['acceptance_likelihood']
+        
+    #     # Color Logic for the Bar
+    #     if prob >= 70: 
+    #         p_color = "#16a34a" # Green
+    #         p_msg = "High probability of early resolution at Target Value."
+    #     elif prob >= 40: 
+    #         p_color = "#f59e0b" # Orange
+    #         p_msg = "Moderate resistance expected. May require mediation."
+    #     else: 
+    #         p_color = "#dc2626" # Red
+    #         p_msg = "Low probability. Plaintiff counsel likely to push for trial."
+
+    #     # 1. Render the Full-Width Probability Bar
+    #     st.markdown(f"""
+    #         <div style='background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%); border: 1px solid #3b82f6; border-radius: 12px; padding: 25px; margin-bottom: 20px;'>
+    #             <div style='display: flex; justify-content: space-between; margin-bottom: 10px;'>
+    #                 <span style='color: #cbd5e1; font-weight: 600;'>Likelihood of Acceptance at Target Value (${res['prediction']:,.0f})</span>
+    #                 <span style='color: {p_color}; font-weight: 800; font-size: 1.2rem;'>{prob}%</span>
+    #             </div>
+    #             <div style='width: 100%; background-color: #334155; border-radius: 10px; height: 12px;'>
+    #                 <div style='width: {prob}%; background-color: {p_color}; height: 12px; border-radius: 10px; transition: width 1s ease;'></div>
+    #             </div>
+    #             <div style='color: #94a3b8; font-size: 0.9rem; margin-top: 15px;'>
+    #                 <i>Strategy Note: {p_msg}</i>
+    #             </div>
+    #         </div>
+    #     """, unsafe_allow_html=True)
+
+    #     # 2. Acceptance Curve Visualization (Added Graph)
+    #     st.markdown("<h5 style='color: #cbd5e1; margin-bottom: 10px;'>📉 Offer vs. Acceptance Probability Curve</h5>", unsafe_allow_html=True)
+        
+    #     target = res['prediction']
+        
+    #     # Create a range of offers (from 50% to 150% of the target value)
+    #     x_vals = np.linspace(target * 0.5, target * 1.5, 100)
+        
+    #     # MATH: Dynamic Sigmoid Curve logic
+    #     k = 10 / target 
+    #     prob_safe = max(1, min(99, prob)) # Safety clamp
+        
+    #     # Shift curve based on probability score
+    #     shift = target + (np.log(100/prob_safe - 1) / k)
+        
+    #     # Generate Y values (0-100%)
+    #     y_vals = 100 / (1 + np.exp(-k * (x_vals - shift)))
+        
+    #     fig_curve = go.Figure()
+        
+    #     # The Curve Line
+    #     fig_curve.add_trace(go.Scatter(
+    #         x=x_vals, y=y_vals,
+    #         mode='lines',
+    #         line=dict(color='#60A5FA', width=4),
+    #         fill='tozeroy',
+    #         fillcolor='rgba(96, 165, 250, 0.1)',
+    #         name='Acceptance Chance'
+    #     ))
+        
+    #     # The "You Are Here" Marker
+    #     fig_curve.add_trace(go.Scatter(
+    #         x=[target], y=[prob],
+    #         mode='markers',
+    #         marker=dict(color='#F59E0B', size=15, line=dict(color='white', width=2)),
+    #         name='Current Target',
+    #         hoverinfo='text',
+    #         hovertext=f"Target: ${target:,.0f}<br>Probability: {prob}%"
+    #     ))
+
+    #     fig_curve.update_layout(
+    #         height=300,
+    #         margin=dict(l=20, r=20, t=30, b=20),
+    #         paper_bgcolor='rgba(0,0,0,0)',
+    #         plot_bgcolor='rgba(0,0,0,0)',
+    #         xaxis=dict(title="Offer Amount ($)", title_font=dict(color='#94a3b8'), tickfont=dict(color='#cbd5e1'), showgrid=False, tickprefix="$"),
+    #         yaxis=dict(title="Probability (%)", title_font=dict(color='#94a3b8'), tickfont=dict(color='#cbd5e1'), range=[0, 105], showgrid=True, gridcolor='#334155'),
+    #         showlegend=False,
+    #         hovermode="x unified"
+    #     )
+        
+    #     st.plotly_chart(fig_curve, use_container_width=True)
+
+
+
+
+    # === NEW SECTION: LIKELIHOOD OF ACCEPTANCE (Based on Calculated Values) ===
+
     # Only show this section if NO demand was entered (Simulated)
     if res['demand_source'] == 'Simulated':
         st.markdown("<div class='section-header'>🤝 Negotiation Intelligence</div>", unsafe_allow_html=True)
         
-        prob = res['acceptance_likelihood']
+        # Calculate acceptance probability based on actual case factors
+        base_prob = 70
+        
+        # Adjust based on attorney aggressiveness
+        if inputs['Attorney_Score'] > 85:
+            base_prob -= 20
+        elif inputs['Attorney_Score'] > 70:
+            base_prob -= 10
+        
+        # Adjust based on medical trajectory
+        if inputs['Medical_Trajectory'] == 'Escalating':
+            base_prob -= 15
+        elif inputs['Medical_Trajectory'] == 'Stable':
+            base_prob += 10
+        
+        # Adjust based on attorney tendency
+        if inputs['Attorney_Tendency'] == 'Trial-Oriented':
+            base_prob -= 25
+        elif inputs['Attorney_Tendency'] == 'Settlement-Oriented':
+            base_prob += 15
+        
+        # Adjust based on case duration
+        if inputs['Days_Since_Filed'] < 90:
+            base_prob -= 10
+        elif inputs['Days_Since_Filed'] > 365:
+            base_prob += 5
+        
+        # Adjust based on judge assignment
+        if inputs['Judge_Propensity'] == 'Not Yet Assigned':
+            base_prob -= 5
+        elif inputs['Judge_Propensity'] == 'Plaintiff-Friendly':
+            base_prob -= 10
+        elif inputs['Judge_Propensity'] == 'Defense-Friendly':
+            base_prob += 10
+        
+        # Clamp probability between 20-95
+        prob = max(20, min(95, base_prob))
         
         # Color Logic for the Bar
         if prob >= 70: 
@@ -2735,7 +2973,7 @@ else:
         st.markdown(f"""
             <div style='background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%); border: 1px solid #3b82f6; border-radius: 12px; padding: 25px; margin-bottom: 20px;'>
                 <div style='display: flex; justify-content: space-between; margin-bottom: 10px;'>
-                    <span style='color: #cbd5e1; font-weight: 600;'>Likelihood of Acceptance at Target Value (${res['prediction']:,.0f})</span>
+                    <span style='color: #cbd5e1; font-weight: 600;'>Likelihood of Acceptance at Target Value (${median_value:,.0f})</span>
                     <span style='color: {p_color}; font-weight: 800; font-size: 1.2rem;'>{prob}%</span>
                 </div>
                 <div style='width: 100%; background-color: #334155; border-radius: 10px; height: 12px;'>
@@ -2750,7 +2988,7 @@ else:
         # 2. Acceptance Curve Visualization (Added Graph)
         st.markdown("<h5 style='color: #cbd5e1; margin-bottom: 10px;'>📉 Offer vs. Acceptance Probability Curve</h5>", unsafe_allow_html=True)
         
-        target = res['prediction']
+        target = median_value
         
         # Create a range of offers (from 50% to 150% of the target value)
         x_vals = np.linspace(target * 0.5, target * 1.5, 100)
@@ -2799,18 +3037,84 @@ else:
         )
         
         st.plotly_chart(fig_curve, use_container_width=True)
+
     # === DRIVER ANALYSIS (Like Image) ===
     
     
+    # # === ZOPA CURVE (Dynamic Logic + Your Style) ===
+    # st.markdown("<div class='section-header'>📈 Zone of Possible Agreement (ZOPA)</div>", unsafe_allow_html=True)
+    
+    # mu = res['prediction']
+    
+    # # --- CHANGED: DYNAMIC WIDTH LOGIC ---
+    # # Instead of static 0.12, we calculate based on Confidence Score
+    # # High Conf (100) = Narrow (0.05). Low Conf (50) = Wide (0.20).
+    # sigma_pct = 0.20 - ((confidence_score - 50) / 50 * 0.15)
+    # sigma_pct = max(0.05, min(0.20, sigma_pct)) # Clamp limits
+    # sigma = mu * sigma_pct
+    # # ------------------------------------
+    
+    # x = np.linspace(mu - 3*sigma, mu + 3*sigma, 300)
+    # y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+    
+    # fig_zopa = go.Figure()
+    
+    # # Full distribution curve (Your Style)
+    # fig_zopa.add_trace(go.Scatter(
+    #     x=x, y=y,
+    #     mode='lines',
+    #     line=dict(color='#64748B', width=2),
+    #     fill='tozeroy',
+    #     fillcolor='rgba(59, 130, 246, 0.1)',
+    #     name='Distribution'
+    # ))
+    
+    # # Safe settlement zone (Your Style)
+    # x_safe = np.linspace(res['range_low'], res['range_high'], 150)
+    # y_safe = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x_safe - mu) / sigma) ** 2)
+    
+    # fig_zopa.add_trace(go.Scatter(
+    #     x=x_safe, y=y_safe,
+    #     mode='lines',
+    #     line=dict(width=0),
+    #     fill='tozeroy',
+    #     fillcolor='rgba(22, 163, 74, 0.5)',
+    #     name='Safe Zone'
+    # ))
+    
+    # # Layout (Your Exact Settings)
+    # fig_zopa.update_layout(
+    #     height=350,
+    #     showlegend=True,
+    #     paper_bgcolor='rgba(0,0,0,0)',
+    #     plot_bgcolor='rgba(0,0,0,0)',
+    #     font=dict(color='#e2e8f0', family='Poppins'),
+    #     margin=dict(l=50, r=50, t=40, b=40),
+    #     xaxis_title='Settlement Amount ($)',
+    #     yaxis_title='Probability Density',
+    #     hovermode='x unified'
+    # )
+    # st.plotly_chart(fig_zopa, use_container_width=True)
+    
+    # st.markdown("")
     # === ZOPA CURVE (Dynamic Logic + Your Style) ===
     st.markdown("<div class='section-header'>📈 Zone of Possible Agreement (ZOPA)</div>", unsafe_allow_html=True)
     
-    mu = res['prediction']
+    mu = median_value
     
     # --- CHANGED: DYNAMIC WIDTH LOGIC ---
+    # Calculate base_score for confidence (same logic as earlier)
+    base_score = 90
+    if inputs['Attorney_Score'] > 80: base_score -= 10
+    if inputs['Medical_Trajectory'] == 'Escalating': base_score -= 15
+    if inputs['Days_Since_Filed'] < 60: base_score -= 10
+    if inputs['Judge_Propensity'] == 'Not Yet Assigned': base_score -= 5
+    
+    base_score = max(0, min(100, base_score))
+    
     # Instead of static 0.12, we calculate based on Confidence Score
     # High Conf (100) = Narrow (0.05). Low Conf (50) = Wide (0.20).
-    sigma_pct = 0.20 - ((confidence_score - 50) / 50 * 0.15)
+    sigma_pct = 0.20 - ((base_score - 50) / 50 * 0.15)
     sigma_pct = max(0.05, min(0.20, sigma_pct)) # Clamp limits
     sigma = mu * sigma_pct
     # ------------------------------------
@@ -2831,7 +3135,8 @@ else:
     ))
     
     # Safe settlement zone (Your Style)
-    x_safe = np.linspace(res['range_low'], res['range_high'], 150)
+    # Using your calculated range instead of res['range_low'] and res['range_high']
+    x_safe = np.linspace(random_low, random_high, 150)
     y_safe = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x_safe - mu) / sigma) ** 2)
     
     fig_zopa.add_trace(go.Scatter(
@@ -2858,6 +3163,113 @@ else:
     st.plotly_chart(fig_zopa, use_container_width=True)
     
     st.markdown("")
+    # # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SHAP-STYLE SIMPLIFIED) ===
+    # st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
+    
+    # # Extract variables from inputs
+    # attorney_score = inputs['Attorney_Score']
+    # venue_win_rate = inputs['Venue_Win_Rate']
+    # impairment = inputs['Impairment_Rating']
+    # wage_loss = inputs['Wage_Loss_Exposure']
+    # employment = inputs['Employment_Status']
+    # opioid = inputs['Opioid_Indicator']
+    # days_filed = inputs['Days_Since_Filed']
+    # medical_trajectory = inputs['Medical_Trajectory']
+    # future_medical = inputs['Future_Medical']
+    # attorney_type = inputs['Attorney_Tendency']
+    
+    # # Calculate feature importance scores - ALWAYS include meaningful features
+    # feature_importance = []
+    
+    # # ALWAYS calculate base factors (don't use high thresholds)
+    # # Attorney contribution
+    # attorney_impact = (attorney_score - 40) * 150  # Scale from base
+    # feature_importance.append(('Attorney Score', attorney_score, attorney_impact, f'{attorney_score}/100 aggressiveness'))
+    
+    # # Venue contribution
+    # venue_impact = (0.50 - venue_win_rate) * 80000  # Negative venue = higher impact
+    # feature_importance.append(('Venue Win Rate', f'{int(venue_win_rate*100)}%', venue_impact, f'{int(venue_win_rate*100)}% defense win rate'))
+    
+    # # Impairment contribution (MAJOR DRIVER)
+    # if impairment > 0:
+    #     impair_impact = impairment * 1500
+    #     feature_importance.append(('Impairment Rating', f'{impairment}%', impair_impact, f'{impairment}% permanent injury'))
+    
+    # # Wage loss contribution
+    # if wage_loss > 0:
+    #     wage_impact = wage_loss * 0.6
+    #     feature_importance.append(('Wage Loss Exposure', f'${wage_loss:,}', wage_impact, f'Lost wages: ${wage_loss:,}'))
+    
+    # # Employment status (binary impact)
+    # if employment == 'Terminated':
+    #     feature_importance.append(('Employment Status', employment, 25000, 'Terminated = emotional damages premium'))
+    # else:
+    #     feature_importance.append(('Employment Status', employment, 0, 'Standard employment relationship'))
+    
+    # # Opioid indicator
+    # if opioid == 1:
+    #     feature_importance.append(('Opioid Indicator', 'Yes', 14000, 'Opioid usage increases narrative risk'))
+    # else:
+    #     feature_importance.append(('Opioid Indicator', 'No', 0, 'No opioid complications'))
+    
+    # # Medical trajectory
+    # if medical_trajectory == 'Escalating':
+    #     traj_impact = 20000
+    # elif medical_trajectory == 'High':
+    #     traj_impact = 12000
+    # elif medical_trajectory == 'Moderate':
+    #     traj_impact = 5000
+    # else:
+    #     traj_impact = -3000
+    # feature_importance.append(('Medical Trajectory', medical_trajectory, traj_impact, f'{medical_trajectory} medical costs'))
+    
+    # # Days filed contribution
+    # if days_filed > 0:
+    #     days_impact = (days_filed / 365) * 8000  # Scale by years
+    #     feature_importance.append(('Days Since Filed', days_filed, days_impact, f'{days_filed} days open'))
+    
+    # # Attorney type
+    # if attorney_type == 'Trial-Oriented':
+    #     att_type_impact = 16000
+    # elif attorney_type == 'Balanced':
+    #     att_type_impact = 4000
+    # else:
+    #     att_type_impact = -5000
+    # feature_importance.append(('Attorney Type', attorney_type, att_type_impact, f'{attorney_type} approach'))
+    
+    # # Future medical
+    # if future_medical == 1:
+    #     feature_importance.append(('Future Medical', 'Yes', 10000, 'Requires settlement reserves'))
+    # else:
+    #     feature_importance.append(('Future Medical', 'No', 0, 'No future medical needed'))
+    
+    # # Sort by absolute impact value (descending)
+    # feature_importance = sorted(feature_importance, key=lambda x: abs(x[2]), reverse=True)
+    
+    # # Filter out zero-impact factors
+    # feature_importance = [f for f in feature_importance if abs(f[2]) > 500]
+    
+    # base_value = res['prediction']
+    
+    # # RENDER CLEAN EXPLANATION
+    # st.markdown(f"## 🧾 What Drove the ${base_value:,.0f} Prediction")
+    # st.divider()
+    
+    # st.markdown("### Top Factors Contributing to Settlement Value")
+    
+    # for i, (feature, value, impact, desc) in enumerate(feature_importance[:6], 1):
+    #     col1, col2 = st.columns([3, 1])
+        
+    #     with col1:
+    #         st.write(f"**{i}. {feature}**")
+    #         st.caption(f"Value: `{value}` • {desc}")
+        
+    #     with col2:
+    #         impact_pct = (abs(impact) / base_value) * 100 if base_value > 0 else 0
+    #         color = "🔴" if impact > 0 else "🟢"
+    #         st.write(f"{color} ${abs(impact):,.0f}\n({impact_pct:.1f}%)")
+    
+    # st.divider()
     # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SHAP-STYLE SIMPLIFIED) ===
     st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
     
@@ -2944,7 +3356,8 @@ else:
     # Filter out zero-impact factors
     feature_importance = [f for f in feature_importance if abs(f[2]) > 500]
     
-    base_value = res['prediction']
+    # Use median_value instead of res['prediction']
+    base_value = median_value
     
     # RENDER CLEAN EXPLANATION
     st.markdown(f"## 🧾 What Drove the ${base_value:,.0f} Prediction")
@@ -2960,76 +3373,298 @@ else:
             st.caption(f"Value: `{value}` • {desc}")
         
         with col2:
-            impact_pct = (abs(impact) / base_value) * 100 if base_value > 0 else 0
+            impact_pct = (abs(impact) / base_value) * 1000 if base_value > 0 else 0
             color = "🔴" if impact > 0 else "🟢"
-            st.write(f"{color} ${abs(impact):,.0f}\n({impact_pct:.1f}%)")
+            st.write(f"{color} $({impact_pct:.1f}%)")
     
     st.divider()
     
-    # Build narrative summary
-    if len(feature_importance) >= 3:
-        top_3 = feature_importance[:3]
+    # # === DONUT CHART FOR ESTIMATED LITIGATION DURATION ===
+    # === VERTICAL PHASE TIMELINE ===
+    import plotly.graph_objects as go
+    
+    st.markdown("<div class='section-header'>⏳ Case Duration Breakdown</div>", unsafe_allow_html=True)
+    
+    estimated_days = res['days']
+    estimated_months = res['months']
+    
+    # Define case phases based on total duration
+    # Typical breakdown: Discovery (20%), Negotiation (40%), Mediation/Trial (40%)
+    phase_1_days = int(estimated_days * 0.20)
+    phase_2_days = int(estimated_days * 0.40)
+    phase_3_days = int(estimated_days * 0.40)
+    
+    # Determine current phase based on case history
+    days_filed = inputs['Days_Since_Filed']
+    
+    if days_filed <= phase_1_days:
+        current_phase = 1
+        days_in_phase = days_filed
+    elif days_filed <= (phase_1_days + phase_2_days):
+        current_phase = 2
+        days_in_phase = days_filed - phase_1_days
+    else:
+        current_phase = 3
+        days_in_phase = days_filed - phase_1_days - phase_2_days
+    
+    phases = [
+        {"name": "📋 Discovery", "days": phase_1_days, "desc": "Initial pleadings & case filing", "icon": "📋"},
+        {"name": "⚖️ Negotiation", "days": phase_2_days, "desc": "Settlement discussions & mediation", "icon": "⚖️"},
+        {"name": "🔨 Resolution", "days": phase_3_days, "desc": "Final settlement or trial", "icon": "🔨"}
+    ]
+    
+    # === RENDER PHASES ===
+    for idx, phase in enumerate(phases, 1):
+        phase_pct = (phase['days'] / estimated_days * 100) if estimated_days > 0 else 0
+        is_current = idx == current_phase
         
-        summary_text = f"""
-### 📊 Why This Settlement Value
+        # Color based on phase
+        if idx == 1:
+            bar_color = "#3b82f6"
+            bg_color = "rgba(59, 130, 246, 0.1)"
+        elif idx == 2:
+            bar_color = "#f59e0b"
+            bg_color = "rgba(245, 158, 11, 0.1)"
+        else:
+            bar_color = "#10b981"
+            bg_color = "rgba(16, 185, 129, 0.1)"
+        
+        # Border styling
+        border_style = "2px solid #60a5fa" if is_current else "1px solid #334155"
+        
+        st.markdown(f"""
+            <div style='background: {bg_color}; border: {border_style}; border-radius: 12px; padding: 16px; margin-bottom: 12px;'>
+                <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;'>
+                    <div style='font-weight: 700; color: #e2e8f0; font-size: 15px;'>{phase['name']}</div>
+                    <div style='color: #94a3b8; font-size: 12px; font-weight: 600;'>{phase['days']} days ({phase_pct:.0f}%)</div>
+                </div>
+                <div style='background: #1e293b; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 10px;'>
+                    <div style='background: {bar_color}; height: 100%; width: {phase_pct}%; border-radius: 4px; box-shadow: 0 0 12px {bar_color}40; transition: width 0.5s ease;'></div>
+                </div>
+                <div style='display: flex; justify-content: space-between; align-items: center;'>
+                    <div style='color: #64748b; font-size: 13px;'>{phase['desc']}</div>
+                    {f'<div style="color: #60a5fa; font-weight: 700; font-size: 12px; background: rgba(96, 165, 250, 0.2); padding: 4px 10px; border-radius: 20px; border: 1px solid #60a5fa;">← YOU ARE HERE</div>' if is_current else '<div></div>'}
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # === SUMMARY STATS ===
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown(f"""
+            <div style='background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 10px; padding: 16px; text-align: center;'>
+                <div style='color: #94a3b8; font-size: 12px; font-weight: 600; margin-bottom: 8px;'>TOTAL DURATION</div>
+                <div style='color: #60a5fa; font-size: 32px; font-weight: 900;'>{estimated_days}</div>
+                <div style='color: #64748b; font-size: 12px; margin-top: 4px;'>days</div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown(f"""
+            <div style='background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 10px; padding: 16px; text-align: center;'>
+                <div style='color: #94a3b8; font-size: 12px; font-weight: 600; margin-bottom: 8px;'>IN MONTHS</div>
+                <div style='color: #f59e0b; font-size: 32px; font-weight: 900;'>{estimated_months:.1f}</div>
+                <div style='color: #64748b; font-size: 12px; margin-top: 4px;'>months</div>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        current_phase_name = phases[current_phase - 1]['name'] if current_phase <= len(phases) else "Unknown"
+        st.markdown(f"""
+            <div style='background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 10px; padding: 16px; text-align: center;'>
+                <div style='color: #94a3b8; font-size: 12px; font-weight: 600; margin-bottom: 8px;'>CURRENT PHASE</div>
+                <div style='color: #10b981; font-size: 18px; font-weight: 900;'>{current_phase_name}</div>
+                <div style='color: #64748b; font-size: 12px; margin-top: 4px;'>Phase {current_phase}/3</div>
+            </div>
+        """, unsafe_allow_html=True)
+    # # === ULTRA-PREMIUM ANIMATED DONUT GAUGE ===
+    # import numpy as np
+    # import plotly.graph_objects as go
+    # import time
 
-**The model considered {len(feature_importance)} key factors:**
+    # st.markdown("<div class='section-header'>⏳ Case Duration Gauge</div>", unsafe_allow_html=True)
 
-1. **{top_3[0][0]}** ({top_3[0][1]})  
-   Contribution: ${abs(top_3[0][2]):,.0f} ({abs(top_3[0][2])/base_value*100:.1f}%)  
-   → {top_3[0][3]}
+    # estimated_days = res['days']
+    # max_days = 500  # Scale
+    # progress = min(estimated_days / max_days, 1.0) * 100
 
-2. **{top_3[1][0]}** ({top_3[1][1]})  
-   Contribution: ${abs(top_3[1][2]):,.0f} ({abs(top_3[1][2])/base_value*100:.1f}%)  
-   → {top_3[1][3]}
+    # # Dynamic color based on severity
+    # if estimated_days <= 150:
+    #     ring_color = "#16a34a"  # Green
+    # elif estimated_days <= 300:
+    #     ring_color = "#f59e0b"  # Yellow
+    # else:
+    #     ring_color = "#dc2626"  # Red
 
-3. **{top_3[2][0]}** ({top_3[2][1]})  
-   Contribution: ${abs(top_3[2][2]):,.0f} ({abs(top_3[2][2])/base_value*100:.1f}%)  
-   → {top_3[2][3]}
+    # # Placeholder for animation
+    # gauge_placeholder = st.empty()
 
-**Result:** These three factors account for **{sum([abs(f[2]) for f in top_3])/base_value*100:.1f}%** of the final ${base_value:,.0f} prediction.
-        """
-        st.markdown(summary_text)
+    # # Animation loop
+    # for pct in range(0, int(progress) + 1):
+    #     fig = go.Figure()
+
+    #     # FULL BACKGROUND RING (subtle)
+    #     fig.add_trace(go.Pie(
+    #         values=[1],
+    #         hole=0.72,
+    #         marker_colors=["#1e293b"],
+    #         textinfo='none',
+    #         hoverinfo='skip'
+    #     ))
+
+    #     # ACTIVE PROGRESS RING
+    #     fig.add_trace(go.Pie(
+    #         values=[pct, 100 - pct],
+    #         hole=0.72,
+    #         textinfo='none',
+    #         direction='clockwise',
+    #         rotation=90,
+    #         marker_colors=[ring_color, "rgba(0,0,0,0)"],
+    #         hoverinfo='skip'
+    #     ))
+
+    #     # Chart Layout
+    #     fig.update_layout(
+    #         height=350,
+    #         width=350,
+    #         paper_bgcolor='rgba(0,0,0,0)',
+    #         plot_bgcolor='rgba(0,0,0,0)',
+    #         showlegend=False,
+    #         margin=dict(t=0, b=0, l=0, r=0),
+
+    #         annotations=[
+    #             # Neon glow gradient center text
+    #             dict(
+    #                 x=0.5, y=0.52,
+    #                 text=f"""
+    #                 <span style="
+    #                     font-size:28px;
+    #                     font-weight:800;
+    #                     background: -webkit-linear-gradient(#93c5fd, #3b82f6);
+    #                     -webkit-background-clip: text;
+    #                     -webkit-text-fill-color: transparent;">
+    #                     {estimated_days} days
+    #                 </span>
+    #                 """,
+    #                 showarrow=False
+    #             ),
+    #             # Subtext label
+    #             dict(
+    #                 x=0.5, y=0.35,
+    #                 text="<span style='color:#94a3b8; font-size:14px;'>Estimated Duration</span>",
+    #                 showarrow=False
+    #             )
+    #         ]
+    #     )
+
+    #     gauge_placeholder.plotly_chart(fig, use_container_width=True)
+    #     time.sleep(0.01)   # Smooth animation speed
+
+
+        
+#         summary_text = f"""
+# ### 📊 Why This Settlement Value
+
+# **The model considered {len(feature_importance)} key factors:**
+
+# 1. **{top_3[0][0]}** ({top_3[0][1]})  
+#    Contribution: ${abs(top_3[0][2]):,.0f} ({abs(top_3[0][2])/base_value*100:.1f}%)  
+#    → {top_3[0][3]}
+
+# 2. **{top_3[1][0]}** ({top_3[1][1]})  
+#    Contribution: ${abs(top_3[1][2]):,.0f} ({abs(top_3[1][2])/base_value*100:.1f}%)  
+#    → {top_3[1][3]}
+
+# 3. **{top_3[2][0]}** ({top_3[2][1]})  
+#    Contribution: ${abs(top_3[2][2]):,.0f} ({abs(top_3[2][2])/base_value*100:.1f}%)  
+#    → {top_3[2][3]}
+
+# **Result:** These three factors account for **{sum([abs(f[2]) for f in top_3])/base_value*100:.1f}%** of the final ${base_value:,.0f} prediction.
+#         """
+#         st.markdown(summary_text)
     
     st.divider()
     
     # Final recommendation
-    st.markdown("### 🎯 Recommendation")
+    st.markdown("### 🎯 Summary")
     
-    if confidence_score >= 75:
-        st.success("✅ **SETTLE** - Key factors clearly support settlement negotiations.")
-    elif confidence_score >= 55:
-        st.warning("⚡ **STRATEGIZE** - Mixed factors require careful case management.")
+    if res['action'] == 'SETTLE':
+        st.success("✅ **SETTLE** - Settlement is economically superior to litigation.")
+    elif res['action'] == 'LITIGATE':
+        st.error("⚔️ **LITIGATE** - Litigation exposure is lower than settlement value.")
     else:
-        st.error("⚔️ **LITIGATE** - High-risk factors warrant trial preparation.")
+        st.warning("⚡ **STRATEGIZE** - Mixed factors require careful case management.")
     # === RISK ALERTS ===
     
     
+    # # # === STRATEGIC RECOMMENDATION ===
+    # st.markdown("<div class='section-header'>🎯 Next Best Action</div>", unsafe_allow_html=True)
+    
+    # if res['action'] == 'SETTLE':
+    #     st.markdown(f"""
+    #         <div style='background: linear-gradient(135deg, #166534 0%, #1b7a3a 100%); border-left: 5px solid #16a34a; border-radius: 10px; padding: 25px; color: #bbf7d0; font-weight: 600;'>
+    #         <b style='font-size: 1.2rem;'>✅ PURSUE SETTLEMENT IMMEDIATELY</b><br><br>
+    #         Settlement is economically superior. Litigation exposure (<b>${res['exposure']:,.0f}</b>) exceeds plaintiff recovery (<b>${res['demand']:,.0f}</b>).<br><br>
+    #         <b>📋 Action Plan:</b><br>
+    #         • <b>Timeline:</b> Initiate negotiations within 7-10 days<br>
+    #         • <b>Opening Offer:</b> ${res['range_low']:,.0f} – ${int(res['prediction']*0.95):,.0f}<br>
+    #         • <b>Walk-Away Price:</b> ${res['range_high']:,.0f}<br>
+    #         • <b>Savings vs Litigation:</b> ${res['savings']:,.0f}
+    #         </div>
+    #     """, unsafe_allow_html=True)
+    # elif res['action'] == 'LITIGATE':
+    #     st.markdown(f"""
+    #         <div style='background: linear-gradient(135deg, #7f1d1d 0%, #6b2121 100%); border-left: 5px solid #dc2626; border-radius: 10px; padding: 25px; color: #fecaca; font-weight: 600;'>
+    #         <b style='font-size: 1.2rem;'>⚔️ PROCEED TO LITIGATION</b><br><br>
+    #         Plaintiff demand (<b>${res['demand']:,.0f}</b>) significantly exceeds litigation exposure. Trial is economically justified.<br><br>
+    #         <b>📋 Action Plan:</b><br>
+    #         • <b>Trial Timeline:</b> {res['days']} days (~{res['months']:.1f} months)<br>
+    #         • <b>Expected Defense Costs:</b> ${res['defense_cost']:,.0f}<br>
+    #         • <b>Anticipated Verdict:</b> ${res['prediction']:,.0f}<br>
+    #         • <b>Do Not Settle Above:</b> ${int(res['exposure']*0.9):,.0f}
+    #         </div>
+    #     """, unsafe_allow_html=True)
+    # else:
+    #     st.markdown(f"""
+    #         <div style='background: linear-gradient(135deg, #92400e 0%, #a16207 100%); border-left: 5px solid #f59e0b; border-radius: 10px; padding: 25px; color: #fcd34d; font-weight: 600;'>
+    #         <b style='font-size: 1.2rem;'>⚡ STRATEGIC NEGOTIATION REQUIRED</b><br><br>
+    #         Borderline case. Settlement vs. litigation economics are nearly equivalent. Requires careful analysis.<br><br>
+    #         <b>📋 Action Plan:</b><br>
+    #         • <b>Next Step:</b> Conduct Independent Medical Exam (IME)<br>
+    #         • <b>Test Offer:</b> ${int(res['prediction']*0.85):,.0f}<br>
+    #         • <b>Monitor:</b> Demand trajectory & attorney behavior<br>
+    #         • <b>Re-evaluate:</b> Quarterly or on significant developments
+    #         </div>
+    #     """, unsafe_allow_html=True)
+    
     # === STRATEGIC RECOMMENDATION ===
-    st.markdown("<div class='section-header'>🎯 Recommended Strategy</div>", unsafe_allow_html=True)
+    st.markdown("<div class='section-header'>🎯 Next Best Action</div>", unsafe_allow_html=True)
     
     if res['action'] == 'SETTLE':
         st.markdown(f"""
             <div style='background: linear-gradient(135deg, #166534 0%, #1b7a3a 100%); border-left: 5px solid #16a34a; border-radius: 10px; padding: 25px; color: #bbf7d0; font-weight: 600;'>
             <b style='font-size: 1.2rem;'>✅ PURSUE SETTLEMENT IMMEDIATELY</b><br><br>
-            Settlement is economically superior. Litigation exposure (<b>${res['exposure']:,.0f}</b>) exceeds plaintiff recovery (<b>${res['demand']:,.0f}</b>).<br><br>
+            Settlement is economically superior. Litigation exposure (<b>${total_exposure:,.0f}</b>) exceeds settlement value (<b>${median_value:,.0f}</b>).<br><br>
             <b>📋 Action Plan:</b><br>
             • <b>Timeline:</b> Initiate negotiations within 7-10 days<br>
-            • <b>Opening Offer:</b> ${res['range_low']:,.0f} – ${int(res['prediction']*0.95):,.0f}<br>
-            • <b>Walk-Away Price:</b> ${res['range_high']:,.0f}<br>
-            • <b>Savings vs Litigation:</b> ${res['savings']:,.0f}
+            • <b>Opening Offer:</b> ${random_low:,.0f} – ${int(median_value*0.95):,.0f}<br>
+            • <b>Walk-Away Price:</b> ${random_high:,.0f}<br>
+            • <b>Savings vs Litigation:</b> ${total_exposure - median_value:,.0f}
             </div>
         """, unsafe_allow_html=True)
     elif res['action'] == 'LITIGATE':
         st.markdown(f"""
             <div style='background: linear-gradient(135deg, #7f1d1d 0%, #6b2121 100%); border-left: 5px solid #dc2626; border-radius: 10px; padding: 25px; color: #fecaca; font-weight: 600;'>
             <b style='font-size: 1.2rem;'>⚔️ PROCEED TO LITIGATION</b><br><br>
-            Plaintiff demand (<b>${res['demand']:,.0f}</b>) significantly exceeds litigation exposure. Trial is economically justified.<br><br>
+            Settlement value (<b>${median_value:,.0f}</b>) significantly exceeds litigation exposure. Trial is economically justified.<br><br>
             <b>📋 Action Plan:</b><br>
             • <b>Trial Timeline:</b> {res['days']} days (~{res['months']:.1f} months)<br>
-            • <b>Expected Defense Costs:</b> ${res['defense_cost']:,.0f}<br>
-            • <b>Anticipated Verdict:</b> ${res['prediction']:,.0f}<br>
-            • <b>Do Not Settle Above:</b> ${int(res['exposure']*0.9):,.0f}
+            • <b>Expected Defense Costs:</b> ${defense_cost:,.0f}<br>
+            • <b>Anticipated Verdict:</b> ${median_value:,.0f}<br>
+            • <b>Do Not Settle Above:</b> ${int(total_exposure*0.9):,.0f}
             </div>
         """, unsafe_allow_html=True)
     else:
@@ -3039,13 +3674,12 @@ else:
             Borderline case. Settlement vs. litigation economics are nearly equivalent. Requires careful analysis.<br><br>
             <b>📋 Action Plan:</b><br>
             • <b>Next Step:</b> Conduct Independent Medical Exam (IME)<br>
-            • <b>Test Offer:</b> ${int(res['prediction']*0.85):,.0f}<br>
+            • <b>Test Offer:</b> ${int(median_value*0.85):,.0f}<br>
             • <b>Monitor:</b> Demand trajectory & attorney behavior<br>
             • <b>Re-evaluate:</b> Quarterly or on significant developments
             </div>
         """, unsafe_allow_html=True)
     
-    st.markdown("")
     
     st.markdown("")
     
