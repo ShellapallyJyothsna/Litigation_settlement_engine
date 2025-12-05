@@ -3270,10 +3270,190 @@ else:
     #         st.write(f"{color} ${abs(impact):,.0f}\n({impact_pct:.1f}%)")
     
     # st.divider()
-    # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SHAP-STYLE SIMPLIFIED) ===
-    st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
+
+
     
-    # Extract variables from inputs
+    # # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SHAP-STYLE SIMPLIFIED) ===
+    # st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
+    
+    # # Extract variables from inputs
+    # attorney_score = inputs['Attorney_Score']
+    # venue_win_rate = inputs['Venue_Win_Rate']
+    # impairment = inputs['Impairment_Rating']
+    # wage_loss = inputs['Wage_Loss_Exposure']
+    # employment = inputs['Employment_Status']
+    # opioid = inputs['Opioid_Indicator']
+    # days_filed = inputs['Days_Since_Filed']
+    # medical_trajectory = inputs['Medical_Trajectory']
+    # future_medical = inputs['Future_Medical']
+    # attorney_type = inputs['Attorney_Tendency']
+    
+    # # Calculate feature importance scores - ALWAYS include meaningful features
+    # feature_importance = []
+    
+    # # ALWAYS calculate base factors (don't use high thresholds)
+    # # Attorney contribution
+    # attorney_impact = (attorney_score - 40) * 80
+    # feature_importance.append(('Attorney Score', attorney_score, attorney_impact, f'{attorney_score}/100 aggressiveness'))
+    
+    # # Venue contribution
+    # venue_impact = (0.50 - venue_win_rate) * 45000
+    # feature_importance.append(('Venue Win Rate', f'{int(venue_win_rate*100)}%', venue_impact, f'{int(venue_win_rate*100)}% defense win rate'))
+    
+    # # Impairment contribution (MAJOR DRIVER)
+    # if impairment > 0:
+    #     impair_impact = impairment * 900
+    #     feature_importance.append(('Impairment Rating', f'{impairment}%', impair_impact, f'{impairment}% permanent injury'))
+    
+    # # Wage loss contribution
+    # if wage_loss > 0:
+    #     wage_impact = wage_loss * 0.35
+    #     feature_importance.append(('Wage Loss Exposure', f'${wage_loss:,}', wage_impact, f'Lost wages: ${wage_loss:,}'))
+    
+    # # Employment status (binary impact)
+    # if employment == 'Terminated':
+    #     feature_importance.append(('Employment Status', employment, 15000, 'Terminated = emotional damages premium'))
+    # else:
+    #     feature_importance.append(('Employment Status', employment, 0, 'Standard employment relationship'))
+    
+    # # Opioid indicator
+    # if opioid == 1:
+    #     feature_importance.append(('Opioid Indicator', 'Yes', 8000, 'Opioid usage increases narrative risk'))
+    # else:
+    #     feature_importance.append(('Opioid Indicator', 'No', 0, 'No opioid complications'))
+    
+    # # Medical trajectory
+    # if medical_trajectory == 'Escalating':
+    #     traj_impact = 12000
+    # elif medical_trajectory == 'High':
+    #     traj_impact = 7000
+    # elif medical_trajectory == 'Moderate':
+    #     traj_impact = 3000
+    # else:
+    #     traj_impact = -2000
+    # feature_importance.append(('Medical Trajectory', medical_trajectory, traj_impact, f'{medical_trajectory} medical costs'))
+    
+    # # Days filed contribution
+    # if days_filed > 0:
+    #     days_impact = (days_filed / 365) * 4500
+    #     feature_importance.append(('Days Since Filed', days_filed, days_impact, f'{days_filed} days open'))
+    
+    # # Attorney type
+    # if attorney_type == 'Trial-Oriented':
+    #     att_type_impact = 9000
+    # elif attorney_type == 'Balanced':
+    #     att_type_impact = 2500
+    # else:
+    #     att_type_impact = -3000
+    # feature_importance.append(('Attorney Type', attorney_type, att_type_impact, f'{attorney_type} approach'))
+    
+    # # Future medical
+    # if future_medical == 1:
+    #     feature_importance.append(('Future Medical', 'Yes', 6000, 'Requires settlement reserves'))
+    # else:
+    #     feature_importance.append(('Future Medical', 'No', 0, 'No future medical needed'))
+    
+    # # Sort by absolute impact value (descending)
+    # feature_importance = sorted(feature_importance, key=lambda x: abs(x[2]), reverse=True)
+    
+    # # Filter out zero-impact factors
+    # feature_importance = [f for f in feature_importance if abs(f[2]) > 500]
+    
+    # # Use median_value instead of res['prediction']
+    # base_value = median_value
+    
+    # # RENDER CLEAN EXPLANATION
+    # st.markdown(f"## 🧾 What Drove the ${base_value:,.0f} Prediction")
+    # st.divider()
+    
+    # st.markdown("### Top Factors Contributing to Settlement Value")
+    
+    # # Calculate total impact of top 6 features
+    # top_6_features = feature_importance[:6]
+    # total_top_6_impact = sum(abs(f[2]) for f in top_6_features)
+    # combined_contribution_pct = (total_top_6_impact / base_value) * 100 if base_value > 0 else 0
+    
+    # for i, (feature, value, impact, desc) in enumerate(top_6_features, 1):
+    #     col1, col2 = st.columns([3, 1])
+        
+    #     with col1:
+    #         st.write(f"**{i}. {feature}**")
+    #         st.caption(f"Value: `{value}` • {desc}")
+        
+    #     with col2:
+    #         # Individual feature contribution as % of top 6 total
+    #         individual_pct = (abs(impact) / total_top_6_impact) * 100 if total_top_6_impact > 0 else 0
+    #         color = "🟢" if impact > 0 else "🟢"
+    #         st.write(f"{color} $({individual_pct:.1f})")
+    
+    # st.divider()
+    
+    
+    
+    # # === SHAP-STYLE BAR CHART ===
+    # st.markdown("<h5 style='color: #cbd5e1; margin-top: 30px; margin-bottom: 15px;'>📊 Feature Impact Distribution</h5>", unsafe_allow_html=True)
+    
+    # # Prepare data for bar chart
+    # shap_features = []
+    # shap_values = []
+    # shap_colors = []
+    
+    # for feature, value, impact, desc in top_6_features:
+    #     shap_features.append(feature)
+    #     # Normalize impact to show on chart
+    #     normalized_impact = impact / abs(top_6_features[0][2]) if abs(top_6_features[0][2]) > 0 else 0
+    #     shap_values.append(normalized_impact)
+    #     # shap_colors.append('#ef4444' if impact > 0 else '#10b981')
+    #     shap_colors.append('#10b981' if impact > 0 else '#ef4444')
+
+    
+    # # Create horizontal bar chart
+    # fig_shap = go.Figure()
+    
+    # fig_shap.add_trace(go.Bar(
+    #     y=shap_features,
+    #     x=shap_values,
+    #     orientation='h',
+    #     marker=dict(
+    #         color=shap_colors,
+    #         line=dict(width=0)
+    #     ),
+    #     text=[f'{abs(v):.2f}' for v in shap_values],
+    #     textposition='outside',
+    #     hovertemplate='<b>%{y}</b><br>Impact: %{x:.2f}<extra></extra>',
+    #     showlegend=False
+    # ))
+    
+    # fig_shap.update_layout(
+    #     height=350,
+    #     paper_bgcolor='rgba(0,0,0,0)',
+    #     plot_bgcolor='rgba(0,0,0,0)',
+    #     xaxis=dict(
+    #         title='Normalized Impact',
+    #         title_font=dict(color='#94a3b8'),
+            
+    #         tickfont=dict(color='#cbd5e1'),
+    #         showgrid=True,
+    #         gridcolor='#334155',
+    #         zeroline=True,
+    #         zerolinecolor='#64748b'
+    #     ),
+    #     yaxis=dict(
+    #         tickfont=dict(color='#cbd5e1'),
+    #         showgrid=False
+    #     ),
+    #     margin=dict(l=150, r=80, t=20, b=40),
+    #     showlegend=False,
+    #     hovermode='y unified'
+    # )
+    
+    # st.plotly_chart(fig_shap, use_container_width=True)
+    
+    # st.divider()
+    # === 7. EXPLAINABILITY & STRATEGIC ANALYSIS (SCENARIO-AWARE) ===
+    st.markdown("<div class='section-header'>📈 Model Explainability & Strategic Analysis</div>", unsafe_allow_html=True)
+
+    # Extract variables
     attorney_score = inputs['Attorney_Score']
     venue_win_rate = inputs['Venue_Win_Rate']
     impairment = inputs['Impairment_Rating']
@@ -3284,309 +3464,185 @@ else:
     medical_trajectory = inputs['Medical_Trajectory']
     future_medical = inputs['Future_Medical']
     attorney_type = inputs['Attorney_Tendency']
+
+    # --- STEP 1: DETECT SCENARIO CONTEXT ---
+    # We define the "Scenario" to decide which features matter most
+    current_scenario = "Standard"
     
-    # Calculate feature importance scores - ALWAYS include meaningful features
+    if impairment > 15 or future_medical == 1:
+        current_scenario = "Catastrophic"
+    elif attorney_score > 65 or employment == 'Terminated':
+        current_scenario = "Litigated/Complex"
+    elif days_filed < 90 and impairment == 0:
+        current_scenario = "Nuisance"
+    else:
+        current_scenario = "Standard"
+
+    # --- STEP 2: DEFINE DYNAMIC WEIGHTS BASED ON SCENARIO ---
+    # These multipliers determine how much a feature impacts the price
+    weights = {
+        'attorney': 50,
+        'venue': 20000,
+        'impairment': 800,
+        'wage': 0.35,
+        'term': 10000,
+        'opioid': 5000,
+        'med_traj': 5000,
+        'days': 10
+    }
+
+    if current_scenario == "Catastrophic":
+        # In Catastrophic, Injury & Future Meds dominate. Attorney matters less.
+        weights['impairment'] = 2500  # Massive impact
+        weights['med_traj'] = 15000   # Massive impact
+        weights['attorney'] = 20      # Attorney skill matters less when injury is obvious
+        weights['venue'] = 10000      # Venue matters less
+        
+    elif current_scenario == "Litigated/Complex":
+        # In Complex, The Attorney, Venue, and Employment Status dominate.
+        weights['attorney'] = 180     # High Attorney Impact
+        weights['venue'] = 65000      # High Venue Impact
+        weights['term'] = 25000       # Termination is huge (retaliation risk)
+        weights['impairment'] = 600   # moderate
+
+    elif current_scenario == "Nuisance":
+        # In Nuisance, it's about making it go away (Days Filed & Venue).
+        weights['days'] = 150         # Aging cases cost money
+        weights['impairment'] = 0     # Injury is negligible
+        weights['wage'] = 0.1         # Wages negligible
+        weights['venue'] = 30000      # Fear of bad venue drives nuisance value
+
+    # --- STEP 3: CALCULATE FEATURE IMPORTANCE ---
     feature_importance = []
-    
-    # ALWAYS calculate base factors (don't use high thresholds)
-    # Attorney contribution
-    attorney_impact = (attorney_score - 40) * 150  # Scale from base
-    feature_importance.append(('Attorney Score', attorney_score, attorney_impact, f'{attorney_score}/100 aggressiveness'))
-    
-    # Venue contribution
-    venue_impact = (0.50 - venue_win_rate) * 80000  # Negative venue = higher impact
-    feature_importance.append(('Venue Win Rate', f'{int(venue_win_rate*100)}%', venue_impact, f'{int(venue_win_rate*100)}% defense win rate'))
-    
-    # Impairment contribution (MAJOR DRIVER)
+
+    # 1. Attorney Contribution
+    # Baseline is 50. If score > 50 it adds value, if < 50 it reduces value.
+    att_impact = (attorney_score - 50) * weights['attorney']
+    feature_importance.append(('Attorney Score', attorney_score, att_impact, f'Aggressiveness rating (Context: {current_scenario})'))
+
+    # 2. Venue Contribution
+    # Baseline 50% win rate.
+    ven_impact = (0.50 - venue_win_rate) * weights['venue']
+    feature_importance.append(('Venue Environment', f'{int(venue_win_rate*100)}%', ven_impact, 'Jury verdict potential'))
+
+    # 3. Impairment (Always positive impact)
     if impairment > 0:
-        impair_impact = impairment * 1500
-        feature_importance.append(('Impairment Rating', f'{impairment}%', impair_impact, f'{impairment}% permanent injury'))
-    
-    # Wage loss contribution
+        imp_impact = impairment * weights['impairment']
+        feature_importance.append(('Impairment Rating', f'{impairment}%', imp_impact, 'Permanent Partial Disability'))
+
+    # 4. Wage Loss
     if wage_loss > 0:
-        wage_impact = wage_loss * 0.6
-        feature_importance.append(('Wage Loss Exposure', f'${wage_loss:,}', wage_impact, f'Lost wages: ${wage_loss:,}'))
-    
-    # Employment status (binary impact)
+        wg_impact = wage_loss * weights['wage']
+        feature_importance.append(('Wage Loss', f'${wage_loss:,}', wg_impact, 'Indemnity exposure'))
+
+    # 5. Employment Status
     if employment == 'Terminated':
-        feature_importance.append(('Employment Status', employment, 25000, 'Terminated = emotional damages premium'))
-    else:
-        feature_importance.append(('Employment Status', employment, 0, 'Standard employment relationship'))
-    
-    # Opioid indicator
+        feature_importance.append(('Employment', 'Terminated', weights['term'], 'Wrongful termination risk premium'))
+    elif employment == 'Resigned':
+         feature_importance.append(('Employment', 'Resigned', weights['term'] * 0.2, 'Voluntary separation'))
+
+    # 6. Opioid (Risk Multiplier)
     if opioid == 1:
-        feature_importance.append(('Opioid Indicator', 'Yes', 14000, 'Opioid usage increases narrative risk'))
-    else:
-        feature_importance.append(('Opioid Indicator', 'No', 0, 'No opioid complications'))
-    
-    # Medical trajectory
-    if medical_trajectory == 'Escalating':
-        traj_impact = 20000
-    elif medical_trajectory == 'High':
-        traj_impact = 12000
-    elif medical_trajectory == 'Moderate':
-        traj_impact = 5000
-    else:
-        traj_impact = -3000
-    feature_importance.append(('Medical Trajectory', medical_trajectory, traj_impact, f'{medical_trajectory} medical costs'))
-    
-    # Days filed contribution
-    if days_filed > 0:
-        days_impact = (days_filed / 365) * 8000  # Scale by years
-        feature_importance.append(('Days Since Filed', days_filed, days_impact, f'{days_filed} days open'))
-    
-    # Attorney type
-    if attorney_type == 'Trial-Oriented':
-        att_type_impact = 16000
-    elif attorney_type == 'Balanced':
-        att_type_impact = 4000
-    else:
-        att_type_impact = -5000
-    feature_importance.append(('Attorney Type', attorney_type, att_type_impact, f'{attorney_type} approach'))
-    
-    # Future medical
+        feature_importance.append(('Opioid Risk', 'Detected', weights['opioid'], 'Addiction/Prolonged recovery risk'))
+
+    # 7. Medical Trajectory
+    traj_map = {'Escalating': 2.0, 'High': 1.5, 'Moderate': 1.0, 'Stable': 0.5}
+    traj_score = traj_map.get(medical_trajectory, 0)
+    # Compare against "Moderate" baseline (1.0)
+    med_impact = (traj_score - 1.0) * weights['med_traj']
+    feature_importance.append(('Medical Trend', medical_trajectory, med_impact, f'Projected medical complexity'))
+
+    # 8. Future Medical
     if future_medical == 1:
-        feature_importance.append(('Future Medical', 'Yes', 10000, 'Requires settlement reserves'))
-    else:
-        feature_importance.append(('Future Medical', 'No', 0, 'No future medical needed'))
-    
-    # Sort by absolute impact value (descending)
+        fm_val = 50000 if current_scenario == "Catastrophic" else 8000
+        feature_importance.append(('Future Medical', 'Required', fm_val, 'Medicare Set-Aside / Future Care'))
+
+    # --- STEP 4: SORT AND FILTER ---
+    # Sort by ABSOLUTE impact (biggest drivers first, whether positive or negative)
     feature_importance = sorted(feature_importance, key=lambda x: abs(x[2]), reverse=True)
     
-    # Filter out zero-impact factors
-    feature_importance = [f for f in feature_importance if abs(f[2]) > 500]
+    # Filter small noise
+    feature_importance = [f for f in feature_importance if abs(f[2]) > 100]
+
+    # Use median_value from your prediction model
+    base_value = median_value 
+
+    # # --- STEP 5: RENDER UI ---
+    # st.markdown(f"## 🧾 Explanation for {current_scenario} Scenario")
+    # st.caption(f"Prediction Baseline: ${base_value:,.0f}")
+    # st.divider()
+
+    col_explain, col_chart = st.columns([1, 1])
+
+    top_features = feature_importance[:5] # Top 5 drivers
     
-    # Use median_value instead of res['prediction']
-    base_value = median_value
-    
-    # RENDER CLEAN EXPLANATION
-    st.markdown(f"## 🧾 What Drove the ${base_value:,.0f} Prediction")
-    st.divider()
-    
-    st.markdown("### Top Factors Contributing to Settlement Value")
-    
-    for i, (feature, value, impact, desc) in enumerate(feature_importance[:6], 1):
-        col1, col2 = st.columns([3, 1])
-        
-        with col1:
-            st.write(f"**{i}. {feature}**")
-            st.caption(f"Value: `{value}` • {desc}")
-        
-        with col2:
-            impact_pct = (abs(impact) / base_value) * 1000 if base_value > 0 else 0
-            color = "🔴" if impact > 0 else "🟢"
-            st.write(f"{color} $({impact_pct:.1f}%)")
-    
-    st.divider()
-    
-    # # === DONUT CHART FOR ESTIMATED LITIGATION DURATION ===
-    # === VERTICAL PHASE TIMELINE ===
-    import plotly.graph_objects as go
-    
-    st.markdown("<div class='section-header'>⏳ Case Duration Breakdown</div>", unsafe_allow_html=True)
-    
-    estimated_days = res['days']
-    estimated_months = res['months']
-    
-    # Define case phases based on total duration
-    # Typical breakdown: Discovery (20%), Negotiation (40%), Mediation/Trial (40%)
-    phase_1_days = int(estimated_days * 0.20)
-    phase_2_days = int(estimated_days * 0.40)
-    phase_3_days = int(estimated_days * 0.40)
-    
-    # Determine current phase based on case history
-    days_filed = inputs['Days_Since_Filed']
-    
-    if days_filed <= phase_1_days:
-        current_phase = 1
-        days_in_phase = days_filed
-    elif days_filed <= (phase_1_days + phase_2_days):
-        current_phase = 2
-        days_in_phase = days_filed - phase_1_days
-    else:
-        current_phase = 3
-        days_in_phase = days_filed - phase_1_days - phase_2_days
-    
-    phases = [
-        {"name": "📋 Discovery", "days": phase_1_days, "desc": "Initial pleadings & case filing", "icon": "📋"},
-        {"name": "⚖️ Negotiation", "days": phase_2_days, "desc": "Settlement discussions & mediation", "icon": "⚖️"},
-        {"name": "🔨 Resolution", "days": phase_3_days, "desc": "Final settlement or trial", "icon": "🔨"}
-    ]
-    
-    # === RENDER PHASES ===
-    for idx, phase in enumerate(phases, 1):
-        phase_pct = (phase['days'] / estimated_days * 100) if estimated_days > 0 else 0
-        is_current = idx == current_phase
-        
-        # Color based on phase
-        if idx == 1:
-            bar_color = "#3b82f6"
-            bg_color = "rgba(59, 130, 246, 0.1)"
-        elif idx == 2:
-            bar_color = "#f59e0b"
-            bg_color = "rgba(245, 158, 11, 0.1)"
-        else:
-            bar_color = "#10b981"
-            bg_color = "rgba(16, 185, 129, 0.1)"
-        
-        # Border styling
-        border_style = "2px solid #60a5fa" if is_current else "1px solid #334155"
-        
-        st.markdown(f"""
-            <div style='background: {bg_color}; border: {border_style}; border-radius: 12px; padding: 16px; margin-bottom: 12px;'>
-                <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;'>
-                    <div style='font-weight: 700; color: #e2e8f0; font-size: 15px;'>{phase['name']}</div>
-                    <div style='color: #94a3b8; font-size: 12px; font-weight: 600;'>{phase['days']} days ({phase_pct:.0f}%)</div>
-                </div>
-                <div style='background: #1e293b; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 10px;'>
-                    <div style='background: {bar_color}; height: 100%; width: {phase_pct}%; border-radius: 4px; box-shadow: 0 0 12px {bar_color}40; transition: width 0.5s ease;'></div>
-                </div>
-                <div style='display: flex; justify-content: space-between; align-items: center;'>
-                    <div style='color: #64748b; font-size: 13px;'>{phase['desc']}</div>
-                    {f'<div style="color: #60a5fa; font-weight: 700; font-size: 12px; background: rgba(96, 165, 250, 0.2); padding: 4px 10px; border-radius: 20px; border: 1px solid #60a5fa;">← YOU ARE HERE</div>' if is_current else '<div></div>'}
-                </div>
+    with col_explain:
+        st.markdown("### 🔑 Key Drivers")
+        for i, (feature, value, impact, desc) in enumerate(top_features, 1):
+            impact_pct = (impact / base_value) * 100 if base_value != 0 else 0
+            
+            # Icon logic
+            if impact > 0:
+                icon = "🔺" # Increases cost
+                color_class = "red"
+            else:
+                icon = "🔻" # Decreases cost (Savings)
+                color_class = "green"
+                
+            st.markdown(f"""
+            <div style='background-color: #1e293b; padding: 10px; border-radius: 5px; margin-bottom: 10px; border-left: 4px solid {'#ef4444' if impact > 0 else '#10b981'}'>
+                <div style='font-weight: bold; font-size: 1.1em;'>{icon} {feature}</div>
+                <div style='font-size: 0.9em; color: #cbd5e1;'>{desc}</div>
+                <div style='font-size: 0.8em; margin-top: 5px;'>Impact: ({impact_pct:+.1f}%)</div>
             </div>
-        """, unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
-    # === SUMMARY STATS ===
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 10px; padding: 16px; text-align: center;'>
-                <div style='color: #94a3b8; font-size: 12px; font-weight: 600; margin-bottom: 8px;'>TOTAL DURATION</div>
-                <div style='color: #60a5fa; font-size: 32px; font-weight: 900;'>{estimated_days}</div>
-                <div style='color: #64748b; font-size: 12px; margin-top: 4px;'>days</div>
-            </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 10px; padding: 16px; text-align: center;'>
-                <div style='color: #94a3b8; font-size: 12px; font-weight: 600; margin-bottom: 8px;'>IN MONTHS</div>
-                <div style='color: #f59e0b; font-size: 32px; font-weight: 900;'>{estimated_months:.1f}</div>
-                <div style='color: #64748b; font-size: 12px; margin-top: 4px;'>months</div>
-            </div>
-        """, unsafe_allow_html=True)
-    
-    with col3:
-        current_phase_name = phases[current_phase - 1]['name'] if current_phase <= len(phases) else "Unknown"
-        st.markdown(f"""
-            <div style='background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 10px; padding: 16px; text-align: center;'>
-                <div style='color: #94a3b8; font-size: 12px; font-weight: 600; margin-bottom: 8px;'>CURRENT PHASE</div>
-                <div style='color: #10b981; font-size: 18px; font-weight: 900;'>{current_phase_name}</div>
-                <div style='color: #64748b; font-size: 12px; margin-top: 4px;'>Phase {current_phase}/3</div>
-            </div>
-        """, unsafe_allow_html=True)
-    # # === ULTRA-PREMIUM ANIMATED DONUT GAUGE ===
-    # import numpy as np
-    # import plotly.graph_objects as go
-    # import time
+            """, unsafe_allow_html=True)
 
-    # st.markdown("<div class='section-header'>⏳ Case Duration Gauge</div>", unsafe_allow_html=True)
-
-    # estimated_days = res['days']
-    # max_days = 500  # Scale
-    # progress = min(estimated_days / max_days, 1.0) * 100
-
-    # # Dynamic color based on severity
-    # if estimated_days <= 150:
-    #     ring_color = "#16a34a"  # Green
-    # elif estimated_days <= 300:
-    #     ring_color = "#f59e0b"  # Yellow
-    # else:
-    #     ring_color = "#dc2626"  # Red
-
-    # # Placeholder for animation
-    # gauge_placeholder = st.empty()
-
-    # # Animation loop
-    # for pct in range(0, int(progress) + 1):
-    #     fig = go.Figure()
-
-    #     # FULL BACKGROUND RING (subtle)
-    #     fig.add_trace(go.Pie(
-    #         values=[1],
-    #         hole=0.72,
-    #         marker_colors=["#1e293b"],
-    #         textinfo='none',
-    #         hoverinfo='skip'
-    #     ))
-
-    #     # ACTIVE PROGRESS RING
-    #     fig.add_trace(go.Pie(
-    #         values=[pct, 100 - pct],
-    #         hole=0.72,
-    #         textinfo='none',
-    #         direction='clockwise',
-    #         rotation=90,
-    #         marker_colors=[ring_color, "rgba(0,0,0,0)"],
-    #         hoverinfo='skip'
-    #     ))
-
-    #     # Chart Layout
-    #     fig.update_layout(
-    #         height=350,
-    #         width=350,
-    #         paper_bgcolor='rgba(0,0,0,0)',
-    #         plot_bgcolor='rgba(0,0,0,0)',
-    #         showlegend=False,
-    #         margin=dict(t=0, b=0, l=0, r=0),
-
-    #         annotations=[
-    #             # Neon glow gradient center text
-    #             dict(
-    #                 x=0.5, y=0.52,
-    #                 text=f"""
-    #                 <span style="
-    #                     font-size:28px;
-    #                     font-weight:800;
-    #                     background: -webkit-linear-gradient(#93c5fd, #3b82f6);
-    #                     -webkit-background-clip: text;
-    #                     -webkit-text-fill-color: transparent;">
-    #                     {estimated_days} days
-    #                 </span>
-    #                 """,
-    #                 showarrow=False
-    #             ),
-    #             # Subtext label
-    #             dict(
-    #                 x=0.5, y=0.35,
-    #                 text="<span style='color:#94a3b8; font-size:14px;'>Estimated Duration</span>",
-    #                 showarrow=False
-    #             )
-    #         ]
-    #     )
-
-    #     gauge_placeholder.plotly_chart(fig, use_container_width=True)
-    #     time.sleep(0.01)   # Smooth animation speed
-
-
+    with col_chart:
+        st.markdown("### 📊 Impact Distribution")
         
-#         summary_text = f"""
-# ### 📊 Why This Settlement Value
+        # Prepare Chart Data (Reverse order for horizontal chart)
+        chart_feats = [x[0] for x in top_features][::-1]
+        chart_vals = [x[2] for x in top_features][::-1]
+        chart_colors = ['#ef4444' if x > 0 else '#10b981' for x in chart_vals]
+        
+        # Calculate Percentages for the Labels
+        # We divide the specific impact by the total prediction (median_value)
+        chart_labels = []
+        for val in chart_vals:
+            if median_value > 0:
+                pct = (val / median_value) * 100
+                chart_labels.append(f"{pct:+.1f}%") # Format: +12.5% or -5.2%
+            else:
+                chart_labels.append("0%")
 
-# **The model considered {len(feature_importance)} key factors:**
+        fig_shap = go.Figure()
+        fig_shap.add_trace(go.Bar(
+            y=chart_feats,
+            x=chart_vals,       # Keep X as $ amount so bar sizes are accurate
+            orientation='h',
+            marker=dict(color=chart_colors),
+            text=chart_labels,  # DISPLAY PERCENTAGES HERE
+            textposition='auto',
+            # Custom Hover: Shows both $ amount and %
+            hovertemplate='<b>%{y}</b><br>Impact: $%{x:,.0f}<br>Share: %{text}<extra></extra>' 
+        ))
 
-# 1. **{top_3[0][0]}** ({top_3[0][1]})  
-#    Contribution: ${abs(top_3[0][2]):,.0f} ({abs(top_3[0][2])/base_value*100:.1f}%)  
-#    → {top_3[0][3]}
-
-# 2. **{top_3[1][0]}** ({top_3[1][1]})  
-#    Contribution: ${abs(top_3[1][2]):,.0f} ({abs(top_3[1][2])/base_value*100:.1f}%)  
-#    → {top_3[1][3]}
-
-# 3. **{top_3[2][0]}** ({top_3[2][1]})  
-#    Contribution: ${abs(top_3[2][2]):,.0f} ({abs(top_3[2][2])/base_value*100:.1f}%)  
-#    → {top_3[2][3]}
-
-# **Result:** These three factors account for **{sum([abs(f[2]) for f in top_3])/base_value*100:.1f}%** of the final ${base_value:,.0f} prediction.
-#         """
-#         st.markdown(summary_text)
-    
-    st.divider()
+        fig_shap.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            margin=dict(l=20, r=20, t=20, b=20),
+            height=400,
+            xaxis=dict(
+                showgrid=True, 
+                gridcolor='#334155', 
+                zeroline=True, 
+                zerolinecolor='white',
+                title="Impact Value ($)", # Optional: label x-axis
+                title_font=dict(color='#cbd5e1')
+            ),
+            yaxis=dict(tickfont=dict(color='white'))
+        )
+        st.plotly_chart(fig_shap, use_container_width=True)
     
     # Final recommendation
     st.markdown("### 🎯 Summary")
