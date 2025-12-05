@@ -21,50 +21,406 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+
 # === PREMIUM CSS STYLING ===
+# st.markdown("""
+#     <style>
+#     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap');
+    
+#     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+#     /* === NEUTRAL CHARCOAL THEME (No Blue) === */
+    
+#     .stApp {
+#         background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+#         font-family: 'Poppins', sans-serif;
+#         color: #e2e8f0;
+#     }
+#     /* Make the Form Container a Lighter Grey to pop */
+#     .form-container {
+#         background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
+#         border: 1px solid #52525b !important; /* Neutral Grey Border */
+#         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+#         padding: 50px;
+#         border-radius: 20px;
+#         max-width: 1200px;
+#         margin: 40px auto;
+#     }
+    
+#     /* Hide Sidebar */
+#     section[data-testid="stSidebar"] { display: none; }
+    
+#     /* Form Container */
+#     .form-container {
+#         background: linear-gradient(135deg, #1a1f3a 0%, #0f172a 100%);
+#         border: 2px solid #3b82f6;
+#         border-radius: 20px;
+#         padding: 50px;
+#         max-width: 1200px;
+#         margin: 40px auto;
+#         box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+#     }
+    
+#     .form-title {
+#         font-family: 'Playfair Display', serif;
+#         font-size: 3rem;
+#         font-weight: 700;
+#         background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
+#         -webkit-background-clip: text;
+#         -webkit-text-fill-color: transparent;
+#         background-clip: text;
+#         text-align: center;
+#         margin-bottom: 10px;
+#         letter-spacing: 1px;
+#     }
+    
+#     .form-subtitle {
+#         text-align: center;
+#         color: #cbd5e1;
+#         margin-bottom: 40px;
+#         font-size: 1.1rem;
+#     }
+    
+#     /* Form Sections Grid */
+#     .form-section-grid {
+#         display: grid;
+#         grid-template-columns: repeat(2, 1fr);
+#         gap: 25px;
+#         margin-bottom: 30px;
+#     }
+    
+#     .form-section-item {
+#         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+#         border: 1.5px solid #334155;
+#         border-radius: 14px;
+#         padding: 20px;
+#         transition: all 0.3s ease;
+#     }
+    
+#     .form-section-item:hover {
+#         border-color: #3b82f6;
+#         box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+#     }
+    
+#     .form-section-label {
+#         color: #60a5fa;
+#         font-weight: 700;
+#         font-size: 0.85rem;
+#         text-transform: uppercase;
+#         letter-spacing: 1.2px;
+#         margin-bottom: 15px;
+#         display: block;
+#     }
+    
+#     /* Input Styling */
+#     .stSelectbox div[data-baseweb="select"] > div,
+#     .stNumberInput div[data-baseweb="input"] > div,
+#     .stSlider {
+#         background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+#         border: 1.5px solid #475569 !important;
+#         border-radius: 10px !important;
+#         color: white !important;
+#         transition: all 0.3s ease;
+#     }
+    
+#     .stSelectbox div[data-baseweb="select"] > div:hover,
+#     .stNumberInput div[data-baseweb="input"] > div:hover {
+#         border-color: #3b82f6 !important;
+#         box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
+#     }
+    
+#     input[type="number"], div[data-baseweb="select"] span {
+#         color: #e2e8f0 !important;
+#         -webkit-text-fill-color: #e2e8f0 !important;
+#         caret-color: #3b82f6 !important;
+#         font-weight: 600 !important;
+#     }
+    
+#     ul[data-testid="stSelectboxVirtualDropdown"] {
+#         background: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%) !important;
+#         border: 1px solid #334155 !important;
+#     }
+    
+#     li[role="option"] { color: #e2e8f0 !important; }
+#     li[role="option"]:hover { background: rgba(59, 130, 246, 0.25) !important; }
+    
+#     .stCheckbox div[role="checkbox"] {
+#         border: 2px solid #475569 !important;
+#         background: #1e293b !important;
+#     }
+    
+#     .stCheckbox div[role="checkbox"]:hover { border-color: #3b82f6 !important; }
+    
+#     /* Submit Button */
+#     .form-button-container {
+#         display: flex;
+#         gap: 15px;
+#         margin-top: 40px;
+#         justify-content: center;
+#     }
+    
+#     div.stButton > button {
+#         background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+#         border: none;
+#         color: white;
+#         font-weight: 800;
+#         font-size: 1rem;
+#         padding: 16px 40px;
+#         text-transform: uppercase;
+#         letter-spacing: 1.5px;
+#         border-radius: 12px;
+#         box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+#         transition: all 0.3s ease;
+#         min-width: 250px;
+#     }
+    
+#     div.stButton > button:hover {
+#         transform: translateY(-3px);
+#         box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
+#     }
+    
+#     /* Dashboard Header */
+#     .dashboard-header {
+#         background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
+#         border: 2px solid #3b82f6;
+#         border-radius: 16px;
+#         padding: 40px;
+#         margin-bottom: 30px;
+#         box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+#         display: grid;
+#         grid-template-columns: 1fr 1fr;
+#         gap: 30px;
+#         align-items: center;
+#     }
+    
+#     .dashboard-title {
+#         font-family: 'Playfair Display', serif;
+#         font-size: 2.5rem;
+#         font-weight: 700;
+#         background: linear-gradient(135deg, #60a5fa, #3b82f6);
+#         -webkit-background-clip: text;
+#         -webkit-text-fill-color: transparent;
+#         background-clip: text;
+#         margin-bottom: 15px;
+#     }
+    
+#     .dashboard-subtitle {
+#         color: #cbd5e1;
+#         font-size: 1rem;
+#         line-height: 1.6;
+#     }
+    
+#     .recommendation-panel {
+#         background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+#         border: 2px solid #3b82f6;
+#         border-radius: 12px;
+#         padding: 25px;
+#         text-align: center;
+#     }
+    
+#     .recommendation-text {
+#         font-size: 1.3rem;
+#         font-weight: 800;
+#         color: #60a5fa;
+#         margin-bottom: 10px;
+#     }
+    
+#     .recommendation-subtext {
+#         color: #94a3b8;
+#         font-size: 0.95rem;
+#     }
+    
+#     /* KPI Cards */
+#     .kpi-row {
+#         display: grid;
+#         grid-template-columns: repeat(4, 1fr);
+#         gap: 20px;
+#         margin-bottom: 30px;
+#     }
+    
+#     .kpi-card {
+#         background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
+#         border: 2px solid #334155;
+#         border-radius: 14px;
+#         padding: 24px;
+#         transition: all 0.3s ease;
+#         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+#     }
+    
+#     .kpi-card:hover {
+#         border-color: #3b82f6;
+#         transform: translateY(-8px);
+#         box-shadow: 0 16px 40px rgba(59, 130, 246, 0.25);
+#     }
+    
+#     .kpi-value {
+#         font-size: 1.8rem; /* Reduced from 2.2rem to fit better */
+#         color: #f1f5f9;
+#         font-weight: 800;
+#         margin: 5px 0; /* Reduced margin */
+#         font-family: 'Playfair Display', serif;
+#         letter-spacing: 0.5px; /* Reduced spacing */
+#         white-space: nowrap; /* Prevents wrapping */
+#     }
+    
+#     .kpi-label {
+#         font-size: 0.7rem; /* Slightly smaller label */
+#         color: #94a3b8;
+#         font-weight: 700;
+#         text-transform: uppercase;
+#         letter-spacing: 1px;
+#         margin-bottom: 5px;
+#     }
+    
+#     .kpi-subtext {
+#         font-size: 0.85rem;
+#         color: #cbd5e1;
+#         font-weight: 500;
+#     }
+    
+#     /* Driver Analysis Container */
+#     .driver-analysis {
+#         display: grid;
+#         grid-template-columns: 1fr 1fr;
+#         gap: 30px;
+#         margin-bottom: 30px;
+#     }
+    
+#     .driver-section {
+#         background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
+#         border: 2px solid #334155;
+#         border-radius: 14px;
+#         padding: 25px;
+#     }
+    
+#     .driver-section-title {
+#         font-weight: 700;
+#         font-size: 1.2rem;
+#         margin-bottom: 20px;
+#         padding-bottom: 12px;
+#         border-bottom: 2px solid #3b82f6;
+#     }
+    
+#     .driver-item {
+#         display: flex;
+#         justify-content: space-between;
+#         align-items: center;
+#         padding: 12px 16px;
+#         background: #0a0e27;
+#         border-radius: 8px;
+#         margin-bottom: 10px;
+#         border-left: 4px solid #3b82f6;
+#     }
+    
+#     .driver-name {
+#         color: #cbd5e1;
+#         font-weight: 600;
+#         flex: 1;
+#         font-size: 0.95rem;
+#     }
+    
+#     .driver-value {
+#         font-weight: 800;
+#         padding: 6px 12px;
+#         border-radius: 6px;
+#         font-size: 0.9rem;
+#     }
+    
+#     .driver-pos {
+#         color: #fecaca;
+#         background: rgba(220, 38, 38, 0.2);
+#         border: 1px solid #dc2626;
+#     }
+    
+#     .driver-neg {
+#         color: #bbf7d0;
+#         background: rgba(22, 163, 74, 0.2);
+#         border: 1px solid #16a34a;
+#     }
+    
+#     /* Alert Boxes */
+#     .alert-box {
+#         background: linear-gradient(135deg, #7f1d1d 0%, #6b2121 100%);
+#         border-left: 5px solid #dc2626;
+#         border-radius: 10px;
+#         padding: 16px;
+#         margin: 12px 0;
+#         color: #fecaca;
+#         font-weight: 600;
+#         box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
+#     }
+    
+#     .section-header {
+#         font-size: 1.5rem;
+#         font-weight: 700;
+#         color: #f1f5f9;
+#         margin: 30px 0 20px 0;
+#         padding-bottom: 10px;
+#         border-bottom: 2px solid #3b82f6;
+#         font-family: 'Playfair Display', serif;
+#     }
+    
+#     header { visibility: hidden; }
+#     footer { visibility: hidden; }
+#     #MainMenu { visibility: hidden; }
+    
+
+#     /* Force all Streamlit input labels to be White */
+#     label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
+#         color: #e2e8f0 !important;
+#         font-size: 0.85rem !important;
+#         font-weight: 600 !important;
+#         letter-spacing: 0.8px !important;
+#     }
+
+#     /* Ensure text typed inside numbers/selects is White */
+#     input[type="number"], div[data-baseweb="select"] span {
+#         color: #ffffff !important;
+#         -webkit-text-fill-color: #ffffff !important;
+#     }
+#     </style>
+# """, unsafe_allow_html=True)
+
+
+# === LIGHT THEME CSS STYLING ===
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap');
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
-    /* === NEUTRAL CHARCOAL THEME (No Blue) === */
+    /* === CORE LIGHT THEME === */
     
     .stApp {
-        background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+        background: #f8fafc; /* Very light, off-white background */
         font-family: 'Poppins', sans-serif;
-        color: #e2e8f0;
+        color: #1e293b; /* Dark text for readability */
     }
-    /* Make the Form Container a Lighter Grey to pop */
+    
+    /* Form Container (Needs to pop slightly) */
     .form-container {
-        background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%) !important;
-        border: 1px solid #52525b !important; /* Neutral Grey Border */
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+        background: #ffffff !important; /* Pure white form background */
+        border: 1px solid #e2e8f0 !important; /* Light border */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
         padding: 50px;
-        border-radius: 20px;
+        border-radius: 16px;
         max-width: 1200px;
         margin: 40px auto;
     }
     
-    /* Hide Sidebar */
+    /* Hide Streamlit UI elements */
     section[data-testid="stSidebar"] { display: none; }
+    header { visibility: hidden; }
+    footer { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
     
-    /* Form Container */
-    .form-container {
-        background: linear-gradient(135deg, #1a1f3a 0%, #0f172a 100%);
-        border: 2px solid #3b82f6;
-        border-radius: 20px;
-        padding: 50px;
-        max-width: 1200px;
-        margin: 40px auto;
-        box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
-    }
-    
+    /* Titles and Subtitles */
     .form-title {
         font-family: 'Playfair Display', serif;
         font-size: 3rem;
         font-weight: 700;
-        background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
+        /* Blue gradient for contrast */
+        background: linear-gradient(135deg, #2563eb, #1e3a8a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -75,34 +431,14 @@ st.markdown("""
     
     .form-subtitle {
         text-align: center;
-        color: #cbd5e1;
+        color: #64748b; /* Medium grey subtitle */
         margin-bottom: 40px;
         font-size: 1.1rem;
     }
     
-    /* Form Sections Grid */
-    .form-section-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        margin-bottom: 30px;
-    }
-    
-    .form-section-item {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        border: 1.5px solid #334155;
-        border-radius: 14px;
-        padding: 20px;
-        transition: all 0.3s ease;
-    }
-    
-    .form-section-item:hover {
-        border-color: #3b82f6;
-        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
-    }
-    
+    /* Form Section Labels */
     .form-section-label {
-        color: #60a5fa;
+        color: #1e40af; /* Dark blue label for emphasis */
         font-weight: 700;
         font-size: 0.85rem;
         text-transform: uppercase;
@@ -111,274 +447,122 @@ st.markdown("""
         display: block;
     }
     
-    /* Input Styling */
+    /* Input Field Styling (Selectbox, Number Input) */
     .stSelectbox div[data-baseweb="select"] > div,
     .stNumberInput div[data-baseweb="input"] > div,
     .stSlider {
-        background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
-        border: 1.5px solid #475569 !important;
-        border-radius: 10px !important;
-        color: white !important;
+        background: #f1f5f9 !important; /* Light grey input background */
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+        color: #1e293b !important; /* Dark text inside inputs */
         transition: all 0.3s ease;
     }
     
     .stSelectbox div[data-baseweb="select"] > div:hover,
     .stNumberInput div[data-baseweb="input"] > div:hover {
         border-color: #3b82f6 !important;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
     }
     
+    /* Force text/label colors to be dark/black */
+    label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
+        color: #1e293b !important;
+    }
+
     input[type="number"], div[data-baseweb="select"] span {
-        color: #e2e8f0 !important;
-        -webkit-text-fill-color: #e2e8f0 !important;
-        caret-color: #3b82f6 !important;
+        color: #1e293b !important;
+        -webkit-text-fill-color: #1e293b !important;
+        caret-color: #2563eb !important;
         font-weight: 600 !important;
     }
-    
+
+    /* Dropdown menu background (for select boxes) */
     ul[data-testid="stSelectboxVirtualDropdown"] {
-        background: linear-gradient(180deg, #0a0e27 0%, #1a1f3a 100%) !important;
-        border: 1px solid #334155 !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
     }
     
-    li[role="option"] { color: #e2e8f0 !important; }
-    li[role="option"]:hover { background: rgba(59, 130, 246, 0.25) !important; }
+    li[role="option"] { color: #1e293b !important; }
+    li[role="option"]:hover { background: rgba(59, 130, 246, 0.1) !important; }
     
-    .stCheckbox div[role="checkbox"] {
-        border: 2px solid #475569 !important;
-        background: #1e293b !important;
-    }
-    
-    .stCheckbox div[role="checkbox"]:hover { border-color: #3b82f6 !important; }
-    
-    /* Submit Button */
-    .form-button-container {
-        display: flex;
-        gap: 15px;
-        margin-top: 40px;
-        justify-content: center;
-    }
-    
+    /* Submit Button (Keep bold blue gradient) */
     div.stButton > button {
         background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
-        border: none;
-        color: white;
-        font-weight: 800;
-        font-size: 1rem;
-        padding: 16px 40px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
-        transition: all 0.3s ease;
-        min-width: 250px;
+        color: white; /* Text stays white on blue button */
+        /* ... rest of button style remains ... */
     }
     
-    div.stButton > button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 36px rgba(37, 99, 235, 0.5);
-    }
-    
-    /* Dashboard Header */
-    .dashboard-header {
-        background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
-        border: 2px solid #3b82f6;
-        border-radius: 16px;
-        padding: 40px;
-        margin-bottom: 30px;
-        box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: center;
+    /* Dashboard Elements */
+    .dashboard-header, .kpi-card, .driver-section {
+        background: #ffffff; /* White background for dashboard sections */
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
     
     .dashboard-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #60a5fa, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 15px;
+        color: #1e293b; /* Dark title text */
     }
     
-    .dashboard-subtitle {
-        color: #cbd5e1;
-        font-size: 1rem;
-        line-height: 1.6;
+    .dashboard-subtitle, .kpi-subtext, .driver-name {
+        color: #475569; /* Darker grey text */
     }
-    
-    .recommendation-panel {
-        background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-        border: 2px solid #3b82f6;
-        border-radius: 12px;
-        padding: 25px;
-        text-align: center;
-    }
-    
-    .recommendation-text {
-        font-size: 1.3rem;
-        font-weight: 800;
-        color: #60a5fa;
-        margin-bottom: 10px;
-    }
-    
-    .recommendation-subtext {
-        color: #94a3b8;
-        font-size: 0.95rem;
-    }
-    
-    /* KPI Cards */
-    .kpi-row {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        margin-bottom: 30px;
-    }
-    
-    .kpi-card {
-        background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
-        border: 2px solid #334155;
-        border-radius: 14px;
-        padding: 24px;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
-    
-    .kpi-card:hover {
-        border-color: #3b82f6;
-        transform: translateY(-8px);
-        box-shadow: 0 16px 40px rgba(59, 130, 246, 0.25);
-    }
-    
+
     .kpi-value {
-        font-size: 1.8rem; /* Reduced from 2.2rem to fit better */
-        color: #f1f5f9;
-        font-weight: 800;
-        margin: 5px 0; /* Reduced margin */
-        font-family: 'Playfair Display', serif;
-        letter-spacing: 0.5px; /* Reduced spacing */
-        white-space: nowrap; /* Prevents wrapping */
+        color: #1e293b; /* Dark black/blue for numbers */
     }
     
     .kpi-label {
-        font-size: 0.7rem; /* Slightly smaller label */
-        color: #94a3b8;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 5px;
+        color: #64748b; /* Grey for labels */
     }
     
-    .kpi-subtext {
-        font-size: 0.85rem;
-        color: #cbd5e1;
-        font-weight: 500;
-    }
-    
-    /* Driver Analysis Container */
-    .driver-analysis {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .driver-section {
-        background: linear-gradient(135deg, #1e293b 0%, #0a0e27 100%);
-        border: 2px solid #334155;
-        border-radius: 14px;
-        padding: 25px;
-    }
-    
-    .driver-section-title {
-        font-weight: 700;
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-        padding-bottom: 12px;
-        border-bottom: 2px solid #3b82f6;
-    }
-    
+    /* Driver item list styling */
     .driver-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 16px;
-        background: #0a0e27;
-        border-radius: 8px;
-        margin-bottom: 10px;
+        background: #f1f5f9; /* Light grey strip background */
         border-left: 4px solid #3b82f6;
     }
     
-    .driver-name {
-        color: #cbd5e1;
-        font-weight: 600;
-        flex: 1;
-        font-size: 0.95rem;
-    }
-    
-    .driver-value {
-        font-weight: 800;
-        padding: 6px 12px;
-        border-radius: 6px;
-        font-size: 0.9rem;
-    }
-    
     .driver-pos {
-        color: #fecaca;
-        background: rgba(220, 38, 38, 0.2);
-        border: 1px solid #dc2626;
+        color: #b91c1c; /* Dark red for positive impact */
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid #f87171;
     }
     
     .driver-neg {
-        color: #bbf7d0;
-        background: rgba(22, 163, 74, 0.2);
-        border: 1px solid #16a34a;
+        color: #059669; /* Dark green for negative impact (lower settlement) */
+        background: rgba(5, 150, 105, 0.1);
+        border: 1px solid #34d399;
     }
     
-    /* Alert Boxes */
-    .alert-box {
-        background: linear-gradient(135deg, #7f1d1d 0%, #6b2121 100%);
-        border-left: 5px solid #dc2626;
-        border-radius: 10px;
-        padding: 16px;
-        margin: 12px 0;
-        color: #fecaca;
-        font-weight: 600;
-        box-shadow: 0 8px 24px rgba(220, 38, 38, 0.15);
-    }
-    
+    /* Section Headers */
     .section-header {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #f1f5f9;
-        margin: 30px 0 20px 0;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #3b82f6;
-        font-family: 'Playfair Display', serif;
+        color: #1e293b;
+        border-bottom: 2px solid #cbd5e1;
     }
     
-    header { visibility: hidden; }
-    footer { visibility: hidden; }
-    #MainMenu { visibility: hidden; }
+    /* Strategic Recommendation Box (Green for Settle) */
+    .stSuccess > div {
+        background: #ecfdf5 !important; /* Very light green */
+        border-left: 5px solid #059669 !important;
+        color: #065f46 !important; /* Dark green text */
+    }
+
+    /* Strategic Recommendation Box (Red for Litigate) */
+    .stError > div {
+        background: #fef2f2 !important; /* Very light red */
+        border-left: 5px solid #ef4444 !important;
+        color: #b91c1c !important; /* Dark red text */
+    }
+
+    /* Strategic Recommendation Box (Yellow for Strategize) */
+    .stWarning > div {
+        background: #fffdf6 !important; /* Very light yellow */
+        border-left: 5px solid #f59e0b !important;
+        color: #b45309 !important; /* Dark brown text */
+    }
     
-
-    /* Force all Streamlit input labels to be White */
-    label, [data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] p {
-        color: #e2e8f0 !important;
-        font-size: 0.85rem !important;
-        font-weight: 600 !important;
-        letter-spacing: 0.8px !important;
-    }
-
-    /* Ensure text typed inside numbers/selects is White */
-    input[type="number"], div[data-baseweb="select"] span {
-        color: #ffffff !important;
-        -webkit-text-fill-color: #ffffff !important;
-    }
     </style>
 """, unsafe_allow_html=True)
+
 
 # === INITIALIZE SESSION STATE ===
 if 'submitted' not in st.session_state:
@@ -388,11 +572,25 @@ if 'submitted' not in st.session_state:
 if "scenario_selected" not in st.session_state:
     st.session_state.scenario_selected = False
 
+if st.session_state.submitted:
+    st.markdown(
+        """
+        <script>
+            // Use setTimeout to ensure the Streamlit content has loaded before scrolling
+            setTimeout(function() {
+                window.scrollTo(0, 0); // Scrolls to the top-left corner
+            }, 50); 
+        </script>
+        """, 
+        unsafe_allow_html=True
+    )
+
 if not st.session_state.scenario_selected:
 
     st.markdown("""
         <div style='text-align:center; margin-top:60px;'>
-            <h1 style='font-family:Poppins; font-size:3rem; color:white;'>⚖️ Litigation Settlement Analyzer</h1>
+           
+           <h1 style='font-family:Poppins; font-size:3rem; color:white;'>⚖️ Litigation Settlement Analyzer</h1>
             <p style='color:#cbd5e1; font-size:1.2rem;'>
                 Select a scenario to pre-fill the case details
             </p>
@@ -404,7 +602,7 @@ if not st.session_state.scenario_selected:
     with c1:
         if st.button("✅ SETTLE", use_container_width=True):
             st.session_state.prefill = {
-                "Jurisdiction": "New York",
+                "Jurisdiction": "New Jersey",
                 "Attorney_Score": 90,
                 "Impairment_Rating": 15,
                 "Wage_Loss_Exposure": 45000,
@@ -417,7 +615,7 @@ if not st.session_state.scenario_selected:
     with c2:
         if st.button("⚡ STRATEGIZE", use_container_width=True):
             st.session_state.prefill = {
-                "Jurisdiction": "Florida",
+                "Jurisdiction": "New Jersey",
                 "Attorney_Score": 60,
                 "Impairment_Rating": 12,
                 "Wage_Loss_Exposure": 35000,
@@ -430,7 +628,7 @@ if not st.session_state.scenario_selected:
     with c3:
         if st.button("⚔️ LITIGATE", use_container_width=True):
             st.session_state.prefill = {
-                "Jurisdiction": "Texas",
+                "Jurisdiction": "New Jersey",
                 "Attorney_Score": 50,
                 "Impairment_Rating": 2,
                 "Wage_Loss_Exposure": 5000,
@@ -447,7 +645,7 @@ if not st.session_state.submitted:
     st.markdown("""
         <div class='form-container'>
             <div class='form-title'>⚖️ Litigation Settlement Analyzer</div>
-            <div class='form-subtitle'>AI-Powered Settlement Valuation & Strategy Intelligence</div>
+            <div class='form-subtitle'>Settlement Valuation & Strategy Intelligence</div>
     """, unsafe_allow_html=True)
     
     with st.container(): # Changed from st.form to st.container to allow dynamic interactions
@@ -459,170 +657,409 @@ if not st.session_state.submitted:
         def use_prefill(key, default):
             return pref.get(key, default)
 
-        # === A. LITIGATION & EXPOSURE ===
-        st.markdown("<span class='form-section-label'>🏛️ A. Litigation & Exposure</span>", unsafe_allow_html=True)
+        # # === A. LITIGATION & EXPOSURE ===
+        # st.markdown("<span class='form-section-label'>🏛️ A. Litigation & Exposure</span>", unsafe_allow_html=True)
 
-        form_col1, form_col2 = st.columns(2)
-        with form_col1:
-            jurisdiction = st.selectbox(
-                "Jurisdiction",
-                ['New York', 'California', 'Texas', 'Florida', 'Illinois', 'Pennsylvania'],
-                index=['New York', 'California', 'Texas', 'Florida', 'Illinois', 'Pennsylvania']
-                .index(use_prefill("Jurisdiction", "New York"))
-            )
-        with form_col2:
-            venue_win_rate = st.slider("Defense Win Rate in Venue", 0.0, 1.0, 0.45)
+        # form_col1, form_col2 = st.columns(2)
+        # with form_col1:
+        #     jurisdiction = st.selectbox(
+        #         "Jurisdiction",
+        #         ['New York', 'California', 'Texas', 'Florida', 'Illinois', 'Pennsylvania', 'New Jersey'],
+        #         index=['New York', 'California', 'Texas', 'Florida', 'Illinois', 'Pennsylvania', 'New Jersey']
+        #         .index(use_prefill("Jurisdiction", "New Jersey"))
+        #     )
+        # with form_col2:
+        #     venue_win_rate = st.slider("Defense Win Rate in Venue", 0.0, 1.0, 0.45)
 
-        form_col3, form_col4 = st.columns(2)
-        with form_col3:
-            attorney_firm = st.selectbox(
-                "Opposing Counsel",
-                ['Morgan & Morgan', 'Binder & Binder', 'Local Plaintiff Mill', 'Solo Practitioner']
-            )
-        with form_col4:
-            attorney_score = st.slider(
-                "Attorney Aggressiveness", 
-                0, 100, 
-                use_prefill("Attorney_Score", 65)
-            )
+        # form_col3, form_col4 = st.columns(2)
+        # with form_col3:
+        #     attorney_firm = st.selectbox(
+        #         "Plaintiff Counsel",
+        #         ['Weitz & Luxenberg', 'Binder & Binder', 'Local Plaintiff Mill', 'Solo Practitioner']
+        #     )
+        # with form_col4:
+        #     attorney_score = st.slider(
+        #         "Plaintiff attorney aggressiveness", 
+        #         0, 100, 
+        #         use_prefill("Attorney_Score", 65)
+        #     )
 
-        form_col5, _ = st.columns(2)
-        with form_col5:
-            provider_type = st.selectbox(
-                "Primary Provider",
-                ['Physical Therepy', 'Orthopedic Surgery', 'Neurology', 'Pain Management', 'Chiropractor']
-            )
+        # form_col5, _ = st.columns(2)
+        # with form_col5:
+        #     provider_type = st.selectbox(
+        #         "Primary Provider",
+        #         ['Chiropractor', 'Orthopedic Surgery', 'Neurology', 'Pain Management', 'Chiropractor']
+        #     )
 
-        st.markdown("---")
+        # st.markdown("---")
 
-        # === B. ECONOMIC DAMAGES ===
-        st.markdown("<span class='form-section-label'>💰 B. Economic Damages</span>", unsafe_allow_html=True)
+        # # === B. ECONOMIC DAMAGES ===
+        # st.markdown("<span class='form-section-label'>💰 B. Economic Damages</span>", unsafe_allow_html=True)
 
-        form_col6, form_col7 = st.columns(2)
-        with form_col6:
-            wage_loss = st.number_input(
-                "Wage Loss Exposure ($)",
-                5000, 500000,
-                use_prefill("Wage_Loss_Exposure", 25000)
-            )
-        with form_col7:
-            impairment = st.slider(
-                "Permanent Impairment (%)",
-                0, 100,
-                use_prefill("Impairment_Rating", 15)
-            )
+        # form_col6, form_col7 = st.columns(2)
+        # with form_col6:
+        #     wage_loss = st.number_input(
+        #         "Wage Loss Exposure ($)",
+        #         5000, 500000,
+        #         use_prefill("Wage_Loss_Exposure", 25000)
+        #     )
+        # with form_col7:
+        #     impairment = st.slider(
+        #         "Permanent Impairment (%)",
+        #         0, 100,
+        #         use_prefill("Impairment_Rating", 15)
+        #     )
 
-        form_col8, form_col9 = st.columns(2)
-        with form_col8:
-            medical_trajectory = st.selectbox(
-                "Medical Cost Trajectory",
-                ['Low', 'Moderate', 'High', 'Escalating']
-            )
-        with form_col9:
-            future_medical = st.checkbox("Future Medical Exposure?", value=True)
+        # form_col8, form_col9 = st.columns(2)
+        # with form_col8:
+        #     medical_trajectory = st.selectbox(
+        #         "Medical Cost Trajectory",
+        #         ['Low', 'Moderate', 'High', 'Escalating']
+        #     )
+        # with form_col9:
+        #     future_medical = st.checkbox("Future Medical Exposure?", value=True)
 
-        form_col10, _ = st.columns(2)
-        with form_col10:
+        # form_col10, _ = st.columns(2)
+        # with form_col10:
 
-            has_demand = st.checkbox(
-                "Has a formal demand been received?",
-                value=use_prefill("Has_Demand", False)
-            )
+        #     has_demand = st.checkbox(
+        #         "Has a formal demand been received?",
+        #         value=use_prefill("Has_Demand", False)
+        #     )
 
-            if has_demand:
-                demand = st.number_input(
-                    "Enter Plaintiff Demand ($)",
-                    min_value=0, max_value=10000000,
-                    value=use_prefill("Demand_Amount", 150000),
-                    step=5000
+        #     if has_demand:
+        #         demand = st.number_input(
+        #             "Enter Plaintiff Demand ($)",
+        #             min_value=0, max_value=10000000,
+        #             value=use_prefill("Demand_Amount", 150000),
+        #             step=5000
+        #         )
+        #     else:
+        #         demand = 0
+        #         st.info("ℹ️ No demand entered. System will calculate 'Likelihood of Acceptance' accordingly.")
+
+        # st.markdown("---")
+
+        # # === C. BEHAVIORAL PROGRESSION ===
+        # st.markdown("<span class='form-section-label'>📊 C. Behavioral Progression</span>", unsafe_allow_html=True)
+
+        # form_col11, form_col12 = st.columns(2)
+        # with form_col11:
+        #     days_filed = st.slider("Days Since Claim Filed", 0, 1000, 180)
+        # with form_col12:
+        #     days_attorney = st.slider("Days Since Attorney Engaged", 0, 1000, 150)
+
+        # form_col13, form_col14 = st.columns(2)
+        # with form_col13:
+        #     treatment_duration = st.slider("Treatment Duration (Days)", 0, 500, 90)
+        # with form_col14:
+        #     provider_shopping = st.slider("Provider Shopping Count", 1, 10, 1)
+
+        # form_col15, _ = st.columns(2)
+        # with form_col15:
+        #     opioid = st.checkbox("Opioid Prescription Indicator?")
+
+        # st.markdown("---")
+
+        # # === D. CLAIMANT PROFILE ===
+        # st.markdown("<span class='form-section-label'>👤 D. Claimant Profile</span>", unsafe_allow_html=True)
+
+        # form_col16, form_col17 = st.columns(2)
+        # with form_col16:
+        #     employment = st.selectbox(
+        #         "Employment Status",
+        #         ['Active', 'Terminated', 'Retired', 'Leave of Absence']
+        #     )
+        # with form_col17:
+        #     benefit = st.selectbox(
+        #         "Impairment Rating",
+        #         ['Temporary Total Disability', 'Permanent Partial Disability ', 'Medical Only']
+        #     )
+
+        # form_col18, _ = st.columns(2)
+        # with form_col18:
+        #     msa = st.checkbox("Medicare Set-Aside (MSA) Required?")
+
+        # st.markdown("---")
+
+        # # === E. MEDICAL PROFILE ===
+        # st.markdown("<span class='form-section-label'>🏥 E. Medical Profile</span>", unsafe_allow_html=True)
+
+        # form_col19, form_col20 = st.columns(2)
+        # with form_col19:
+        #     comorbidity = st.selectbox(
+        #         "Comorbidities",
+        #         ['None', 'Obesity', 'Diabetes', 'Hypertension', 'Multiple Conditions']
+        #     )
+        # with form_col20:
+        #     odg = st.selectbox(
+        #         "ODG Guidelines Adherence",
+        #         ['Within Guidelines', 'Exceeds Guidelines', 'Significantly Exceeds']
+        #     )
+
+        # st.markdown("---")
+
+        # # === F. LITIGATION INTELLIGENCE ===
+        # st.markdown("<span class='form-section-label'>📋 F. Litigation Intelligence</span>", unsafe_allow_html=True)
+
+        # form_col21, form_col22 = st.columns(2)
+        # with form_col21:
+        #     attorney_winrate = st.slider("Plaintiff Attorney Win Rate", 0.0, 1.0, 0.55)
+        # with form_col22:
+        #     attorney_type = st.selectbox(
+        #         "Attorney Settlement Tendency",
+        #         ['Early Settlement', 'Balanced', 'Trial-Oriented']
+        #     )
+
+        # form_col23, _ = st.columns(2)
+        # with form_col23:
+        #     judge = st.selectbox(
+        #         "Judge Propensity (if assigned)",
+        #         ['Pro-Defense', 'Neutral', 'Pro-Labor', 'Not Yet Assigned']
+        #     )
+
+            
+        # --- 1. CLAIMANT PROFILE (New First Section - Expanded) ---
+        with st.expander("👤 1. Claimant Profile", expanded=True):
+            
+            col_age, col_tenure = st.columns(2)
+            with col_age:
+                # NEW FIELD: Claimant Age
+                claimant_age = st.number_input("Claimant Age", min_value=18, max_value=99, value=45)
+            with col_tenure:
+                # NEW FIELD: Tenure
+                tenure = st.number_input("Tenure (Years at Employer)", min_value=0, max_value=50, value=5)
+
+            col_occup, col_employ = st.columns(2)
+            with col_occup:
+                # NEW FIELD: Occupation
+                occupation = st.selectbox(
+                    "Occupation Type",
+                    ['Clerical/Office', 'Light Manual', 'Heavy Manual', 'Professional', 'Service Industry']
                 )
-            else:
-                demand = 0
-                st.info("ℹ️ No demand entered. System will calculate 'Likelihood of Acceptance' accordingly.")
+            with col_employ:
+                # EXISTING FIELD: Employment Status (Moved)
+                employment = st.selectbox(
+                    "Employment Status",
+                    ['Active', 'Terminated', 'Retired', 'Leave of Absence']
+                )
 
-        st.markdown("---")
+            col_dependents, col_engaged = st.columns(2)
+            with col_dependents:
+                # EXISTING NEW FIELD: Dependents
+                dependents_count = st.number_input("Number of Dependents", min_value=0, max_value=10, value=2)
+            with col_engaged:
+                # NEW FIELD: Engaged Claimant
+                engaged_claimant = st.checkbox("Engaged with Medical Provider (Compliance)?")
+                
+            col_claim, col_social = st.columns(2)
+            with col_claim:
+                # EXISTING NEW FIELD: Previous Claim History
+                previous_claim_flag = st.checkbox("Previous Litigation/Claim History?")
+            with col_social:
+                # EXISTING NEW FIELD: Social Media Risk
+                social_media_risk = st.selectbox(
+                    "Social Media Activity Risk",
+                    ['Low (Private/Inactive)', 'Moderate (Active)', 'High (Contradictory)']
+                )
+            
 
-        # === C. BEHAVIORAL PROGRESSION ===
-        st.markdown("<span class='form-section-label'>📊 C. Behavioral Progression</span>", unsafe_allow_html=True)
+        # --- 2. LITIGATION & EXPOSURE (Second Section - Expanded) ---
+        with st.expander("🏛️ 2. Litigation & Exposure", expanded=True):
+            
+            form_col1, form_col2 = st.columns(2)
+            with form_col1:
+                jurisdiction = st.selectbox(
+                    "Jurisdiction",
+                    ['New Jersey', 'New York', 'California', 'Texas', 'Florida', 'Illinois', 'Pennsylvania'],
+                    index=['New Jersey', 'New York', 'California', 'Texas', 'Florida', 'Illinois', 'Pennsylvania']
+                    .index(use_prefill("Jurisdiction", "New Jersey"))
+                )
+            with form_col2:
+                venue_win_rate = st.slider("Defense Win Rate in Venue (General)", 0.0, 1.0, 0.45) # CLARIFIED LABEL
 
-        form_col11, form_col12 = st.columns(2)
-        with form_col11:
-            days_filed = st.slider("Days Since Claim Filed", 0, 1000, 180)
-        with form_col12:
-            days_attorney = st.slider("Days Since Attorney Engaged", 0, 1000, 150)
+            form_col3, form_col4 = st.columns(2)
+            with form_col3:
+                attorney_firm = st.selectbox(
+                    "Plaintiff Counsel",
+                    ['Weitz & Luxenberg', 'Binder & Binder', 'Local Plaintiff Mill', 'Solo Practitioner']
+                )
+            with form_col4:
+                attorney_score = st.slider(
+                    "Plaintiff Attorney Aggressiveness Score (0-100)", # CLARIFIED LABEL
+                    0, 100, 
+                    use_prefill("Attorney_Score", 65)
+                )
 
-        form_col13, form_col14 = st.columns(2)
-        with form_col13:
-            treatment_duration = st.slider("Treatment Duration (Days)", 0, 500, 90)
-        with form_col14:
-            provider_shopping = st.slider("Provider Shopping Count", 1, 10, 1)
+            form_col5, form_col6 = st.columns(2)
+            with form_col5:
+                attorney_winrate = st.slider("Plaintiff Attorney Win Rate", 0.0, 1.0, 0.55)
+            with form_col6:
+                attorney_type = st.selectbox(
+                    "Attorney Settlement Tendency",
+                    ['Early Settlement', 'Balanced', 'Trial-Oriented']
+                )
+            
+            form_col7, _ = st.columns(2)
+            with form_col7:
+                judge = st.selectbox(
+                    "Judge Propensity (if assigned)",
+                    ['Pro-Defense', 'Neutral', 'Pro-Labor', 'Not Yet Assigned']
+                )
 
-        form_col15, _ = st.columns(2)
-        with form_col15:
-            opioid = st.checkbox("Opioid Prescription Indicator?")
 
-        st.markdown("---")
+        # --- 3. ECONOMIC DAMAGES (Third Section - Expanded) ---
+        with st.expander("💰 3. Economic Damages & Demand", expanded=True):
+            
+            form_col8, form_col9 = st.columns(2)
+            with form_col8:
+                wage_loss = st.number_input(
+                    "Wage Loss Exposure ($) - Estimated Total Liability", # CLARIFIED LABEL
+                    5000, 500000,
+                    use_prefill("Wage_Loss_Exposure", 25000)
+                )
+            with form_col9:
+                # EXISTING FIELD: Permanent Impairment (%)
+                impairment = st.slider(
+                    "Permanent Impairment (%)",
+                    0, 100,
+                    use_prefill("Impairment_Rating", 15)
+                )
 
-        # === D. CLAIMANT PROFILE ===
-        st.markdown("<span class='form-section-label'>👤 D. Claimant Profile</span>", unsafe_allow_html=True)
+            form_col10, form_col11 = st.columns(2)
+            with form_col10:
+                medical_trajectory = st.selectbox(
+                    "Medical Cost Trajectory (Future Liability)", # CLARIFIED LABEL
+                    ['Low', 'Moderate', 'High', 'Escalating']
+                )
+            with form_col11:
+                future_medical = st.checkbox("Future Medical Exposure?", value=True)
 
-        form_col16, form_col17 = st.columns(2)
-        with form_col16:
-            employment = st.selectbox(
-                "Employment Status",
-                ['Active', 'Terminated', 'Retired', 'Leave of Absence']
-            )
-        with form_col17:
-            benefit = st.selectbox(
-                "Benefit Status",
-                ['Temporary Total Disability', 'Permanent Partial Disability ', 'Medical Only']
-            )
+            form_col12, _ = st.columns(2)
+            with form_col12:
+                has_demand = st.checkbox(
+                    "Has a formal demand been received?",
+                    value=use_prefill("Has_Demand", False)
+                )
 
-        form_col18, _ = st.columns(2)
-        with form_col18:
-            msa = st.checkbox("Medicare Set-Aside (MSA) Required?")
+                if has_demand:
+                    demand = st.number_input(
+                        "Enter Plaintiff Demand ($)",
+                        min_value=0, max_value=10000000,
+                        value=use_prefill("Demand_Amount", 150000),
+                        step=5000
+                    )
+                else:
+                    demand = 0
+                    st.info("ℹ️ No demand entered. System will calculate 'Likelihood of Acceptance' accordingly.")
 
-        st.markdown("---")
 
-        # === E. MEDICAL PROFILE ===
-        st.markdown("<span class='form-section-label'>🏥 E. Medical Profile</span>", unsafe_allow_html=True)
+        # --- 4. MEDICAL & BEHAVIORAL PROGRESSION (Last Section - Collapsed) ---
+        with st.expander("🏥 4. Medical & Behavioral Progression", expanded=False):
+            
+            col_injury, col_body = st.columns(2)
+            with col_injury:
+                # NEW FIELD: Injury Type
+                injury_type = st.selectbox(
+                    "Injury Type",
+                    ['Soft Tissue Strain', 'Fracture', 'Herniated Disc', 'Head Injury', 'Amputation', 'Other']
+                )
+            with col_body:
+                # NEW FIELD: Body Part Involved
+                body_part = st.selectbox(
+                    "Body Part Involved",
+                    ['Lumbar Spine', 'Cervical Spine', 'Knee', 'Shoulder', 'Hand/Wrist', 'Multiple']
+                )
 
-        form_col19, form_col20 = st.columns(2)
-        with form_col19:
-            comorbidity = st.selectbox(
-                "Comorbidities",
-                ['None', 'Obesity', 'Diabetes', 'Hypertension', 'Multiple Conditions']
-            )
-        with form_col20:
-            odg = st.selectbox(
-                "ODG Guidelines Adherence",
-                ['Within Guidelines', 'Exceeds Guidelines', 'Significantly Exceeds']
-            )
+            col_surgery, col_hosp = st.columns(2)
+            with col_surgery:
+                # NEW FIELD: Need for Surgery
+                need_for_surgery = st.checkbox("Need for Surgery?")
+            with col_hosp:
+                # NEW FIELD: Need for Hospitalization
+                need_for_hosp = st.checkbox("Need for Hospitalization?")
 
-        st.markdown("---")
+            col_provider, col_comorbid = st.columns(2)
+            with col_provider:
+                # EXISTING FIELD: Primary Provider
+                provider_type = st.selectbox(
+                    "Primary Provider",
+                    ['Chiropractor', 'Orthopedic Surgery', 'Neurology', 'Pain Management', 'Physical Therepy']
+                )
+            with col_comorbid:
+                # EXISTING FIELD: Comorbidities
+                comorbidity = st.selectbox(
+                    "Comorbidities",
+                    ['None', 'Obesity', 'Diabetes', 'Hypertension', 'Multiple Conditions']
+                )
+            
+            col_odg, col_msa = st.columns(2)
+            with col_odg:
+                # EXISTING FIELD: ODG Adherence
+                odg = st.selectbox(
+                    "ODG Guidelines Adherence",
+                    ['Within Guidelines', 'Exceeds Guidelines', 'Significantly Exceeds']
+                )
+            with col_msa:
+                # EXISTING FIELD: MSA
+                msa = st.checkbox("Medicare Set-Aside (MSA) Required?")
 
-        # === F. LITIGATION INTELLIGENCE ===
-        st.markdown("<span class='form-section-label'>📋 F. Litigation Intelligence</span>", unsafe_allow_html=True)
+            st.markdown("<h5 style='color:#cbd5e1; margin-top:20px;'>Case Progression Timeline</h5>", unsafe_allow_html=True)
+            
+            col_filed, col_attorney = st.columns(2)
+            with col_filed:
+                # EXISTING FIELD: Days Since Filed
+                days_filed = st.slider("Days Since Claim Filed", 0, 1000, 180)
+            with col_attorney:
+                # EXISTING FIELD: Days Since Attorney Engaged
+                days_attorney = st.slider("Days Since Attorney Engaged", 0, 1000, 150)
 
-        form_col21, form_col22 = st.columns(2)
-        with form_col21:
-            attorney_winrate = st.slider("Plaintiff Attorney Win Rate", 0.0, 1.0, 0.55)
-        with form_col22:
-            attorney_type = st.selectbox(
-                "Attorney Settlement Tendency",
-                ['Early Settlement', 'Balanced', 'Trial-Oriented']
-            )
+            col_duration, col_shopping = st.columns(2)
+            with col_duration:
+                # EXISTING FIELD: Treatment Duration
+                treatment_duration = st.slider("Treatment Duration (Days)", 0, 500, 90)
+            with col_shopping:
+                # EXISTING FIELD: Provider Shopping Count
+                provider_shopping = st.slider("Provider Shopping Count", 1, 10, 1)
 
-        form_col23, _ = st.columns(2)
-        with form_col23:
-            judge = st.selectbox(
-                "Judge Propensity (if assigned)",
-                ['Pro-Defense', 'Neutral', 'Pro-Labor', 'Not Yet Assigned']
-            )
+            col_opioid, _ = st.columns(2)
+            with col_opioid:
+                # EXISTING FIELD: Opioid Indicator
+                opioid = st.checkbox("Opioid Prescription Indicator?")
 
         st.markdown("---")
 
         
+        # # Submit Button
+        # submitted = st.button("🚀 ANALYZE CASE", use_container_width=True)
+        # if submitted:
+        #     # Store all form values in session state
+        #     st.session_state.jurisdiction = jurisdiction
+        #     st.session_state.venue_win_rate = venue_win_rate
+        #     st.session_state.attorney_firm = attorney_firm
+        #     st.session_state.attorney_score = attorney_score
+        #     st.session_state.provider_type = provider_type
+        #     st.session_state.wage_loss = wage_loss
+        #     st.session_state.impairment = impairment
+        #     st.session_state.medical_trajectory = medical_trajectory
+        #     st.session_state.future_medical = future_medical
+        #     st.session_state.demand = demand
+        #     st.session_state.days_filed = days_filed
+        #     st.session_state.days_attorney = days_attorney
+        #     st.session_state.treatment_duration = treatment_duration
+        #     st.session_state.opioid = opioid
+        #     st.session_state.provider_shopping = provider_shopping
+        #     st.session_state.employment = employment
+        #     st.session_state.benefit = benefit
+        #     st.session_state.msa = msa
+        #     st.session_state.comorbidity = comorbidity
+        #     st.session_state.odg = odg
+        #     st.session_state.attorney_winrate = attorney_winrate
+        #     st.session_state.attorney_type = attorney_type
+        #     st.session_state.judge = judge
+        #     st.session_state.submitted = True
+        #     st.rerun()
+
         # Submit Button
         submitted = st.button("🚀 ANALYZE CASE", use_container_width=True)
         if submitted:
@@ -643,13 +1080,30 @@ if not st.session_state.submitted:
             st.session_state.opioid = opioid
             st.session_state.provider_shopping = provider_shopping
             st.session_state.employment = employment
-            st.session_state.benefit = benefit
+            
+            # --- NEW CLAIMANT FIELDS ---
+            st.session_state.claimant_age = claimant_age
+            st.session_state.occupation = occupation
+            st.session_state.tenure = tenure
+            st.session_state.engaged_claimant = engaged_claimant
+            st.session_state.dependents_count = dependents_count
+            st.session_state.previous_claim_flag = previous_claim_flag
+            st.session_state.social_media_risk = social_media_risk
+            
+            # --- MEDICAL / OLD FIELDS ---
             st.session_state.msa = msa
             st.session_state.comorbidity = comorbidity
             st.session_state.odg = odg
             st.session_state.attorney_winrate = attorney_winrate
             st.session_state.attorney_type = attorney_type
             st.session_state.judge = judge
+            
+            # --- NEW MEDICAL FIELDS ---
+            st.session_state.injury_type = injury_type
+            st.session_state.body_part = body_part
+            st.session_state.need_for_surgery = need_for_surgery
+            st.session_state.need_for_hosp = need_for_hosp
+
             st.session_state.submitted = True
             st.rerun()
     
@@ -659,6 +1113,33 @@ if not st.session_state.submitted:
 else:
     import model
 
+    # Get form data from session state
+    # inputs = {
+    #     "Jurisdiction": st.session_state.jurisdiction,
+    #     "Venue_Win_Rate": st.session_state.venue_win_rate,
+    #     "Plaintiff_Attorney": st.session_state.attorney_firm,
+    #     "Attorney_Score": st.session_state.attorney_score,
+    #     "Provider_Type": st.session_state.provider_type,
+    #     "Wage_Loss_Exposure": st.session_state.wage_loss,
+    #     "Impairment_Rating": st.session_state.impairment,
+    #     "Medical_Trajectory": st.session_state.medical_trajectory,
+    #     "Future_Medical": 1 if st.session_state.future_medical else 0,
+    #     "Demand_Amount": st.session_state.demand,
+    #     "Days_Since_Filed": st.session_state.days_filed,
+    #     "Days_Attorney_Engaged": st.session_state.days_attorney,
+    #     "Treatment_Duration": st.session_state.treatment_duration,
+    #     "Opioid_Indicator": 1 if st.session_state.opioid else 0,
+    #     "Provider_Shopping": st.session_state.provider_shopping,
+    #     "Employment_Status": st.session_state.employment,
+    #     "Benefit_Status": st.session_state.benefit,
+    #     "MSA_Flag": 1 if st.session_state.msa else 0,
+    #     "Comorbidities": st.session_state.comorbidity,
+    #     "Guidelines_Adherence": st.session_state.odg,
+    #     "Attorney_Win_Rate": st.session_state.attorney_winrate,
+    #     "Attorney_Tendency": st.session_state.attorney_type,
+    #     "Judge_Propensity": st.session_state.judge
+    # }
+    
     # Get form data from session state
     inputs = {
         "Jurisdiction": st.session_state.jurisdiction,
@@ -677,7 +1158,23 @@ else:
         "Opioid_Indicator": 1 if st.session_state.opioid else 0,
         "Provider_Shopping": st.session_state.provider_shopping,
         "Employment_Status": st.session_state.employment,
-        "Benefit_Status": st.session_state.benefit,
+        "Benefit_Status": "N/A",
+        # --- NEW CLAIMANT FIELDS ---
+        "Claimant_Age": st.session_state.claimant_age,
+        "Occupation": st.session_state.occupation,
+        "Tenure": st.session_state.tenure,
+        "Engaged_Claimant": 1 if st.session_state.engaged_claimant else 0,
+        "Dependents_Count": st.session_state.dependents_count,
+        "Previous_Claim_Flag": 1 if st.session_state.previous_claim_flag else 0,
+        "Social_Media_Risk": st.session_state.social_media_risk,
+        
+        # --- NEW MEDICAL FIELDS ---
+        "Injury_Type": st.session_state.injury_type,
+        "Body_Part": st.session_state.body_part,
+        "Need_for_Surgery": 1 if st.session_state.need_for_surgery else 0,
+        "Need_for_Hosp": 1 if st.session_state.need_for_hosp else 0,
+        
+        # --- OLD/RETAINED FIELDS ---
         "MSA_Flag": 1 if st.session_state.msa else 0,
         "Comorbidities": st.session_state.comorbidity,
         "Guidelines_Adherence": st.session_state.odg,
@@ -685,7 +1182,7 @@ else:
         "Attorney_Tendency": st.session_state.attorney_type,
         "Judge_Propensity": st.session_state.judge
     }
-    
+
     # Extract variables for use in dashboard
     jurisdiction = st.session_state.jurisdiction
     attorney_score = st.session_state.attorney_score
@@ -715,13 +1212,19 @@ else:
     
     col_header_left, col_header_right = st.columns(2)
     
+    # with col_header_left:
+    #     st.markdown(f"""
+    #         <div class='dashboard-title'>{rec_emoji} {res['action']}</div>
+    #         <div class='dashboard-subtitle'>{res['action_desc']}<br>
+    #         📍 Jurisdiction: <b>{inputs['Jurisdiction']}</b> </b></div>
+    #     """, unsafe_allow_html=True)
+    
     with col_header_left:
         st.markdown(f"""
-            <div class='dashboard-title'>{rec_emoji} {res['action']}</div>
-            <div class='dashboard-subtitle'>{res['action_desc']}<br>
+            <div class='dashboard-title' style='color:#1e293b;'>{rec_emoji} {res['action']}</div>
+            <div class='dashboard-subtitle' style='color:#475569;'>{res['action_desc']}<br>
             📍 Jurisdiction: <b>{inputs['Jurisdiction']}</b> </b></div>
         """, unsafe_allow_html=True)
-    
     
     
     st.markdown("---")
@@ -816,7 +1319,7 @@ else:
             p_msg = "Moderate resistance expected. May require mediation."
         else: 
             p_color = "#dc2626" # Red
-            p_msg = "Low probability. Opposing counsel likely to push for trial."
+            p_msg = "Low probability. Plaintiff counsel likely to push for trial."
 
         # 1. Render the Full-Width Probability Bar
         st.markdown(f"""
