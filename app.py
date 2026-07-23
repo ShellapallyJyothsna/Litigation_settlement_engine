@@ -1,6 +1,3 @@
-
-
-
 # import streamlit as st
 # import pandas as pd
 # import numpy as np
@@ -4235,12 +4232,11 @@ if not st.session_state.submitted:
 
 # === DASHBOARD VIEW ===
 else:
-    import joblib
     import model
 
     if model._MODEL is None:
-        model._MODEL = joblib.load("litigation_model.pkl")
-        print("✅ Model loaded from PKL in app.py")
+        model.load_and_train()
+        print("✅ Model ready in app.py")
 
     
 
@@ -4916,9 +4912,3 @@ else:
             st.session_state.submitted = False
             
             st.rerun()
-
-
-
-
-
-
