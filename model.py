@@ -1,4 +1,3 @@
-
 # import pandas as pd
 # import numpy as np
 # from sklearn.ensemble import GradientBoostingRegressor
@@ -396,9 +395,15 @@ def load_and_train():
 
     # ✅ NEW: Load from PKL if exists
     if os.path.exists(MODEL_PKL_PATH):
-        _MODEL = joblib.load(MODEL_PKL_PATH)
-        print("✅ Loaded model from PKL")
-        return _MODEL
+        try:
+            _MODEL = joblib.load(MODEL_PKL_PATH)
+            print("✅ Loaded model from PKL")
+            return _MODEL
+        except Exception as e:
+            # PKL is likely incompatible with the current scikit-learn/numpy
+            # version (e.g. built on a different Python/library version).
+            # Fall through and retrain fresh instead of crashing the app.
+            print(f"⚠️ Could not load existing PKL ({e}). Retraining fresh model instead.")
 
     try:
         df = pd.read_csv("synthetic_litigation_db_enhanced.csv")
@@ -936,15 +941,3 @@ if __name__ == "__main__":
     print("="*60)
     
     load_and_train()
-
-
-
-
-
-
-
-
-
-
-
-
